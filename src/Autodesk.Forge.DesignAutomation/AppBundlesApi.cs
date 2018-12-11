@@ -174,7 +174,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public AppBundlesApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new AppBundlesApiHttp(service);
+            this.LowLevelApi = new AppBundlesApiHttp(service, configuration);
         }
 
         /// <summary>

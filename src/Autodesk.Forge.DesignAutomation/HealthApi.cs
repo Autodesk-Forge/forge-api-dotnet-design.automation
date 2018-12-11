@@ -44,7 +44,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public HealthApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new HealthApiHttp(service);
+            this.LowLevelApi = new HealthApiHttp(service, configuration);
         }
 
         /// <summary>

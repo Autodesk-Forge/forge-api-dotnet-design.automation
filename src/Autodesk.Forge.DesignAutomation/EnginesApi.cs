@@ -54,7 +54,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public EnginesApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new EnginesApiHttp(service);
+            this.LowLevelApi = new EnginesApiHttp(service, configuration);
         }
 
         /// <summary>

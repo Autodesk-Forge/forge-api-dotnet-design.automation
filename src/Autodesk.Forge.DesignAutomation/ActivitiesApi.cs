@@ -174,7 +174,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public ActivitiesApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new ActivitiesApiHttp(service);
+            this.LowLevelApi = new ActivitiesApiHttp(service, configuration);
         }
 
         /// <summary>

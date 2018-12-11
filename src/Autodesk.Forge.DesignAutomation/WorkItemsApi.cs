@@ -64,7 +64,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public WorkItemsApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new WorkItemsApiHttp(service);
+            this.LowLevelApi = new WorkItemsApiHttp(service, configuration);
         }
 
         /// <summary>

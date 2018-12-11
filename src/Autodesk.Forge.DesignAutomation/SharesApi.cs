@@ -44,7 +44,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <returns></returns>
         public SharesApi(ForgeService service = null, IOptions<Configuration> configuration = null)
         {
-            this.LowLevelApi = new SharesApiHttp(service);
+            this.LowLevelApi = new SharesApiHttp(service, configuration);
         }
 
         /// <summary>
