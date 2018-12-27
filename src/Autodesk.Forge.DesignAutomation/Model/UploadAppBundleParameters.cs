@@ -58,15 +58,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
-        {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
     }

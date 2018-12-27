@@ -25,72 +25,10 @@ namespace Autodesk.Forge.DesignAutomation.Model
     public partial class WorkItemStatus 
     {
         /// <summary>
-        /// Defines Status
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StatusEnum
-        {
-            
-            /// <summary>
-            /// Enum Pending for value: pending
-            /// </summary>
-            [EnumMember(Value = "pending")]
-            Pending = 1,
-            
-            /// <summary>
-            /// Enum Inprogress for value: inprogress
-            /// </summary>
-            [EnumMember(Value = "inprogress")]
-            Inprogress = 2,
-            
-            /// <summary>
-            /// Enum Cancelled for value: cancelled
-            /// </summary>
-            [EnumMember(Value = "cancelled")]
-            Cancelled = 3,
-            
-            /// <summary>
-            /// Enum FailedDownload for value: failedDownload
-            /// </summary>
-            [EnumMember(Value = "failedDownload")]
-            FailedDownload = 4,
-            
-            /// <summary>
-            /// Enum FailedInstructions for value: failedInstructions
-            /// </summary>
-            [EnumMember(Value = "failedInstructions")]
-            FailedInstructions = 5,
-            
-            /// <summary>
-            /// Enum FailedUpload for value: failedUpload
-            /// </summary>
-            [EnumMember(Value = "failedUpload")]
-            FailedUpload = 6,
-            
-            /// <summary>
-            /// Enum FailedLimitProcessingTime for value: failedLimitProcessingTime
-            /// </summary>
-            [EnumMember(Value = "failedLimitProcessingTime")]
-            FailedLimitProcessingTime = 7,
-            
-            /// <summary>
-            /// Enum FailedLimitDataSize for value: failedLimitDataSize
-            /// </summary>
-            [EnumMember(Value = "failedLimitDataSize")]
-            FailedLimitDataSize = 8,
-            
-            /// <summary>
-            /// Enum Success for value: success
-            /// </summary>
-            [EnumMember(Value = "success")]
-            Success = 9
-        }
-
-        /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum Status { get; set; }
+        public Status Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemStatus" /> class.
         /// </summary>
@@ -104,7 +42,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="ReportUrl">ReportUrl.</param>
         /// <param name="Stats">Stats.</param>
         /// <param name="Id">Id.</param>
-        public WorkItemStatus(StatusEnum Status = default(StatusEnum), string Progress = default(string), string ReportUrl = default(string), Statistics Stats = default(Statistics), string Id = default(string))
+        public WorkItemStatus(Status Status = default(Status), string Progress = default(string), string ReportUrl = default(string), Statistics Stats = default(Statistics), string Id = default(string))
         {
             this.Status = Status;
             this.Progress = Progress;
@@ -143,15 +81,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

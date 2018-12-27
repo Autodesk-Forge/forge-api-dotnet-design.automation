@@ -28,29 +28,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).
         /// </summary>
         /// <value>The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Activity for value: activity
-            /// </summary>
-            [EnumMember(Value = "activity")]
-            Activity = 1,
-            
-            /// <summary>
-            /// Enum App for value: app
-            /// </summary>
-            [EnumMember(Value = "app")]
-            App = 2
-        }
-
-        /// <summary>
-        /// The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).
-        /// </summary>
-        /// <value>The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum Type { get; set; }
+        public ShareType Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Shares" /> class.
         /// </summary>
@@ -62,7 +41,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="Id">The name alias id with the owner stripped ex: CoolApp+Prod. (required).</param>
         /// <param name="Receiver">The Receiver of the shared alias. (required).</param>
         /// <param name="Type">The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,). (required).</param>
-        public Shares(string Id = default(string), string Receiver = default(string), TypeEnum Type = default(TypeEnum))
+        public Shares(string Id = default(string), string Receiver = default(string), ShareType Type = default(ShareType))
         {
             this.Id = Id;
             this.Receiver = Receiver;
@@ -89,15 +68,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

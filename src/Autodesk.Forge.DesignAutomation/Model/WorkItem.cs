@@ -36,7 +36,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="ActivityId">Reference to the Activity that this WorkItem will invoke.  Examples: &#x60;MyPlot+Prod&#x60; (an Activity created by the caller) or  &#x60;Autodesk.PlotToPdf&#x60; (an Activity created by someone else and shared with this caller). (required).</param>
         /// <param name="Arguments">Arguments of the WorkItem..</param>
         /// <param name="Signatures">Signatures for various WorkItem attributes..</param>
-        public WorkItem(string Id = default(string), string ActivityId = default(string), Argument Arguments = default(Argument), WorkItemSignatures Signatures = default(WorkItemSignatures))
+        public WorkItem(string Id = default(string), string ActivityId = default(string), Dictionary<string, IArgument> Arguments = default(Dictionary<string, IArgument>), WorkItemSignatures Signatures = default(WorkItemSignatures))
         {
             this.Id = Id;
             this.ActivityId = ActivityId;
@@ -63,7 +63,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>Arguments of the WorkItem.</value>
         [DataMember(Name="arguments", EmitDefaultValue=false)]
-        public Argument Arguments { get; set; }
+        public Dictionary<string, IArgument> Arguments { get; set; }
 
         /// <summary>
         /// Signatures for various WorkItem attributes.
@@ -77,15 +77,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -19,40 +19,46 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// A digitally signed url.
+    /// UrlSetting
     /// </summary>
     [DataContract]
-    public partial class SignedUrl 
+    public partial class UrlSetting 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SignedUrl" /> class.
+        /// Initializes a new instance of the <see cref="UrlSetting" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected SignedUrl() { }
+        protected UrlSetting() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SignedUrl" /> class.
+        /// Initializes a new instance of the <see cref="UrlSetting" /> class.
         /// </summary>
-        /// <param name="Url">The Url value. (required).</param>
-        /// <param name="Signature">The signature calculated for Url. (required).</param>
-        public SignedUrl(string Url = default(string), string Signature = default(string))
+        /// <param name="Url">Url (required).</param>
+        /// <param name="Headers">Headers.</param>
+        /// <param name="Verb">Verb.</param>
+        public UrlSetting(string Url = default(string), Dictionary<string, string> Headers = default(Dictionary<string, string>), Verb Verb = default(Verb))
         {
             this.Url = Url;
-            this.Signature = Signature;
+            this.Headers = Headers;
+            this.Verb = Verb;
         }
         
         /// <summary>
-        /// The Url value.
+        /// Gets or Sets Url
         /// </summary>
-        /// <value>The Url value.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
 
         /// <summary>
-        /// The signature calculated for Url.
+        /// Gets or Sets Headers
         /// </summary>
-        /// <value>The signature calculated for Url.</value>
-        [DataMember(Name="signature", EmitDefaultValue=false)]
-        public string Signature { get; set; }
+        [DataMember(Name="headers", EmitDefaultValue=false)]
+        public Dictionary<string, string> Headers { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Verb
+        /// </summary>
+        [DataMember(Name="verb", EmitDefaultValue=false)]
+        public Verb Verb { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

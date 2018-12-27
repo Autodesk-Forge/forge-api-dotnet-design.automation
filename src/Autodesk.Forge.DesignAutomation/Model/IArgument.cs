@@ -19,34 +19,19 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// PageString
+    /// IArgument
     /// </summary>
     [DataContract]
-    public partial class PageString 
+    public partial class IArgument 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageString" /> class.
+        /// Initializes a new instance of the <see cref="IArgument" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageString(string PaginationToken = default(string), List<string> Data = default(List<string>))
+        [JsonConstructorAttribute]
+        public IArgument()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
-        /// <summary>
-        /// Gets or Sets PaginationToken
-        /// </summary>
-        [DataMember(Name="paginationToken", EmitDefaultValue=false)]
-        public string PaginationToken { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Data
-        /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<string> Data { get; set; }
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

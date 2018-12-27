@@ -19,33 +19,33 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// PageString
+    /// StringSetting
     /// </summary>
     [DataContract]
-    public partial class PageString 
+    public partial class StringSetting 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageString" /> class.
+        /// Initializes a new instance of the <see cref="StringSetting" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageString(string PaginationToken = default(string), List<string> Data = default(List<string>))
+        /// <param name="Value">Value.</param>
+        /// <param name="IsEnvironmentVariable">IsEnvironmentVariable (default to false).</param>
+        public StringSetting(string Value = default(string), bool IsEnvironmentVariable = false)
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
+            this.Value = Value;
+            this.IsEnvironmentVariable = IsEnvironmentVariable;
         }
         
         /// <summary>
-        /// Gets or Sets PaginationToken
+        /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name="paginationToken", EmitDefaultValue=false)]
-        public string PaginationToken { get; set; }
+        [DataMember(Name="value", EmitDefaultValue=false)]
+        public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets Data
+        /// Gets or Sets IsEnvironmentVariable
         /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<string> Data { get; set; }
+        [DataMember(Name="isEnvironmentVariable", EmitDefaultValue=false)]
+        public bool IsEnvironmentVariable { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -40,7 +40,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="Description">Human readable description of the object..</param>
         /// <param name="Version">Version.</param>
         /// <param name="Id">Id.</param>
-        public Activity(List<string> CommandLine = default(List<string>), Parameter Parameters = default(Parameter), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, string> Settings = default(Dictionary<string, string>), string Description = default(string), int Version = default(int), string Id = default(string))
+        public Activity(List<string> CommandLine = default(List<string>), Dictionary<string, Parameter> Parameters = default(Dictionary<string, Parameter>), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, ISetting> Settings = default(Dictionary<string, ISetting>), string Description = default(string), int Version = default(int), string Id = default(string))
         {
             this.CommandLine = CommandLine;
             this.Parameters = Parameters;
@@ -63,7 +63,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
-        public Parameter Parameters { get; set; }
+        public Dictionary<string, Parameter> Parameters { get; set; }
 
         /// <summary>
         /// Gets or Sets Engine
@@ -82,7 +82,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>The url/string Settings for a given set of AppBundles.</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public Dictionary<string, string> Settings { get; set; }
+        public Dictionary<string, ISetting> Settings { get; set; }
 
         /// <summary>
         /// Human readable description of the object.
@@ -108,15 +108,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

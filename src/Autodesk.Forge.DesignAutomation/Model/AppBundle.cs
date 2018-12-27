@@ -40,7 +40,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="Description">Human readable description of the object..</param>
         /// <param name="Version">Version.</param>
         /// <param name="Id">Id.</param>
-        public AppBundle(string Package = default(string), UploadAppBundleParameters UploadParameters = default(UploadAppBundleParameters), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, string> Settings = default(Dictionary<string, string>), string Description = default(string), int Version = default(int), string Id = default(string))
+        public AppBundle(string Package = default(string), UploadAppBundleParameters UploadParameters = default(UploadAppBundleParameters), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, ISetting> Settings = default(Dictionary<string, ISetting>), string Description = default(string), int Version = default(int), string Id = default(string))
         {
             this.Package = Package;
             this.UploadParameters = UploadParameters;
@@ -83,7 +83,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>The url/string Settings for a given set of AppBundles.</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public Dictionary<string, string> Settings { get; set; }
+        public Dictionary<string, ISetting> Settings { get; set; }
 
         /// <summary>
         /// Human readable description of the object.
@@ -109,15 +109,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

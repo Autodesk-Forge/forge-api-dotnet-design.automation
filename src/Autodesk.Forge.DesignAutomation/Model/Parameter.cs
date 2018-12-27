@@ -28,53 +28,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Request method (get, put, patch or post).
         /// </summary>
         /// <value>Request method (get, put, patch or post).</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum VerbEnum
-        {
-            
-            /// <summary>
-            /// Enum Get for value: get
-            /// </summary>
-            [EnumMember(Value = "get")]
-            Get = 1,
-            
-            /// <summary>
-            /// Enum Head for value: head
-            /// </summary>
-            [EnumMember(Value = "head")]
-            Head = 2,
-            
-            /// <summary>
-            /// Enum Put for value: put
-            /// </summary>
-            [EnumMember(Value = "put")]
-            Put = 3,
-            
-            /// <summary>
-            /// Enum Post for value: post
-            /// </summary>
-            [EnumMember(Value = "post")]
-            Post = 4,
-            
-            /// <summary>
-            /// Enum Patch for value: patch
-            /// </summary>
-            [EnumMember(Value = "patch")]
-            Patch = 5,
-            
-            /// <summary>
-            /// Enum Read for value: read
-            /// </summary>
-            [EnumMember(Value = "read")]
-            Read = 6
-        }
-
-        /// <summary>
-        /// Request method (get, put, patch or post).
-        /// </summary>
-        /// <value>Request method (get, put, patch or post).</value>
         [DataMember(Name="verb", EmitDefaultValue=false)]
-        public VerbEnum Verb { get; set; }
+        public Verb Verb { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Parameter" /> class.
         /// </summary>
@@ -89,7 +44,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <param name="Description">The description of the parameter..</param>
         /// <param name="Required">Specifies whether the corresponding WorkItem Argument is required. Default is false. (default to false).</param>
         /// <param name="LocalName">The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name..</param>
-        public Parameter(bool Zip = false, bool Ondemand = false, VerbEnum Verb = default(VerbEnum), string Description = default(string), bool Required = false, string LocalName = default(string))
+        public Parameter(bool Zip = false, bool Ondemand = false, Verb Verb = default(Verb), string Description = default(string), bool Required = false, string LocalName = default(string))
         {
             this.Zip = Zip;
             this.Ondemand = Ondemand;
@@ -140,15 +95,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
-        {
-            return this.ToJson();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
