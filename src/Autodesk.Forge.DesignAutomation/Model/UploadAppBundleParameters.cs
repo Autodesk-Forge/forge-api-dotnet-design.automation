@@ -27,17 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadAppBundleParameters" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected UploadAppBundleParameters() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UploadAppBundleParameters" /> class.
-        /// </summary>
-        /// <param name="EndpointURL">EndpointURL (required).</param>
-        /// <param name="FormData">FormData (required).</param>
-        public UploadAppBundleParameters(string EndpointURL = default(string), UploadAppBundleParameteresFormData FormData = default(UploadAppBundleParameteresFormData))
+        public UploadAppBundleParameters()
         {
-            this.EndpointURL = EndpointURL;
-            this.FormData = FormData;
         }
         
         /// <summary>

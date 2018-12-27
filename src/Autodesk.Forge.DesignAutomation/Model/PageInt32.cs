@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageInt32" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageInt32(string PaginationToken = default(string), List<int> Data = default(List<int>))
+        public PageInt32()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
         /// <summary>

@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageShares" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageShares(string PaginationToken = default(string), List<Shares> Data = default(List<Shares>))
+        public PageShares()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
         /// <summary>

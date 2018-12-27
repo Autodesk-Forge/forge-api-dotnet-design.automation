@@ -25,27 +25,10 @@ namespace Autodesk.Forge.DesignAutomation.Model
     public partial class Shares 
     {
         /// <summary>
-        /// The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).
-        /// </summary>
-        /// <value>The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public ShareType Type { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="Shares" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Shares() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Shares" /> class.
-        /// </summary>
-        /// <param name="Id">The name alias id with the owner stripped ex: CoolApp+Prod. (required).</param>
-        /// <param name="Receiver">The Receiver of the shared alias. (required).</param>
-        /// <param name="Type">The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,). (required).</param>
-        public Shares(string Id = default(string), string Receiver = default(string), ShareType Type = default(ShareType))
+        public Shares()
         {
-            this.Id = Id;
-            this.Receiver = Receiver;
-            this.Type = Type;
         }
         
         /// <summary>
@@ -62,6 +45,12 @@ namespace Autodesk.Forge.DesignAutomation.Model
         [DataMember(Name="receiver", EmitDefaultValue=false)]
         public string Receiver { get; set; }
 
+        /// <summary>
+        /// The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).
+        /// </summary>
+        /// <value>The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public ShareType Type { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

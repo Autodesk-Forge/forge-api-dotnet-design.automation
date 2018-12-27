@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageAlias" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageAlias(string PaginationToken = default(string), List<Alias> Data = default(List<Alias>))
+        public PageAlias()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
         /// <summary>

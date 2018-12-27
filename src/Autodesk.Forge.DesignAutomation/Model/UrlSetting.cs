@@ -27,19 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UrlSetting" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected UrlSetting() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UrlSetting" /> class.
-        /// </summary>
-        /// <param name="Url">Url (required).</param>
-        /// <param name="Headers">Headers.</param>
-        /// <param name="Verb">Verb.</param>
-        public UrlSetting(string Url = default(string), Dictionary<string, string> Headers = default(Dictionary<string, string>), Verb Verb = default(Verb))
+        public UrlSetting()
         {
-            this.Url = Url;
-            this.Headers = Headers;
-            this.Verb = Verb;
         }
         
         /// <summary>

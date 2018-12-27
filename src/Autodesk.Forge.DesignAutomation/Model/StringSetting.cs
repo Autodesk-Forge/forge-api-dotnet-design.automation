@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StringSetting" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="IsEnvironmentVariable">IsEnvironmentVariable (default to false).</param>
-        public StringSetting(string Value = default(string), bool IsEnvironmentVariable = false)
+        public StringSetting()
         {
-            this.Value = Value;
-            this.IsEnvironmentVariable = IsEnvironmentVariable;
         }
         
         /// <summary>

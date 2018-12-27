@@ -27,24 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Statistics" /> class.
         /// </summary>
-        /// <param name="TimeQueued">TimeQueued.</param>
-        /// <param name="TimeDownloadStarted">TimeDownloadStarted.</param>
-        /// <param name="TimeInstructionsStarted">TimeInstructionsStarted.</param>
-        /// <param name="TimeInstructionsEnded">TimeInstructionsEnded.</param>
-        /// <param name="TimeUploadEnded">TimeUploadEnded.</param>
-        /// <param name="TimeFinished">TimeFinished.</param>
-        /// <param name="BytesDownloaded">BytesDownloaded.</param>
-        /// <param name="BytesUploaded">BytesUploaded.</param>
-        public Statistics(DateTime TimeQueued = default(DateTime), DateTime TimeDownloadStarted = default(DateTime), DateTime TimeInstructionsStarted = default(DateTime), DateTime TimeInstructionsEnded = default(DateTime), DateTime TimeUploadEnded = default(DateTime), DateTime TimeFinished = default(DateTime), long BytesDownloaded = default(long), long BytesUploaded = default(long))
+        public Statistics()
         {
-            this.TimeQueued = TimeQueued;
-            this.TimeDownloadStarted = TimeDownloadStarted;
-            this.TimeInstructionsStarted = TimeInstructionsStarted;
-            this.TimeInstructionsEnded = TimeInstructionsEnded;
-            this.TimeUploadEnded = TimeUploadEnded;
-            this.TimeFinished = TimeFinished;
-            this.BytesDownloaded = BytesDownloaded;
-            this.BytesUploaded = BytesUploaded;
         }
         
         /// <summary>

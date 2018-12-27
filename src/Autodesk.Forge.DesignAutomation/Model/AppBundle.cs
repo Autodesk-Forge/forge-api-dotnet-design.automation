@@ -27,29 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppBundle" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AppBundle() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AppBundle" /> class.
-        /// </summary>
-        /// <param name="Package">The URL that points to the zip package for the AppBundle or Engine..</param>
-        /// <param name="UploadParameters">The parameters needed to POST an AppBundle..</param>
-        /// <param name="Engine">Engine (required).</param>
-        /// <param name="Appbundles">Appbundles.</param>
-        /// <param name="Settings">The url/string Settings for a given set of AppBundles..</param>
-        /// <param name="Description">Human readable description of the object..</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Id">Id.</param>
-        public AppBundle(string Package = default(string), UploadAppBundleParameters UploadParameters = default(UploadAppBundleParameters), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, ISetting> Settings = default(Dictionary<string, ISetting>), string Description = default(string), int Version = default(int), string Id = default(string))
+        public AppBundle()
         {
-            this.Package = Package;
-            this.UploadParameters = UploadParameters;
-            this.Engine = Engine;
-            this.Appbundles = Appbundles;
-            this.Settings = Settings;
-            this.Description = Description;
-            this.Version = Version;
-            this.Id = Id;
         }
         
         /// <summary>

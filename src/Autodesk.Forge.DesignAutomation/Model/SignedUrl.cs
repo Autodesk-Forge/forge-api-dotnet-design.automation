@@ -27,17 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignedUrl" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SignedUrl() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SignedUrl" /> class.
-        /// </summary>
-        /// <param name="Url">The Url value. (required).</param>
-        /// <param name="Signature">The signature calculated for Url. (required).</param>
-        public SignedUrl(string Url = default(string), string Signature = default(string))
+        public SignedUrl()
         {
-            this.Url = Url;
-            this.Signature = Signature;
         }
         
         /// <summary>

@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NicknameRecord" /> class.
         /// </summary>
-        /// <param name="Nickname">Nickname.</param>
-        /// <param name="PublicKey">PublicKey.</param>
-        public NicknameRecord(string Nickname = default(string), PublicKey PublicKey = default(PublicKey))
+        public NicknameRecord()
         {
-            this.Nickname = Nickname;
-            this.PublicKey = PublicKey;
         }
         
         /// <summary>

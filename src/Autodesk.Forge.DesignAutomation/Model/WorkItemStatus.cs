@@ -25,32 +25,17 @@ namespace Autodesk.Forge.DesignAutomation.Model
     public partial class WorkItemStatus 
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="WorkItemStatus" /> class.
+        /// </summary>
+        public WorkItemStatus()
+        {
+        }
+        
+        /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public Status Status { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemStatus" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected WorkItemStatus() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemStatus" /> class.
-        /// </summary>
-        /// <param name="Status">Status (required).</param>
-        /// <param name="Progress">Progress.</param>
-        /// <param name="ReportUrl">ReportUrl.</param>
-        /// <param name="Stats">Stats.</param>
-        /// <param name="Id">Id.</param>
-        public WorkItemStatus(Status Status = default(Status), string Progress = default(string), string ReportUrl = default(string), Statistics Stats = default(Statistics), string Id = default(string))
-        {
-            this.Status = Status;
-            this.Progress = Progress;
-            this.ReportUrl = ReportUrl;
-            this.Stats = Stats;
-            this.Id = Id;
-        }
-        
 
         /// <summary>
         /// Gets or Sets Progress

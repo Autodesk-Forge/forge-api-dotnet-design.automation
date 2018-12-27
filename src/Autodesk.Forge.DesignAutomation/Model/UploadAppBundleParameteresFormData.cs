@@ -27,35 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadAppBundleParameteresFormData" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected UploadAppBundleParameteresFormData() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UploadAppBundleParameteresFormData" /> class.
-        /// </summary>
-        /// <param name="Key">Key (required).</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="Policy">Policy (required).</param>
-        /// <param name="SuccessActionStatus">SuccessActionStatus.</param>
-        /// <param name="SuccessActionRedirect">SuccessActionRedirect.</param>
-        /// <param name="XAmzSignature">XAmzSignature (required).</param>
-        /// <param name="XAmzCredential">XAmzCredential (required).</param>
-        /// <param name="XAmzAlgorithm">XAmzAlgorithm (required).</param>
-        /// <param name="XAmzDate">XAmzDate (required).</param>
-        /// <param name="XAmzServerSideEncryption">XAmzServerSideEncryption.</param>
-        /// <param name="XAmzSecurityToken">XAmzSecurityToken.</param>
-        public UploadAppBundleParameteresFormData(string Key = default(string), string ContentType = default(string), string Policy = default(string), string SuccessActionStatus = default(string), string SuccessActionRedirect = default(string), string XAmzSignature = default(string), string XAmzCredential = default(string), string XAmzAlgorithm = default(string), string XAmzDate = default(string), string XAmzServerSideEncryption = default(string), string XAmzSecurityToken = default(string)) : base()
+        public UploadAppBundleParameteresFormData() : base()
         {
-            this.Key = Key;
-            this.ContentType = ContentType;
-            this.Policy = Policy;
-            this.SuccessActionStatus = SuccessActionStatus;
-            this.SuccessActionRedirect = SuccessActionRedirect;
-            this.XAmzSignature = XAmzSignature;
-            this.XAmzCredential = XAmzCredential;
-            this.XAmzAlgorithm = XAmzAlgorithm;
-            this.XAmzDate = XAmzDate;
-            this.XAmzServerSideEncryption = XAmzServerSideEncryption;
-            this.XAmzSecurityToken = XAmzSecurityToken;
         }
         
         /// <summary>

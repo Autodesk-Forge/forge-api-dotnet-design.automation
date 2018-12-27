@@ -27,10 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StringArgument" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        public StringArgument(string Value = default(string))
+        public StringArgument()
         {
-            this.Value = Value;
         }
         
         /// <summary>

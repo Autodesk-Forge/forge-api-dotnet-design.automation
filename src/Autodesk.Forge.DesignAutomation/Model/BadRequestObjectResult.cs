@@ -27,18 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BadRequestObjectResult" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="Formatters">Formatters.</param>
-        /// <param name="ContentTypes">ContentTypes.</param>
-        /// <param name="DeclaredType">DeclaredType.</param>
-        /// <param name="StatusCode">StatusCode.</param>
-        public BadRequestObjectResult(Object Value = default(Object), List<string> Formatters = default(List<string>), List<string> ContentTypes = default(List<string>), string DeclaredType = default(string), int StatusCode = default(int))
+        public BadRequestObjectResult()
         {
-            this.Value = Value;
-            this.Formatters = Formatters;
-            this.ContentTypes = ContentTypes;
-            this.DeclaredType = DeclaredType;
-            this.StatusCode = StatusCode;
         }
         
         /// <summary>

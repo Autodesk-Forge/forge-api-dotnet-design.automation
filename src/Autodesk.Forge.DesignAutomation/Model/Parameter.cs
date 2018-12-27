@@ -25,33 +25,10 @@ namespace Autodesk.Forge.DesignAutomation.Model
     public partial class Parameter 
     {
         /// <summary>
-        /// Request method (get, put, patch or post).
-        /// </summary>
-        /// <value>Request method (get, put, patch or post).</value>
-        [DataMember(Name="verb", EmitDefaultValue=false)]
-        public Verb Verb { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="Parameter" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Parameter() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Parameter" /> class.
-        /// </summary>
-        /// <param name="Zip">The parameter references a zip file. This is how this is interpreted in various scenarios: 1. verb&#x3D;&#x3D;get implies that the byte stream should be unzipped to a folder designated by localName. 2. verb&#x3D;&#x3D;put, patch, post the contents of the file or folder designated by localName will be zipped and sent. 3. Any other verb values result in an error. Default is false. (default to false).</param>
-        /// <param name="Ondemand">The parameter will be accessed by the appbundle on demand and should not be used by the system. Default is false. (default to false).</param>
-        /// <param name="Verb">Request method (get, put, patch or post). (required).</param>
-        /// <param name="Description">The description of the parameter..</param>
-        /// <param name="Required">Specifies whether the corresponding WorkItem Argument is required. Default is false. (default to false).</param>
-        /// <param name="LocalName">The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name..</param>
-        public Parameter(bool Zip = false, bool Ondemand = false, Verb Verb = default(Verb), string Description = default(string), bool Required = false, string LocalName = default(string))
+        public Parameter()
         {
-            this.Zip = Zip;
-            this.Ondemand = Ondemand;
-            this.Verb = Verb;
-            this.Description = Description;
-            this.Required = Required;
-            this.LocalName = LocalName;
         }
         
         /// <summary>
@@ -68,6 +45,12 @@ namespace Autodesk.Forge.DesignAutomation.Model
         [DataMember(Name="ondemand", EmitDefaultValue=false)]
         public bool Ondemand { get; set; }
 
+        /// <summary>
+        /// Request method (get, put, patch or post).
+        /// </summary>
+        /// <value>Request method (get, put, patch or post).</value>
+        [DataMember(Name="verb", EmitDefaultValue=false)]
+        public Verb Verb { get; set; }
 
         /// <summary>
         /// The description of the parameter.

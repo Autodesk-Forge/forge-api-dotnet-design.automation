@@ -27,21 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItem" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected WorkItem() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItem" /> class.
-        /// </summary>
-        /// <param name="Id">Gets Id..</param>
-        /// <param name="ActivityId">Reference to the Activity that this WorkItem will invoke.  Examples: &#x60;MyPlot+Prod&#x60; (an Activity created by the caller) or  &#x60;Autodesk.PlotToPdf&#x60; (an Activity created by someone else and shared with this caller). (required).</param>
-        /// <param name="Arguments">Arguments of the WorkItem..</param>
-        /// <param name="Signatures">Signatures for various WorkItem attributes..</param>
-        public WorkItem(string Id = default(string), string ActivityId = default(string), Dictionary<string, IArgument> Arguments = default(Dictionary<string, IArgument>), WorkItemSignatures Signatures = default(WorkItemSignatures))
+        public WorkItem()
         {
-            this.Id = Id;
-            this.ActivityId = ActivityId;
-            this.Arguments = Arguments;
-            this.Signatures = Signatures;
         }
         
         /// <summary>

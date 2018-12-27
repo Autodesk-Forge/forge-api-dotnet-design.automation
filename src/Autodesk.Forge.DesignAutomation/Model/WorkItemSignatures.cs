@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemSignatures" /> class.
         /// </summary>
-        /// <param name="ActivityId">Digital signature of the ActivityId. The client must supply this when using a 3-legged oauth token for submitting a WorkItem..</param>
-        /// <param name="BaseUrls">Digitally signed base urls that are allowed in the WorkItem. The client may supply these when using a 3-legged oauth token for submitting a WorkItem..</param>
-        public WorkItemSignatures(string ActivityId = default(string), List<SignedUrl> BaseUrls = default(List<SignedUrl>))
+        public WorkItemSignatures()
         {
-            this.ActivityId = ActivityId;
-            this.BaseUrls = BaseUrls;
         }
         
         /// <summary>

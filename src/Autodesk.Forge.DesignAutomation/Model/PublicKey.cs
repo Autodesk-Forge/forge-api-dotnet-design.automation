@@ -27,17 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicKey" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected PublicKey() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PublicKey" /> class.
-        /// </summary>
-        /// <param name="Exponent">Exponent (required).</param>
-        /// <param name="Modulus">Modulus (required).</param>
-        public PublicKey(byte[] Exponent = default(byte[]), byte[] Modulus = default(byte[]))
+        public PublicKey()
         {
-            this.Exponent = Exponent;
-            this.Modulus = Modulus;
         }
         
         /// <summary>

@@ -27,23 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Engine" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Engine() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Engine" /> class.
-        /// </summary>
-        /// <param name="Package">The URL that points to the zip package for the AppBundle..</param>
-        /// <param name="ProductVersion">The product version of the Engine (the version of the binary that will be uploaded). (required).</param>
-        /// <param name="Description">Human readable description of the object..</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Id">Id.</param>
-        public Engine(string Package = default(string), string ProductVersion = default(string), string Description = default(string), int Version = default(int), string Id = default(string))
+        public Engine()
         {
-            this.Package = Package;
-            this.ProductVersion = ProductVersion;
-            this.Description = Description;
-            this.Version = Version;
-            this.Id = Id;
         }
         
         /// <summary>

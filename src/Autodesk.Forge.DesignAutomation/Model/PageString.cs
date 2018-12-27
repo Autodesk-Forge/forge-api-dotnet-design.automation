@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageString" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public PageString(string PaginationToken = default(string), List<string> Data = default(List<string>))
+        public PageString()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
         /// <summary>

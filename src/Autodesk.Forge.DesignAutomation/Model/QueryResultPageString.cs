@@ -27,12 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryResultPageString" /> class.
         /// </summary>
-        /// <param name="PaginationToken">PaginationToken.</param>
-        /// <param name="Data">Data.</param>
-        public QueryResultPageString(string PaginationToken = default(string), Dictionary<string, PageString> Data = default(Dictionary<string, PageString>))
+        public QueryResultPageString()
         {
-            this.PaginationToken = PaginationToken;
-            this.Data = Data;
         }
         
         /// <summary>

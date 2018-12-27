@@ -27,14 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Alias" /> class.
         /// </summary>
-        /// <param name="Version">The version that this alias refers to..</param>
-        /// <param name="Receiver">The user to share the alias with..</param>
-        /// <param name="Id">Id.</param>
-        public Alias(int Version = default(int), string Receiver = default(string), string Id = default(string))
+        public Alias()
         {
-            this.Version = Version;
-            this.Receiver = Receiver;
-            this.Id = Id;
         }
         
         /// <summary>

@@ -27,27 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="XrefTreeArgument" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected XrefTreeArgument() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="XrefTreeArgument" /> class.
-        /// </summary>
-        /// <param name="Optional">Optional (default to false).</param>
-        /// <param name="LocalName">LocalName.</param>
-        /// <param name="PathInZip">PathInZip.</param>
-        /// <param name="References">References.</param>
-        /// <param name="Url">Url (required).</param>
-        /// <param name="Headers">Headers.</param>
-        /// <param name="Verb">Verb.</param>
-        public XrefTreeArgument(bool Optional = false, string LocalName = default(string), string PathInZip = default(string), List<XrefTreeArgument> References = default(List<XrefTreeArgument>), string Url = default(string), Dictionary<string, string> Headers = default(Dictionary<string, string>), Verb Verb = default(Verb))
+        public XrefTreeArgument()
         {
-            this.Optional = Optional;
-            this.LocalName = LocalName;
-            this.PathInZip = PathInZip;
-            this.References = References;
-            this.Url = Url;
-            this.Headers = Headers;
-            this.Verb = Verb;
         }
         
         /// <summary>

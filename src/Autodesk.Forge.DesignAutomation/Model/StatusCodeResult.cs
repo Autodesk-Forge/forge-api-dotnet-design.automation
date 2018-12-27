@@ -27,17 +27,15 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StatusCodeResult" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
         public StatusCodeResult()
         {
-            this.StatusCode = StatusCode;
         }
         
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
-        public int StatusCode { get; private set; }
+        public int StatusCode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

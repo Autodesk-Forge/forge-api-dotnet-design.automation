@@ -27,29 +27,8 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Activity" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Activity() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Activity" /> class.
-        /// </summary>
-        /// <param name="CommandLine">Path to Engine executable with arguments. (required).</param>
-        /// <param name="Parameters">Parameters.</param>
-        /// <param name="Engine">Engine (required).</param>
-        /// <param name="Appbundles">Appbundles.</param>
-        /// <param name="Settings">The url/string Settings for a given set of AppBundles..</param>
-        /// <param name="Description">Human readable description of the object..</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Id">Id.</param>
-        public Activity(List<string> CommandLine = default(List<string>), Dictionary<string, Parameter> Parameters = default(Dictionary<string, Parameter>), string Engine = default(string), List<string> Appbundles = default(List<string>), Dictionary<string, ISetting> Settings = default(Dictionary<string, ISetting>), string Description = default(string), int Version = default(int), string Id = default(string))
+        public Activity()
         {
-            this.CommandLine = CommandLine;
-            this.Parameters = Parameters;
-            this.Engine = Engine;
-            this.Appbundles = Appbundles;
-            this.Settings = Settings;
-            this.Description = Description;
-            this.Version = Version;
-            this.Id = Id;
         }
         
         /// <summary>

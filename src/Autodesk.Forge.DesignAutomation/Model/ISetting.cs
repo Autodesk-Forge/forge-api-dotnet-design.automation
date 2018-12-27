@@ -27,7 +27,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ISetting" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
         public ISetting()
         {
         }
