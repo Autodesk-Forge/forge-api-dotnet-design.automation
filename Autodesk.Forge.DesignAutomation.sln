@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{6FFCA0F9-C91D-4867-AFCD-64F3194C7918}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{5479BF7C-A384-49AE-A3B8-699181B8E5AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,10 +10,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FFCA0F9-C91D-4867-AFCD-64F3194C7918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FFCA0F9-C91D-4867-AFCD-64F3194C7918}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FFCA0F9-C91D-4867-AFCD-64F3194C7918}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FFCA0F9-C91D-4867-AFCD-64F3194C7918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5479BF7C-A384-49AE-A3B8-699181B8E5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5479BF7C-A384-49AE-A3B8-699181B8E5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5479BF7C-A384-49AE-A3B8-699181B8E5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5479BF7C-A384-49AE-A3B8-699181B8E5AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
