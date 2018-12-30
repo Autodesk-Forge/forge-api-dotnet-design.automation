@@ -18,29 +18,38 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// StringSetting
+    /// ( response only ).
     /// </summary>
     [DataContract]
-    public partial class StringSetting : ISetting
+    public partial class Share 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StringSetting" /> class.
+        /// Initializes a new instance of the <see cref="Share" /> class.
         /// </summary>
-        public StringSetting() : base()
+        public Share()
         {
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// The name alias id with the owner stripped ex: CoolApp+Prod.
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        /// <value>The name alias id with the owner stripped ex: CoolApp+Prod.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsEnvironmentVariable
+        /// The Receiver of the shared alias.
         /// </summary>
-        [DataMember(Name="isEnvironmentVariable", EmitDefaultValue=false)]
-        public bool IsEnvironmentVariable { get; set; }
+        /// <value>The Receiver of the shared alias.</value>
+        [DataMember(Name="receiver", EmitDefaultValue=false)]
+        public string Receiver { get; set; }
+
+        /// <summary>
+        /// The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).
+        /// </summary>
+        /// <value>The type of the share (\&quot;Activity\&quot;, \&quot;App\&quot;,).</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public ShareType Type { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
