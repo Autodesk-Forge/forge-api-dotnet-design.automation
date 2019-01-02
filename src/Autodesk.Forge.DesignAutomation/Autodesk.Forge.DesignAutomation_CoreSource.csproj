@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors></Authors>
+    <Company>Autodesk</Company>
+    <Product>Autodesk Forge</Product>
+    <Description>Client sdk for Forge DesignAutomation API</Description>
+    <Copyright>Autodesk Inc.</Copyright>
+    <Version>1.0.0-alpha1</Version>
+    <AssemblyName>Autodesk.Forge.DesignAutomation</AssemblyName>
+    <RootNamespace>Autodesk.Forge.DesignAutomation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Autodesk.Forge.Core\src\Autodesk.Forge.Core\Autodesk.Forge.Core.csproj" />
+  </ItemGroup>
+
+</Project>
+
