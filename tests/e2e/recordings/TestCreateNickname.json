@@ -1,0 +1,22 @@
+[
+  {
+    "StatusCode": 200,
+    "Request": {
+      "Method": "PATCH",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/forgeapps/me",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "nickname": "SdkTester"
+        },
+        "Headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "24"
+        }
+      }
+    }
+  }
+]

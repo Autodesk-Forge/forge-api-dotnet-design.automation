@@ -19,7 +19,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="services"></param>
         /// <param name="configuration"></param>
         /// <returns></returns>
-        public static IServiceCollection AddDesignAutomation(this IServiceCollection services, IConfiguration configuration)
+        public static IHttpClientBuilder AddDesignAutomation(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<Configuration>(configuration.GetSection("Forge").GetSection("DesignAutomation"));
             services.AddForgeService(configuration);
@@ -31,7 +31,7 @@ namespace Autodesk.Forge.DesignAutomation
             services.AddTransient<ISharesApi,SharesApi>();
             services.AddTransient<IWorkItemsApi,WorkItemsApi>();
             services.AddTransient<DesignAutomationClient>();
-            return services;
+            return services.AddForgeService(configuration);
         }
     }
 }

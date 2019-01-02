@@ -1,0 +1,13 @@
+[
+  {
+    "StatusCode": 204,
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/forgeapps/me",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "StatusCode": 200,
+  "Content": {
+    "Body": {
+      "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJjbGllbnRfaWQiOiJGWXkxRGhYNlo2bVFMaU1nU05ZOFNBQUVBZ283YTIyOCIsImV4cCI6MTU0NjQ3MTM0OSwic2NvcGUiOlsiY29kZTphbGwiXSwiYXVkIjoiaHR0cHM6Ly9hdXRvZGVzay5jb20vYXVkL2p3dGV4cDYwIiwianRpIjoidDgyeXJ2UWVBcE5ZVzN0M1cxaXQ0OTZuS2Y4Nlc3ZGFSTGJTbFNwMVRiNk5oVXZYaWVVemx2Q0o2Zm9FbUEwWiJ9.UlTsSdelfWDUzdGd2WYUFHg5MV0UCH_qqtiHxjjXHoI",
+      "token_type": "Bearer",
+      "expires_in": 3599
+    },
+    "Headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "429"
+    }
+  },
+  "Request": {
+    "Method": "POST",
+    "RequestUri": "https://developer.api.autodesk.com/authentication/v1/authenticate",
+    "Content": {
+      "Body": "client_id=FYy1DhX6Z6mQLiMgSNY8SAAEAgo7a228&client_secret=tukaej1bYR8GWVHn&grant_type=client_credentials&scope=code%3Aall",
+      "Headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Length": "120"
+      }
+    }
+  }
+}
