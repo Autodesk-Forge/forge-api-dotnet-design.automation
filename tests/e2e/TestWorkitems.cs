@@ -13,7 +13,7 @@ namespace E2eTests
     {
         [Fact]
         [Order(Weight = 3.0)]
-        public async void WorkItem_Create()
+        public async void WorkItems_Create()
         {
             using (var testScope = Fixture.StartTestScope())
             {
@@ -39,7 +39,6 @@ namespace E2eTests
                     resp = await Fixture.DesignAutomationClient.GetWorkitemStatusAsync(resp.Id);
                 }
                 Assert.Equal(Status.Success, resp.Status);
-                
             }
         }
 

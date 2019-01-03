@@ -38,5 +38,20 @@ namespace E2eTests
                 await Fixture.DesignAutomationClient.CreateAppBundleAliasAsync(this.app.Id, new Alias { Id = "latest", Version = version });
             }
         }
+
+        [Fact]
+        [Order(Weight = 1.2)]
+        public async void AppBundles_GetAll()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var list = await Fixture.DesignAutomationClient.GetAllItems(Fixture.DesignAutomationClient.GetAppBundlesAsync);
+                Assert.Contains($"{this.nickname}.{this.app.Id}+latest", list);
+                Assert.Contains($"{this.nickname}.{this.app.Id}+rc", list);
+                Assert.Contains($"{this.nickname}.{this.app.Id}+beta", list);
+                Assert.Contains($"{this.nickname}.{this.app.Id}+$LATEST", list);
+            }
+        }
+
     }
 }

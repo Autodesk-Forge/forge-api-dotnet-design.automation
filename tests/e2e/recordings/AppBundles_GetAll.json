@@ -1,0 +1,38 @@
+[
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "paginationToken": null,
+        "data": [
+          "SdkTester.MyApp+$LATEST",
+          "SdkTester.MyApp+beta",
+          "SdkTester.MyApp+latest",
+          "SdkTester.MyApp+rc",
+          "Inventor.Configuration+prod",
+          "AutoCAD.Publish2View22+prod",
+          "3dsMax.UVUnwrap+latest",
+          "Revit.RVTIOSandboxTestPackage2018+prod",
+          "Inventor.ChPa+prod",
+          "Inventor.iLogicSampleAppPackage+prod",
+          "Revit.RVTIOSketchItPackage+prod",
+          "AutoCAD.Publish2View23+prod",
+          "Inventor.ChangeParams+prod",
+          "3dsMax.bakeToTexture+prod",
+          "Revit.RVTIOSketchItPackage2018+prod"
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]

@@ -32,11 +32,23 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 2.0)]
-        public async void Activity_Create()
+        public async void Activities_Create()
         {
             using (Fixture.StartTestScope())
             {
                 await Fixture.DesignAutomationClient.CreateActivityAsync(act, "latest");
+            }
+        }
+
+        [Fact]
+        [Order(Weight = 2.1)]
+        public async void Activities_GetAll()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var list = await Fixture.DesignAutomationClient.GetAllItems(Fixture.DesignAutomationClient.GetActivitiesAsync);
+                Assert.Contains($"{this.nickname}.{this.act.Id}+latest", list);
+                Assert.Contains($"{this.nickname}.{this.act.Id}+$LATEST", list);
             }
         }
 

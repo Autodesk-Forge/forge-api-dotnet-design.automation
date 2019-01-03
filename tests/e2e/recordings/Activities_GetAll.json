@@ -1,0 +1,71 @@
+[
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "paginationToken": "3eyJOYW1lX2xhYmVsIjp7IlMiOiJSdnRJT1NhbmRib3hUZXN0QWN0aXZpdHkucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IlJldml0In19",
+        "data": [
+          "SdkTester.MyAct+$LATEST",
+          "SdkTester.MyAct+latest",
+          "Revit.RVTIOSimpleActivity+prod",
+          "Autodesk.Nop+Latest",
+          "vOnjyCxTqZ34qAszA0k7NJUVDADAgh4c.inviowebsample_Choke_Trigger_ipt+inviowebsample_Choke_Trigger_ipt_nick",
+          "AutoCAD.AcSvfPublish+prod",
+          "Revit.RvtIOSandboxTestActivity2018+prod",
+          "Revit.RvtIOSketchItActivity+prod",
+          "3dsMax.HelloWorld+Latest",
+          "3dsMax.UVUnwrapMesh+prod",
+          "Revit.RvtIOSketchItActivity2018+prod",
+          "Inventor.Configuration+prod",
+          "Revit.RvtIOFillCDriveTestActivity+prod",
+          "3dsMax.UVUnwrapMesh+latest",
+          "revitiosample.FileUpgraderActivity+test",
+          "3dsMax.bakeToTexture+Latest",
+          "Inventor.iLogic_Volume+prod",
+          "AutoCAD.AcF2dPublish+prod",
+          "Inventor.ChPa+prod",
+          "Revit.RvtIOSandboxTestActivity+prod"
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "paginationToken": null,
+        "data": [
+          "fileupgradersample.FileUpgraderActivity+test",
+          "AutoCAD.AcLMVPublish+prod",
+          "AutoCAD.PlotToPDF+prod",
+          "Inventor.ChangeParams+prod",
+          "3dsMax.bakeToTexture+prod",
+          "3hdryVDAjSv0FwHkVAaFz237BSWJquoB.inviowebsample_Stapler_zip+inviowebsample_Stapler_zip_nick",
+          "psawQK8sGnSYlX6wbRBEvR7KI5KAWwch.InventorSmokeActivity+InventorSmokeActivityNickname"
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities?page=3eyJOYW1lX2xhYmVsIjp7IlMiOiJSdnRJT1NhbmRib3hUZXN0QWN0aXZpdHkucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IlJldml0In19&",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]
