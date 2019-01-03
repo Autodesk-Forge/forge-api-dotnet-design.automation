@@ -525,9 +525,9 @@ namespace Autodesk.Forge.DesignAutomation
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkitemsAsync (string id)
+        public async System.Threading.Tasks.Task DeleteWorkitemAsync (string id)
         {
-             await this.workItemsApi.DeleteWorkitemsAsync(id);
+             await this.workItemsApi.DeleteWorkitemAsync(id);
 
         }
         /// <summary>

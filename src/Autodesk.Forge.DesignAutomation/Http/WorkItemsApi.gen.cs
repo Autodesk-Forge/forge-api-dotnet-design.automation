@@ -32,7 +32,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id"></param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemsAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
         /// Gets the status of a specific WorkItem. Gets the status of a specific WorkItem.  Typically used to &#39;poll&#39; for              the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for              an alternative that does not require &#39;polling&#39;.  WorkItem status is retained              for a limited period of time after the WorkItem completes.              Limits:              1. Retention period (LimitWorkItemRetentionPeriod).
         /// </summary>
@@ -133,7 +133,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id"></param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemsAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {
