@@ -1,8 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{F07D8A53-070B-45AD-ABD1-520444606FB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{F07D8A53-070B-45AD-ABD1-520444606FB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E2eTests", "tests\e2e\E2eTests.csproj", "{E9572467-ACD3-4DB4-88E2-06650E7746C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,12 +16,15 @@ Global
 		{F07D8A53-070B-45AD-ABD1-520444606FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07D8A53-070B-45AD-ABD1-520444606FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07D8A53-070B-45AD-ABD1-520444606FB0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9572467-ACD3-4DB4-88E2-06650E7746C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9572467-ACD3-4DB4-88E2-06650E7746C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9572467-ACD3-4DB4-88E2-06650E7746C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9572467-ACD3-4DB4-88E2-06650E7746C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE29FB77-4D3D-4499-BB44-722A10632E77}
 	EndGlobalSection
 EndGlobal

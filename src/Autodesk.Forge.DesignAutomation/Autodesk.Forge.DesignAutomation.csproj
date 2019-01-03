@@ -8,11 +8,11 @@
     <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
-    <Version>1.0.0-alpha1</Version>
+    <Version>1.0.0-beta1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Autodesk.Forge.Core\src\Autodesk.Forge.Core.csproj" />
+    <PackageReference Include="Autodesk.Forge.Core" Version="1.0.0-beta*" /> 
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
