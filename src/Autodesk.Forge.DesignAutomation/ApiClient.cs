@@ -52,22 +52,29 @@ namespace Autodesk.Forge.DesignAutomation
         public async Task<int> UpdateAppBundleAsync(AppBundle app, string label, string packagePath)
         {
             var id = app.Id;
-            app.Id = null;
-            var item = await this.CreateAppBundleVersionAsync(id, app);
-
-            await UploadAppBundleBits(item.UploadParameters, packagePath);
-
-            var resp = await this.appBundlesApi.ModifyAppBundleAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
-            if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            try
             {
-                await this.appBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version });
-            }
-            else
-            {
-                await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
-            }
+                app.Id = null;
+                var item = await this.CreateAppBundleVersionAsync(id, app);
 
-            return item.Version;
+                await UploadAppBundleBits(item.UploadParameters, packagePath);
+
+                var resp = await this.appBundlesApi.ModifyAppBundleAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
+                if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    await this.appBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                }
+                else
+                {
+                    await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
+                }
+
+                return item.Version;
+            }
+            finally
+            {
+                app.Id = id;
+            }
         }
 
         public async Task CreateActivityAsync(Activity activity, string label)
@@ -81,21 +88,28 @@ namespace Autodesk.Forge.DesignAutomation
         public async Task<int> UpdateActivityAsync(Activity activity, string label)
         {
             var id = activity.Id;
-            activity.Id = null;
-            
-            var item = await this.CreateActivityVersionAsync(id, activity);
-
-            var resp = await this.activitiesApi.ModifyActivityAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
-            if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            try
             {
-                await this.activitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version });
-            }
-            else
-            {
-                await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
-            }
+                activity.Id = null;
 
-            return item.Version;
+                var item = await this.CreateActivityVersionAsync(id, activity);
+
+                var resp = await this.activitiesApi.ModifyActivityAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
+                if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    await this.activitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                }
+                else
+                {
+                    await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
+                }
+
+                return item.Version;
+            }
+            finally
+            {
+                activity.Id = id;
+            }
         }
 
         public async Task<List<T>> GetAllItems<T>(Func<string, Task<Page<T>>> pageGetter)

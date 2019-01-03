@@ -1,0 +1,19 @@
+[
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": "\"SdkTester\"",
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/forgeapps/me",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "uploadParameters": {
+          "endpointURL": "https://dasprod-store.s3.amazonaws.com",
+          "formData": {
+            "key": "apps/SdkTester/MyApp/2",
+            "content-type": "application/octet-stream",
+            "policy": "eyJleHBpcmF0aW9uIjoiMjAxOS0wMS0wM1QwNDowMjowMC4xNTM3NzgxWiIsImNvbmRpdGlvbnMiOlt7ImtleSI6ImFwcHMvU2RrVGVzdGVyL015QXBwLzIifSx7ImJ1Y2tldCI6ImRhc3Byb2Qtc3RvcmUifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMCJ9LFsic3RhcnRzLXdpdGgiLCIkc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiLCIiXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtVHlwZSIsImFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbSJdLHsieC1hbXotc2VydmVyLXNpZGUtZW5jcnlwdGlvbiI6IkFFUzI1NiJ9LFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCIwIiwiMTA0ODU3NjAwIl0seyJ4LWFtei1jcmVkZW50aWFsIjoiQVNJQVRHVkpaS00zSFRBN1BZNUwvMjAxOTAxMDMvdXMtZWFzdC0xL3MzL2F3czRfcmVxdWVzdC8ifSx7IngtYW16LWFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IngtYW16LWRhdGUiOiIyMDE5MDEwM1QwMzAyMDBaIn0seyJ4LWFtei1zZWN1cml0eS10b2tlbiI6IkZRb0daWEl2WVhkekVKei8vLy8vLy8vLy93RWFESWIxbTZaUGU0SHFQTS9IcHlMOUFmTm1xcXBBZDNmeVFuMkI4WVVoMnBxQ1BMRUZYRXdGaktYUmVITkkveUROWkJuRWFXL2lPQ0NiajRGZDBocXpBTnkrSGJEc1B5a3hibmVoMTJJTUU2M3owUlV1eStHSmF4cSsweXk0ZlNRVDV2UmwyRFA0QkZ1OWtZc1hSMjdOR1VQbmkrSGo1YnJhRWY2d0hISEh1SXUwYklOWnVEb1krVTh0T0RXSFNSNHd5MHRRM3VFYXAxTUhGM1BucmIrSFBqc3p3QVNKVWhHT0pLdzBsL2s2R2JTNTRRYi9sUzhBN0ZNa0pYNE9Pc2tPbCs0Tlo5N1ZaQTAzTzhwSDBCa0R0bkpQeXJWcHE0K0N2QW84OGl6R0xXYm13clcydjdzeEpJVlRyMm1pY1FkTmhDMW83UWRtS1gwNERsa0NpM0YzbGxua0RHK3hWZGpPU1lkblFpMG80T0sxNFFVPSJ9XX0=",
+            "success_action_status": "200",
+            "success_action_redirect": "",
+            "x-amz-signature": "fe7745bb691d878404ebfc1ffe555373a4d1ce0f97a9fc795b6e69f425a30a0c",
+            "x-amz-credential": "ASIATGVJZKM3HTA7PY5L/20190103/us-east-1/s3/aws4_request/",
+            "x-amz-algorithm": "AWS4-HMAC-SHA256",
+            "x-amz-date": "20190103T030200Z",
+            "x-amz-server-side-encryption": "AES256",
+            "x-amz-security-token": "FQoGZXIvYXdzEJz//////////wEaDIb1m6ZPe4HqPM/HpyL9AfNmqqpAd3fyQn2B8YUh2pqCPLEFXEwFjKXReHNI/yDNZBnEaW/iOCCbj4Fd0hqzANy+HbDsPykxbneh12IME63z0RUuy+GJaxq+0yy4fSQT5vRl2DP4BFu9kYsXR27NGUPni+Hj5braEf6wHHHHuIu0bINZuDoY+U8tODWHSR4wy0tQ3uEap1MHF3Pnrb+HPjszwASJUhGOJKw0l/k6GbS54Qb/lS8A7FMkJX4OOskOl+4NZ97VZA03O8pH0BkDtnJPyrVpq4+CvAo88izGLWbmwrW2v7sxJIVTr2micQdNhC1o7QdmKX04DlkCi3F3llnkDG+xVdjOSYdnQi0o4OK14QU="
+          }
+        },
+        "engine": "Autodesk.AutoCAD+23",
+        "version": 2,
+        "id": "SdkTester.MyApp"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/versions",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "engine": "Autodesk.AutoCAD+23"
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "x-amz-server-side-encryption": "AES256",
+      "Location": "https://dasprod-store.s3.amazonaws.com/apps%2FSdkTester%2FMyApp%2F2",
+      "Server": "AmazonS3"
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://dasprod-store.s3.amazonaws.com/",
+      "Content": {
+        "Body": "Data not recorded",
+        "Headers": {
+          "Content-Type": "multipart/form-data"
+        }
+      }
+    }
+  },
+  {
+    "StatusCode": 404,
+    "Content": {
+      "Body": "\"Cannot modify alias that does not exist.\"",
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "PATCH",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/aliases/rc",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "version": 2
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "version": 2,
+        "id": "rc"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/aliases",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "version": 2,
+          "id": "rc"
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "version": 2,
+        "id": "latest"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/aliases",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "version": 2,
+          "id": "latest"
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  }
+]

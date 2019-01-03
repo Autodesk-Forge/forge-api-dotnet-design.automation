@@ -2,13 +2,12 @@
   "StatusCode": 200,
   "Content": {
     "Body": {
-      "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJjbGllbnRfaWQiOiJGWXkxRGhYNlo2bVFMaU1nU05ZOFNBQUVBZ283YTIyOCIsImV4cCI6MTU0NjQ3MTM0OSwic2NvcGUiOlsiY29kZTphbGwiXSwiYXVkIjoiaHR0cHM6Ly9hdXRvZGVzay5jb20vYXVkL2p3dGV4cDYwIiwianRpIjoidDgyeXJ2UWVBcE5ZVzN0M1cxaXQ0OTZuS2Y4Nlc3ZGFSTGJTbFNwMVRiNk5oVXZYaWVVemx2Q0o2Zm9FbUEwWiJ9.UlTsSdelfWDUzdGd2WYUFHg5MV0UCH_qqtiHxjjXHoI",
+      "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJjbGllbnRfaWQiOiJGWXkxRGhYNlo2bVFMaU1nU05ZOFNBQUVBZ283YTIyOCIsImV4cCI6MTU0NjQ4ODExNiwic2NvcGUiOlsiY29kZTphbGwiXSwiYXVkIjoiaHR0cHM6Ly9hdXRvZGVzay5jb20vYXVkL2p3dGV4cDYwIiwianRpIjoiT3BzcHlBeGRSNHkzZ2dyTGJySHVGTVhiakVudTJwYlMyOTgxVHQ2V0daS3dvRHpIU010dWc0elUzUXBVMHJtZCJ9.ZBFLXQTUonO-CIlfaGfpY966YIXT2GzzEhw1w67NBO8",
       "token_type": "Bearer",
       "expires_in": 3599
     },
     "Headers": {
-      "Content-Type": "application/json; charset=utf-8",
-      "Content-Length": "429"
+      "Content-Type": "application/json"
     }
   },
   "Request": {
@@ -17,8 +16,7 @@
     "Content": {
       "Body": "client_id=FYy1DhX6Z6mQLiMgSNY8SAAEAgo7a228&client_secret=tukaej1bYR8GWVHn&grant_type=client_credentials&scope=code%3Aall",
       "Headers": {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Content-Length": "120"
+        "Content-Type": "application/x-www-form-urlencoded"
       }
     }
   }

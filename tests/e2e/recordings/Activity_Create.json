@@ -1,0 +1,111 @@
+[
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "commandLine": [
+          "$(engine.path)\\accoreconsole.exe /i $(args[dwg].path) /s $(settings[script].path)"
+        ],
+        "parameters": {
+          "dwg": {
+            "verb": "get"
+          },
+          "params": {
+            "verb": "read",
+            "localName": "params.json"
+          },
+          "results": {
+            "zip": true,
+            "verb": "post",
+            "localName": "outputs"
+          }
+        },
+        "engine": "Autodesk.AutoCAD+23",
+        "appbundles": [
+          "SdkTester.MyApp+latest"
+        ],
+        "settings": {
+          "script": {
+            "value": "_test params.json outputs\n"
+          }
+        },
+        "version": 1,
+        "id": "SdkTester.MyAct"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "commandLine": [
+            "$(engine.path)\\accoreconsole.exe /i $(args[dwg].path) /s $(settings[script].path)"
+          ],
+          "parameters": {
+            "dwg": {
+              "verb": "get"
+            },
+            "params": {
+              "verb": "read",
+              "localName": "params.json"
+            },
+            "results": {
+              "zip": true,
+              "verb": "post",
+              "localName": "outputs"
+            }
+          },
+          "engine": "Autodesk.AutoCAD+23",
+          "appbundles": [
+            "SdkTester.MyApp+latest"
+          ],
+          "settings": {
+            "script": {
+              "value": "_test params.json outputs\n"
+            }
+          },
+          "id": "MyAct"
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "version": 1,
+        "id": "latest"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities/MyAct/aliases",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      },
+      "Content": {
+        "Body": {
+          "version": 1,
+          "id": "latest"
+        },
+        "Headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  }
+]
