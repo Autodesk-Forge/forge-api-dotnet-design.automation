@@ -34,7 +34,7 @@ namespace E2eTests
             this.DesignAutomationClient = serviceProvider.GetRequiredService<DesignAutomationClient>();
         }
 
-        public IDisposable StartTestScope([CallerMemberName] string name = null)
+        public ITestScope StartTestScope([CallerMemberName] string name = null)
         {
             return this.testHandler.StartTestScope(name);
         }

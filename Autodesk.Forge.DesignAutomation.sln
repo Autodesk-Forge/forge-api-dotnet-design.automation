@@ -1,10 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{BEAF6234-C575-49F9-AE18-0327F6ACC563}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E2eTests", "tests\e2e\E2eTests.csproj", "{F84A60DB-F4F2-438F-8F67-D54B89760932}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autodesk.Forge.DesignAutomation", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj", "{CA871175-C608-46E0-BBF9-8925F9FAB6BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,19 +10,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BEAF6234-C575-49F9-AE18-0327F6ACC563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEAF6234-C575-49F9-AE18-0327F6ACC563}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEAF6234-C575-49F9-AE18-0327F6ACC563}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEAF6234-C575-49F9-AE18-0327F6ACC563}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F84A60DB-F4F2-438F-8F67-D54B89760932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F84A60DB-F4F2-438F-8F67-D54B89760932}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F84A60DB-F4F2-438F-8F67-D54B89760932}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F84A60DB-F4F2-438F-8F67-D54B89760932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA871175-C608-46E0-BBF9-8925F9FAB6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA871175-C608-46E0-BBF9-8925F9FAB6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA871175-C608-46E0-BBF9-8925F9FAB6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA871175-C608-46E0-BBF9-8925F9FAB6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6B21ADE9-E62A-45C4-8080-C21D4FA8E7C6}
 	EndGlobalSection
 EndGlobal

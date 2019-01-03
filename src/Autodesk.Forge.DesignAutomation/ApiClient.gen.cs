@@ -536,9 +536,9 @@ namespace Autodesk.Forge.DesignAutomation
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of WorkItemStatus</returns>
-        public async System.Threading.Tasks.Task<WorkItemStatus> GetWorkitemsStatusAsync (string id)
+        public async System.Threading.Tasks.Task<WorkItemStatus> GetWorkitemStatusAsync (string id)
         {
-             var response = await this.workItemsApi.GetWorkitemsStatusAsync(id);
+             var response = await this.workItemsApi.GetWorkitemStatusAsync(id);
              return response.Content;
 
         }

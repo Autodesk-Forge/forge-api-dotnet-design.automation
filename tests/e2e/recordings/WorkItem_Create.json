@@ -5,9 +5,9 @@
       "Body": {
         "status": "pending",
         "stats": {
-          "timeQueued": "2019-01-03T03:02:02.4995322Z"
+          "timeQueued": "2019-01-03T05:42:59.9256904Z"
         },
-        "id": "64d6ff86adbf4243ae6019b53c55f5f9"
+        "id": "b2e85b086b8045e9a5a28e0b2b96f3d4"
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -42,6 +42,35 @@
         "Headers": {
           "Content-Type": "application/json"
         }
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Content": {
+      "Body": {
+        "status": "success",
+        "reportUrl": "https://dasprod-store.s3.amazonaws.com/workItem/SdkTester/b2e85b086b8045e9a5a28e0b2b96f3d4/report.txt?AWSAccessKeyId=ASIATGVJZKM3HBAEFTHT&Expires=1546497785&x-amz-security-token=FQoGZXIvYXdzEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDEmIckCvKn8%2F87Z0SCL9AYafE8PsudHLPcBjJ48uhdWudR%2BMrM8DH9FO1saphGUvXzrPsiWNaYs5AYCfzMEW7QGjmdqOQmcRAlipNyh0zoiNUFeBkc3LmntyJkIwo7dbyh8aUe2mhLb0b%2FLHe2jfuGtUE%2FGge%2FacqFXzZ57sn4ee9FbypIly2J63gNfKsloFqHSjwufi2pvnB8wUS4lX%2BYdWfJEImJLv3qY%2BCCXzJT9WR8%2B8605h3MQPXG72CIcWAv2A7RCDc8CFt2v5pg%2Bq1UpKdUzOcOrEmGYE6Eoo0RuAmNf%2FV8tKAWX%2BhLCXQ2mR66FULC73LInGIE8dPGmFyayDtFMUanv3gNxPVmEogZu24QU%3D&Signature=t%2Be%2BVcEnV7LwCNY2p94Twd1uvLI%3D",
+        "stats": {
+          "timeQueued": "2019-01-03T05:42:59.9256904Z",
+          "timeDownloadStarted": "2019-01-03T05:43:00.2041376Z",
+          "timeInstructionsStarted": "2019-01-03T05:43:00.3772063Z",
+          "timeInstructionsEnded": "2019-01-03T05:43:01.3615925Z",
+          "timeUploadEnded": "2019-01-03T05:43:01.6908844Z",
+          "timeFinished": "2019-01-03T05:43:01.7898366Z"
+        },
+        "id": "b2e85b086b8045e9a5a28e0b2b96f3d4"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/workitems/b2e85b086b8045e9a5a28e0b2b96f3d4",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
       }
     }
   }

@@ -40,7 +40,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> GetWorkitemsStatusAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> GetWorkitemStatusAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
     }
 
     /// <summary>
@@ -191,7 +191,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> GetWorkitemsStatusAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> GetWorkitemStatusAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {

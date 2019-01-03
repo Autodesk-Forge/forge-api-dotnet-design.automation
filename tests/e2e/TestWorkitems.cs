@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace E2eTests
@@ -14,7 +15,7 @@ namespace E2eTests
         [Order(Weight = 3.0)]
         public async void WorkItem_Create()
         {
-            using (Fixture.StartTestScope())
+            using (var testScope = Fixture.StartTestScope())
             {
                 var wi = new WorkItem()
                 {
@@ -29,6 +30,16 @@ namespace E2eTests
 
                 var resp = await Fixture.DesignAutomationClient.CreateWorkItemsAsync(wi);
                 Assert.Equal(Status.Pending, resp.Status);
+                while (!resp.Status.IsDone())
+                {
+                    if (testScope.IsRecording)
+                    {
+                        await Task.Delay(TimeSpan.FromSeconds(5));
+                    }
+                    resp = await Fixture.DesignAutomationClient.GetWorkitemStatusAsync(resp.Id);
+                }
+                Assert.Equal(Status.Success, resp.Status);
+                
             }
         }
 
