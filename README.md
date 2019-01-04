@@ -23,8 +23,7 @@ dotnet test Autodesk.ForgeDesignAutmation.sln
 
 ## Overview
 
-Following API classes are provided
-
+For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided:
 [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation/Http/ActivitiesApi.gen.cs),
 [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation/Http/AppBundlesApi.gen.cs),
 [EnginesApi](/src/Autodesk.Forge.DesignAutomation/Http/EnginesApi.gen.cs),
@@ -32,6 +31,7 @@ Following API classes are provided
 [HealthApi](/src/Autodesk.Forge.DesignAutomation/Http/HealthApi.gen.cs),
 [SharesApi](/src/Autodesk.Forge.DesignAutomation/Http/SharesApi.gen.cs),
 [WorkItemsApi](/src/Autodesk.Forge.DesignAutomation/Http/WorkItemsApi.gen.cs)
+.
 
 This SDK depends on the [Autodesk.Forge.Core](https://git.autodesk.com/design-automation/Autodesk.Forge.Core) assembly which provides services such as:
 1. Acquisition of [2 legged oauth token](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) (and refreshing it when it expires)
