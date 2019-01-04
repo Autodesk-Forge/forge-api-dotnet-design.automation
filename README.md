@@ -23,7 +23,7 @@ dotnet test Autodesk.ForgeDesignAutmation.sln
 
 ## Overview
 
-For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided:
+For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/Autodesk.Forge.DesignAutomation/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided:
 [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation/Http/ActivitiesApi.gen.cs),
 [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation/Http/AppBundlesApi.gen.cs),
 [EnginesApi](/src/Autodesk.Forge.DesignAutomation/Http/EnginesApi.gen.cs),
