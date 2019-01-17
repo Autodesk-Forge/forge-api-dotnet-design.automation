@@ -22,5 +22,5 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
-Autodesk.Forge.DesignAutomation.sln
+Autodesk.Forge.DesignAutomation.Rsdk.sln
 README.md
