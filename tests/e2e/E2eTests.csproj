@@ -32,11 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj" />
+    <Folder Include="recordings\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="recordings\" />
+    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation.Rsdk\Autodesk.Forge.DesignAutomation.Rsdk.csproj" />
   </ItemGroup>
 
 </Project>

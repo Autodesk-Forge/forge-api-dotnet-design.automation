@@ -9,8 +9,8 @@
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
     <Version>1.0.0-alpha1</Version>
-    <AssemblyName>Autodesk.Forge.DesignAutomation</AssemblyName>
-    <RootNamespace>Autodesk.Forge.DesignAutomation</RootNamespace>
+    <AssemblyName>Autodesk.Forge.DesignAutomation.Rsdk</AssemblyName>
+    <RootNamespace>Autodesk.Forge.DesignAutomation.Rsdk</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

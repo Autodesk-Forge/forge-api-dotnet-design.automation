@@ -34,7 +34,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Autodesk.Forge.Core\src\Autodesk.Forge.Core.E2eTestHelpers\Autodesk.Forge.Core.E2eTestHelpers.csproj" />
-    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation_CoreSource.csproj" />
+    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation.Rsdk\Autodesk.Forge.DesignAutomation_CoreSource.csproj" />
   </ItemGroup>
 
   <ItemGroup>
