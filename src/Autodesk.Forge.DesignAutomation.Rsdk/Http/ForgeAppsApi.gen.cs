@@ -47,7 +47,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk.Http
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        System.Threading.Tasks.Task<HttpResponseMessage> DeleteUserAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<HttpResponseMessage> DeleteForgeAppAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
         /// Returns the user&#39;s (app) nickname. Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk.Http
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteUserAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteForgeAppAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {

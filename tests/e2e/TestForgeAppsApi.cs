@@ -34,7 +34,7 @@ namespace E2eTests
         {
             using (Fixture.StartTestScope())
             {
-                await this.Fixture.DesignAutomationClient.DeleteUserAsync("me");
+                await this.Fixture.DesignAutomationClient.DeleteForgeAppAsync("me");
             }
         }
 

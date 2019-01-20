@@ -270,7 +270,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <param name="aliasId">Name of alias.</param>
         /// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of Alias</returns>
-        public async System.Threading.Tasks.Task<Alias> ModifyActivityAliasAsync (string id, string aliasId, Alias alias)
+        public async System.Threading.Tasks.Task<Alias> ModifyActivityAliasAsync (string id, string aliasId, AliasPatch alias)
         {
              var response = await this.ActivitiesApi.ModifyActivityAliasAsync(id, aliasId, alias);
              return response.Content;
@@ -433,7 +433,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <param name="aliasId">Name of alias.</param>
         /// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of Alias</returns>
-        public async System.Threading.Tasks.Task<Alias> ModifyAppBundleAliasAsync (string id, string aliasId, Alias alias)
+        public async System.Threading.Tasks.Task<Alias> ModifyAppBundleAliasAsync (string id, string aliasId, AliasPatch alias)
         {
              var response = await this.AppBundlesApi.ModifyAppBundleAliasAsync(id, aliasId, alias);
              return response.Content;
@@ -481,9 +481,9 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUserAsync (string id)
+        public async System.Threading.Tasks.Task DeleteForgeAppAsync (string id)
         {
-             await this.ForgeAppsApi.DeleteUserAsync(id);
+             await this.ForgeAppsApi.DeleteForgeAppAsync(id);
 
         }
         /// <summary>

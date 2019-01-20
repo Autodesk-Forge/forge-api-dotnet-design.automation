@@ -135,7 +135,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk.Http
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Alias>> ModifyAppBundleAliasAsync (string id, string aliasId, Alias alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<ApiResponse<Alias>> ModifyAppBundleAliasAsync (string id, string aliasId, AliasPatch alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
     }
 
     /// <summary>
@@ -874,7 +874,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk.Http
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Alias>> ModifyAppBundleAliasAsync (string id, string aliasId, Alias alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<ApiResponse<Alias>> ModifyAppBundleAliasAsync (string id, string aliasId, AliasPatch alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {
