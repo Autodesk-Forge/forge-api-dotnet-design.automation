@@ -78,10 +78,10 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
 
                 await UploadAppBundleBits(item.UploadParameters, packagePath);
 
-                var resp = await this.appBundlesApi.ModifyAppBundleAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
+                var resp = await this.AppBundlesApi.ModifyAppBundleAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
                 if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
-                    await this.appBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                    await this.AppBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version });
                 }
                 else
                 {
@@ -113,10 +113,10 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
 
                 var item = await this.CreateActivityVersionAsync(id, activity);
 
-                var resp = await this.activitiesApi.ModifyActivityAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
+                var resp = await this.ActivitiesApi.ModifyActivityAliasAsync(id, label, new Alias() { Version = item.Version }, throwOnError: false);
                 if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
-                    await this.activitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                    await this.ActivitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version });
                 }
                 else
                 {

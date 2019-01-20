@@ -28,13 +28,13 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
 {
     public partial class DesignAutomationClient
     {
-        private IActivitiesApi activitiesApi;
-        private IAppBundlesApi appBundlesApi;
-        private IEnginesApi enginesApi;
-        private IForgeAppsApi forgeAppsApi;
-        private IHealthApi healthApi;
-        private ISharesApi sharesApi;
-        private IWorkItemsApi workItemsApi;
+        public IActivitiesApi ActivitiesApi{get;private set;}
+        public IAppBundlesApi AppBundlesApi{get;private set;}
+        public IEnginesApi EnginesApi{get;private set;}
+        public IForgeAppsApi ForgeAppsApi{get;private set;}
+        public IHealthApi HealthApi{get;private set;}
+        public ISharesApi SharesApi{get;private set;}
+        public IWorkItemsApi WorkItemsApi{get;private set;}
         public DesignAutomationClient(ForgeService service = null, IOptions<Configuration> configuration = null, IActivitiesApi activitiesApi = null, IAppBundlesApi appBundlesApi = null, IEnginesApi enginesApi = null, IForgeAppsApi forgeAppsApi = null, IHealthApi healthApi = null, ISharesApi sharesApi = null, IWorkItemsApi workItemsApi = null)
         {
             this.Service = service ?? ForgeService.CreateDefault();
@@ -42,67 +42,67 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
             // set BaseAddress from configuration or default
             this.Service.Client.BaseAddress = configuration?.Value.BaseAddress ?? new Configuration().BaseAddress;
 
-            if (activitiesApi==null)
+            if (this.ActivitiesApi==null)
             {
-                this.activitiesApi = new ActivitiesApi(service, configuration);
+                this.ActivitiesApi = new ActivitiesApi(service, configuration);
             }
             else
             {
-                this.activitiesApi = activitiesApi;
+                this.ActivitiesApi = activitiesApi;
             }
 
-            if (appBundlesApi==null)
+            if (this.AppBundlesApi==null)
             {
-                this.appBundlesApi = new AppBundlesApi(service, configuration);
+                this.AppBundlesApi = new AppBundlesApi(service, configuration);
             }
             else
             {
-                this.appBundlesApi = appBundlesApi;
+                this.AppBundlesApi = appBundlesApi;
             }
 
-            if (enginesApi==null)
+            if (this.EnginesApi==null)
             {
-                this.enginesApi = new EnginesApi(service, configuration);
+                this.EnginesApi = new EnginesApi(service, configuration);
             }
             else
             {
-                this.enginesApi = enginesApi;
+                this.EnginesApi = enginesApi;
             }
 
-            if (forgeAppsApi==null)
+            if (this.ForgeAppsApi==null)
             {
-                this.forgeAppsApi = new ForgeAppsApi(service, configuration);
+                this.ForgeAppsApi = new ForgeAppsApi(service, configuration);
             }
             else
             {
-                this.forgeAppsApi = forgeAppsApi;
+                this.ForgeAppsApi = forgeAppsApi;
             }
 
-            if (healthApi==null)
+            if (this.HealthApi==null)
             {
-                this.healthApi = new HealthApi(service, configuration);
+                this.HealthApi = new HealthApi(service, configuration);
             }
             else
             {
-                this.healthApi = healthApi;
+                this.HealthApi = healthApi;
             }
 
-            if (sharesApi==null)
+            if (this.SharesApi==null)
             {
-                this.sharesApi = new SharesApi(service, configuration);
+                this.SharesApi = new SharesApi(service, configuration);
             }
             else
             {
-                this.sharesApi = sharesApi;
+                this.SharesApi = sharesApi;
             }
 
-            if (workItemsApi==null)
+            if (this.WorkItemsApi==null)
             {
-                this.workItemsApi = new WorkItemsApi(service, configuration);
+                this.WorkItemsApi = new WorkItemsApi(service, configuration);
             }
             else
             {
-                this.workItemsApi = workItemsApi;
+                this.WorkItemsApi = workItemsApi;
             }
 
         }
@@ -121,7 +121,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Activity</returns>
         public async System.Threading.Tasks.Task<Activity> CreateActivityAsync (Activity item)
         {
-             var response = await this.activitiesApi.CreateActivityAsync(item);
+             var response = await this.ActivitiesApi.CreateActivityAsync(item);
              return response.Content;
 
         }
@@ -134,7 +134,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> CreateActivityAliasAsync (string id, Alias alias)
         {
-             var response = await this.activitiesApi.CreateActivityAliasAsync(id, alias);
+             var response = await this.ActivitiesApi.CreateActivityAliasAsync(id, alias);
              return response.Content;
 
         }
@@ -147,7 +147,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Activity</returns>
         public async System.Threading.Tasks.Task<Activity> CreateActivityVersionAsync (string id, Activity item)
         {
-             var response = await this.activitiesApi.CreateActivityVersionAsync(id, item);
+             var response = await this.ActivitiesApi.CreateActivityVersionAsync(id, item);
              return response.Content;
 
         }
@@ -159,7 +159,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteActivityAsync (string id)
         {
-             await this.activitiesApi.DeleteActivityAsync(id);
+             await this.ActivitiesApi.DeleteActivityAsync(id);
 
         }
         /// <summary>
@@ -171,7 +171,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteActivityAliasAsync (string id, string aliasId)
         {
-             await this.activitiesApi.DeleteActivityAliasAsync(id, aliasId);
+             await this.ActivitiesApi.DeleteActivityAliasAsync(id, aliasId);
 
         }
         /// <summary>
@@ -183,7 +183,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteActivityVersionAsync (string id, int version)
         {
-             await this.activitiesApi.DeleteActivityVersionAsync(id, version);
+             await this.ActivitiesApi.DeleteActivityVersionAsync(id, version);
 
         }
         /// <summary>
@@ -195,7 +195,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Activity</returns>
         public async System.Threading.Tasks.Task<Activity> GeActivityVersionAsync (string id, int version)
         {
-             var response = await this.activitiesApi.GeActivityVersionAsync(id, version);
+             var response = await this.ActivitiesApi.GeActivityVersionAsync(id, version);
              return response.Content;
 
         }
@@ -207,7 +207,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<Page<string>> GetActivitiesAsync (string page = null)
         {
-             var response = await this.activitiesApi.GetActivitiesAsync(page);
+             var response = await this.ActivitiesApi.GetActivitiesAsync(page);
              return response.Content;
 
         }
@@ -219,7 +219,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Activity</returns>
         public async System.Threading.Tasks.Task<Activity> GetActivityAsync (string id)
         {
-             var response = await this.activitiesApi.GetActivityAsync(id);
+             var response = await this.ActivitiesApi.GetActivityAsync(id);
              return response.Content;
 
         }
@@ -232,7 +232,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> GetActivityAliasAsync (string id, string aliasId)
         {
-             var response = await this.activitiesApi.GetActivityAliasAsync(id, aliasId);
+             var response = await this.ActivitiesApi.GetActivityAliasAsync(id, aliasId);
              return response.Content;
 
         }
@@ -245,7 +245,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;Alias&gt;</returns>
         public async System.Threading.Tasks.Task<Page<Alias>> GetActivityAliasesAsync (string id, string page = null)
         {
-             var response = await this.activitiesApi.GetActivityAliasesAsync(id, page);
+             var response = await this.ActivitiesApi.GetActivityAliasesAsync(id, page);
              return response.Content;
 
         }
@@ -258,7 +258,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;int&gt;</returns>
         public async System.Threading.Tasks.Task<Page<int>> GetActivityVersionsAsync (string id, string page = null)
         {
-             var response = await this.activitiesApi.GetActivityVersionsAsync(id, page);
+             var response = await this.ActivitiesApi.GetActivityVersionsAsync(id, page);
              return response.Content;
 
         }
@@ -272,7 +272,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> ModifyActivityAliasAsync (string id, string aliasId, Alias alias)
         {
-             var response = await this.activitiesApi.ModifyActivityAliasAsync(id, aliasId, alias);
+             var response = await this.ActivitiesApi.ModifyActivityAliasAsync(id, aliasId, alias);
              return response.Content;
 
         }
@@ -284,7 +284,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of AppBundle</returns>
         public async System.Threading.Tasks.Task<AppBundle> CreateAppBundleAsync (AppBundle item)
         {
-             var response = await this.appBundlesApi.CreateAppBundleAsync(item);
+             var response = await this.AppBundlesApi.CreateAppBundleAsync(item);
              return response.Content;
 
         }
@@ -297,7 +297,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> CreateAppBundleAliasAsync (string id, Alias alias)
         {
-             var response = await this.appBundlesApi.CreateAppBundleAliasAsync(id, alias);
+             var response = await this.AppBundlesApi.CreateAppBundleAliasAsync(id, alias);
              return response.Content;
 
         }
@@ -310,7 +310,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of AppBundle</returns>
         public async System.Threading.Tasks.Task<AppBundle> CreateAppBundleVersionAsync (string id, AppBundle item)
         {
-             var response = await this.appBundlesApi.CreateAppBundleVersionAsync(id, item);
+             var response = await this.AppBundlesApi.CreateAppBundleVersionAsync(id, item);
              return response.Content;
 
         }
@@ -322,7 +322,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAppBundleAsync (string id)
         {
-             await this.appBundlesApi.DeleteAppBundleAsync(id);
+             await this.AppBundlesApi.DeleteAppBundleAsync(id);
 
         }
         /// <summary>
@@ -334,7 +334,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAppBundleAliasAsync (string id, string aliasId)
         {
-             await this.appBundlesApi.DeleteAppBundleAliasAsync(id, aliasId);
+             await this.AppBundlesApi.DeleteAppBundleAliasAsync(id, aliasId);
 
         }
         /// <summary>
@@ -346,7 +346,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteAppBundleVersionAsync (string id, int version)
         {
-             await this.appBundlesApi.DeleteAppBundleVersionAsync(id, version);
+             await this.AppBundlesApi.DeleteAppBundleVersionAsync(id, version);
 
         }
         /// <summary>
@@ -357,7 +357,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of AppBundle</returns>
         public async System.Threading.Tasks.Task<AppBundle> GetAppBundleAsync (string id)
         {
-             var response = await this.appBundlesApi.GetAppBundleAsync(id);
+             var response = await this.AppBundlesApi.GetAppBundleAsync(id);
              return response.Content;
 
         }
@@ -370,7 +370,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> GetAppBundleAliasAsync (string id, string aliasId)
         {
-             var response = await this.appBundlesApi.GetAppBundleAliasAsync(id, aliasId);
+             var response = await this.AppBundlesApi.GetAppBundleAliasAsync(id, aliasId);
              return response.Content;
 
         }
@@ -383,7 +383,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;Alias&gt;</returns>
         public async System.Threading.Tasks.Task<Page<Alias>> GetAppBundleAliasesAsync (string id, string page = null)
         {
-             var response = await this.appBundlesApi.GetAppBundleAliasesAsync(id, page);
+             var response = await this.AppBundlesApi.GetAppBundleAliasesAsync(id, page);
              return response.Content;
 
         }
@@ -396,7 +396,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of AppBundle</returns>
         public async System.Threading.Tasks.Task<AppBundle> GetAppBundleVersionAsync (string id, int version)
         {
-             var response = await this.appBundlesApi.GetAppBundleVersionAsync(id, version);
+             var response = await this.AppBundlesApi.GetAppBundleVersionAsync(id, version);
              return response.Content;
 
         }
@@ -409,7 +409,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;int&gt;</returns>
         public async System.Threading.Tasks.Task<Page<int>> GetAppBundleVersionsAsync (string id, string page = null)
         {
-             var response = await this.appBundlesApi.GetAppBundleVersionsAsync(id, page);
+             var response = await this.AppBundlesApi.GetAppBundleVersionsAsync(id, page);
              return response.Content;
 
         }
@@ -421,7 +421,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<Page<string>> GetAppBundlesAsync (string page = null)
         {
-             var response = await this.appBundlesApi.GetAppBundlesAsync(page);
+             var response = await this.AppBundlesApi.GetAppBundlesAsync(page);
              return response.Content;
 
         }
@@ -435,7 +435,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Alias</returns>
         public async System.Threading.Tasks.Task<Alias> ModifyAppBundleAliasAsync (string id, string aliasId, Alias alias)
         {
-             var response = await this.appBundlesApi.ModifyAppBundleAliasAsync(id, aliasId, alias);
+             var response = await this.AppBundlesApi.ModifyAppBundleAliasAsync(id, aliasId, alias);
              return response.Content;
 
         }
@@ -447,7 +447,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Engine</returns>
         public async System.Threading.Tasks.Task<Engine> GetEngineAsync (string id)
         {
-             var response = await this.enginesApi.GetEngineAsync(id);
+             var response = await this.EnginesApi.GetEngineAsync(id);
              return response.Content;
 
         }
@@ -459,7 +459,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;string&gt;</returns>
         public async System.Threading.Tasks.Task<Page<string>> GetEnginesAsync (string page = null)
         {
-             var response = await this.enginesApi.GetEnginesAsync(page);
+             var response = await this.EnginesApi.GetEnginesAsync(page);
              return response.Content;
 
         }
@@ -472,7 +472,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task CreateNicknameAsync (string id, NicknameRecord nicknameRecord)
         {
-             await this.forgeAppsApi.CreateNicknameAsync(id, nicknameRecord);
+             await this.ForgeAppsApi.CreateNicknameAsync(id, nicknameRecord);
 
         }
         /// <summary>
@@ -483,7 +483,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteUserAsync (string id)
         {
-             await this.forgeAppsApi.DeleteUserAsync(id);
+             await this.ForgeAppsApi.DeleteUserAsync(id);
 
         }
         /// <summary>
@@ -494,7 +494,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> GetNicknameAsync (string id)
         {
-             var response = await this.forgeAppsApi.GetNicknameAsync(id);
+             var response = await this.ForgeAppsApi.GetNicknameAsync(id);
              return response.Content;
 
         }
@@ -506,7 +506,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> HealthStatusAsync (string engine)
         {
-             var response = await this.healthApi.HealthStatusAsync(engine);
+             var response = await this.HealthApi.HealthStatusAsync(engine);
              return response.Content;
 
         }
@@ -518,7 +518,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of Page&lt;Share&gt;</returns>
         public async System.Threading.Tasks.Task<Page<Share>> GetSharesAsync (string page = null)
         {
-             var response = await this.sharesApi.GetSharesAsync(page);
+             var response = await this.SharesApi.GetSharesAsync(page);
              return response.Content;
 
         }
@@ -530,7 +530,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of WorkItemStatus</returns>
         public async System.Threading.Tasks.Task<WorkItemStatus> CreateWorkItemsAsync (WorkItem workitem)
         {
-             var response = await this.workItemsApi.CreateWorkItemsAsync(workitem);
+             var response = await this.WorkItemsApi.CreateWorkItemsAsync(workitem);
              return response.Content;
 
         }
@@ -542,7 +542,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteWorkitemAsync (string id)
         {
-             await this.workItemsApi.DeleteWorkitemAsync(id);
+             await this.WorkItemsApi.DeleteWorkitemAsync(id);
 
         }
         /// <summary>
@@ -553,7 +553,7 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         /// <returns>Task of WorkItemStatus</returns>
         public async System.Threading.Tasks.Task<WorkItemStatus> GetWorkitemStatusAsync (string id)
         {
-             var response = await this.workItemsApi.GetWorkitemStatusAsync(id);
+             var response = await this.WorkItemsApi.GetWorkitemStatusAsync(id);
              return response.Content;
 
         }
