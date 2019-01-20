@@ -37,7 +37,6 @@ namespace Autodesk.Forge.DesignAutomation.Rsdk
         public static IHttpClientBuilder AddDesignAutomation(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<Configuration>(configuration.GetSection("Forge").GetSection("DesignAutomation"));
-            services.AddForgeService(configuration);
             services.AddTransient<IActivitiesApi,ActivitiesApi>();
             services.AddTransient<IAppBundlesApi,AppBundlesApi>();
             services.AddTransient<IEnginesApi,EnginesApi>();
