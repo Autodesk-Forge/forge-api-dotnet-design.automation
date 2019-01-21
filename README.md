@@ -28,7 +28,7 @@ The change log for the SDK can be found in the [changelog file](/changelog.md).
 
 ## Support
 
-Please ask questions on [StackOverflow](https://stackoverflow.com/questions/ask?tags=autodesk-designautomation,csharp) with tag `autodesk-designautomation` tag. If it turns out that you may have found a bug, please open an [issue](/issues).
+Please ask questions on [StackOverflow](https://stackoverflow.com/questions/ask?tags=autodesk-designautomation,csharp) with tag `autodesk-designautomation` tag. If it turns out that you may have found a bug, please open an issue
 
 ## Getting Started
 
@@ -138,7 +138,7 @@ internal class Program
 
 ## Versioning
 
-Using [Semantic Version](https://semver.org/) scheme following the pattern of `w.x.y.z.`:
+Using [Semantic Version](https://semver.org/) scheme following the pattern of `x.y.z.`:
 
 - `x`: MAJOR version when you make incompatible changes,
 - `y`: MINOR version when you add functionality in a backwards-compatible manner, and
