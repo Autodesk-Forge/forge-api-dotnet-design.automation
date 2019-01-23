@@ -11,6 +11,11 @@
     <Version>3.0.0-beta1</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
+	<PackageId>Autodesk.Forge.DesignAutomation</PackageId>
+	<licenseUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/LICENSE</licenseUrl>
+	<projectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</projectUrl>
+	<iconUrl>http://developer.static.autodesk.com/images/logo_forge-2-line.png</iconUrl>
+	<releaseNotes>For full release notes see https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/CHANGELOG.md</releaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
