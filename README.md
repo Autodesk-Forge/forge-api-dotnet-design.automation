@@ -27,6 +27,10 @@ For clients with straightforward needs one high level API client is provided in 
 
 The change log for the SDK can be found in the [changelog file](/changelog.md).
 
+### Contributions
+
+Contributions are welcome! Please open a Pull Request.
+
 ## Support
 
 Please ask questions on [StackOverflow](https://stackoverflow.com/questions/ask?tags=autodesk-designautomation,csharp) with tag `autodesk-designautomation` tag. If it turns out that you may have found a bug, please open an issue
@@ -146,6 +150,8 @@ Using [Semantic Version](https://semver.org/) scheme following the pattern of `x
 - `z`: PATCH version when you make backwards-compatible bug fixes.
 
 ## Source-code
+
+Generated with [swagger-codegen](https://github.com/swagger-api/swagger-codegen).
 
 #### Build
 ```
