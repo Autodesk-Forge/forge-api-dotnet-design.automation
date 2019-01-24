@@ -24,4 +24,4 @@
 
 Autodesk.Forge.DesignAutomation.sln
 README.md
-src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj
+src/Autodesk.Forge.DesignAutomation/Autodesk.Forge.DesignAutomation.csproj
