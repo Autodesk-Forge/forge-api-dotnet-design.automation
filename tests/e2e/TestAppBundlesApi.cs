@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 using Autodesk.Forge.Core.E2eTestHelpers;
-using Autodesk.Forge.DesignAutomation.Rsdk.Model;
+using Autodesk.Forge.DesignAutomation.Model;
 using System;
 using System.IO;
 using Xunit;

@@ -30,7 +30,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Model
+namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
     /// An Engine executes a WorkItem job and processes the actions specified by an Activity. Engines are provided by Autodesk. AppBundles and Activities refer to Engines with their alias, e.g. Autodesk.Revit+23. ( request only ).

@@ -17,8 +17,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using Autodesk.Forge.DesignAutomation.Rsdk.Model;
-using Autodesk.Forge.DesignAutomation.Rsdk.Http;
+using Autodesk.Forge.DesignAutomation.Model;
+using Autodesk.Forge.DesignAutomation.Http;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.IO;
@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System;
 using Autodesk.Forge.Core;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk
+namespace Autodesk.Forge.DesignAutomation
 {
     public partial class DesignAutomationClient
     {

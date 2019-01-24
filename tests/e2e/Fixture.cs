@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 using Autodesk.Forge.Core.E2eTestHelpers;
-using Autodesk.Forge.DesignAutomation.Rsdk;
+using Autodesk.Forge.DesignAutomation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;

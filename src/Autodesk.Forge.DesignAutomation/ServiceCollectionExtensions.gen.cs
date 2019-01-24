@@ -22,9 +22,9 @@
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Autodesk.Forge.DesignAutomation.Rsdk.Http;
+using Autodesk.Forge.DesignAutomation.Http;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk
+namespace Autodesk.Forge.DesignAutomation
 {
     public static class ServiceCollectionExtensions
     {

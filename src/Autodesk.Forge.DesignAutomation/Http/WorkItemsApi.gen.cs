@@ -23,9 +23,9 @@ using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Net.Http;
-using Autodesk.Forge.DesignAutomation.Rsdk.Model;
+using Autodesk.Forge.DesignAutomation.Model;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Http
+namespace Autodesk.Forge.DesignAutomation.Http
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints

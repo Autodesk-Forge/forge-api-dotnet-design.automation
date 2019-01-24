@@ -22,7 +22,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Model
+namespace Autodesk.Forge.DesignAutomation.Model
 {
     public class SettingConverter : CustomCreationConverter<ISetting>
     {

@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.Core", "..\A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.Core.E2eTestHelpers", "..\Autodesk.Forge.Core\src\Autodesk.Forge.Core.E2eTestHelpers\Autodesk.Forge.Core.E2eTestHelpers.csproj", "{848C6D69-E8F1-418C-97C8-98770A33C753}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.DesignAutomation_CoreSource", "src\Autodesk.Forge.DesignAutomation.Rsdk\Autodesk.Forge.DesignAutomation_CoreSource.csproj", "{7EBD137A-2D07-4A26-96B5-1B7DA093FF53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autodesk.Forge.DesignAutomation_CoreSource", "src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation_CoreSource.csproj", "{7EBD137A-2D07-4A26-96B5-1B7DA093FF53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

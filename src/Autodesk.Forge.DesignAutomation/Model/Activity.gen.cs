@@ -30,7 +30,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Model
+namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
     /// Defines an Activity, a type of work, a function: input/outputs, instructions. An Activity is an action that can be executed within an engine. For example, for AutoCAD engine this might be plotting a DWG to PDF or update the CAD standards in a drawing file.

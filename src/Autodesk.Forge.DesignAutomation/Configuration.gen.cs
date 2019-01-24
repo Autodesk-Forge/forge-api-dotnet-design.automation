@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Http;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk
+namespace Autodesk.Forge.DesignAutomation
 {
     /// <summary>
     /// Represents a set of configuration settings

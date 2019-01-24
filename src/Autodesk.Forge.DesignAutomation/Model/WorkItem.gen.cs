@@ -30,7 +30,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Model
+namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
     /// A WorkItem is a specification of the processing job for an Activity, and it is submitted to and executed by an Engine. Note that a WorkItem cannot be modified after it has been created. ( request only ).

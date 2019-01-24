@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation.Rsdk\Autodesk.Forge.DesignAutomation.Rsdk.csproj" />
+    <ProjectReference Include="..\..\src\Autodesk.Forge.DesignAutomation\Autodesk.Forge.DesignAutomation.csproj" />
   </ItemGroup>
 
 </Project>

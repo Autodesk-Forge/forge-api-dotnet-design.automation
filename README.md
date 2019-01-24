@@ -8,8 +8,8 @@
 
 .NET SDK for **Design Automation v3 API**, for more information, please visit  [official documentation](https://forge.autodesk.com/en/docs/design-automation/v3/)
 
-For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/Autodesk.Forge.DesignAutomation.Rsdk/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided: [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/ActivitiesApi.gen.cs), [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/AppBundlesApi.gen.cs), [EnginesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/EnginesApi.gen.cs),
-[ForgeAppsApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/ForgeAppsApi.gen.cs), [HealthApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/HealthApi.gen.cs), [SharesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/SharesApi.gen.cs), [WorkItemsApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/WorkItemsApi.gen.cs).
+For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/Autodesk.Forge.DesignAutomation/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided: [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/ActivitiesApi.gen.cs), [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/AppBundlesApi.gen.cs), [EnginesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/EnginesApi.gen.cs),
+[ForgeAppsApi](/src/Autodesk.Forge.DesignAutomation/Http/ForgeAppsApi.gen.cs), [HealthApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/HealthApi.gen.cs), [SharesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/SharesApi.gen.cs), [WorkItemsApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/WorkItemsApi.gen.cs).
 
 
 ### Requirements
@@ -43,7 +43,7 @@ There are 2 classes that you can use to configure the API:
 
 1. [Autodesk.Forge.Core.ForgeConfiguration](https://github.com/autodesk-forge/forge-api-dotnet-shared/blob/master/src/ForgeConfiguration.cs) - Allows the configuration of Forge client credentials and alternative authentication service endpoint (default is https://developer.api.autodesk.com/authentication/v1/authenticate)
 
-2. [Autodesk.Forge.DesignAutomation.Rsdk.Configuration](src/Autodesk.Forge.DesignAutomation.Rsdk/Configuration.gen.cs)- Allows the configuration of non-default API endpoint (default is https://developer.api.autodesk.com/da/us-east/). 
+2. [Autodesk.Forge.DesignAutomation.Configuration](src/Autodesk.Forge.DesignAutomation/Configuration.gen.cs)- Allows the configuration of non-default API endpoint (default is https://developer.api.autodesk.com/da/us-east/). 
 
 This SDK integrates with the .netcore configuration system. You can configure the above values via any configuration provider (e.g. `appsettings.json` or environment variables).
 For example to set the Forge credentials you could define the following environment variables:
@@ -78,14 +78,14 @@ FORGE_CLIENT_SECRET=<your client secret>
 Please visit [Learn Forge](https://learnforge.autodesk.io/#/tutorials/modifymodels) tutorial.
 
 #### Using dependency injection
-First you must add Autodesk.Forge.DesignAutomation.Rsdk services. This is usually done in `ConfigureServices(...)` method of your Startup class. [More information](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection)
+First you must add Autodesk.Forge.DesignAutomation services. This is usually done in `ConfigureServices(...)` method of your Startup class. [More information](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection)
 
 __NOTE__: This example assumes that you are building an [Asp.Net Core](https://docs.microsoft.com/en-us/aspnet/core/) web api or website. 
 If you want to use dependency injection in a console app then follow [this example](https://keestalkstech.com/2018/04/dependency-injection-with-ioptions-in-console-apps-in-net-core-2/).
 
 ```csharp
-using Autodesk.Forge.DesignAutomation.Rsdk;
-using Autodesk.Forge.DesignAutomation.Rsdk.Model;
+using Autodesk.Forge.DesignAutomation;
+using Autodesk.Forge.DesignAutomation.Model;
 ...
 public void ConfigureServices(IServiceCollection services)
 {
@@ -96,7 +96,7 @@ public void ConfigureServices(IServiceCollection services)
 Then you can use any of the API classes or interfaces in a constructor:
 
 ```csharp
-using Autodesk.Forge.DesignAutomation.Rsdk;
+using Autodesk.Forge.DesignAutomation;
 ...
 public class SomeApiController : ControllerBase
 {
@@ -109,7 +109,7 @@ public class SomeApiController : ControllerBase
 #### By directly creating API objects
 
 ```csharp
-using Autodesk.Forge.DesignAutomation.Rsdk;
+using Autodesk.Forge.DesignAutomation;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Autodesk.Forge.Core;
@@ -148,10 +148,10 @@ Using [Semantic Version](https://semver.org/) scheme following the pattern of `x
 
 #### Build
 ```
-dotnet build Autodesk.Forge.DesignAutomation.Rsdk.sln
+dotnet build Autodesk.Forge.DesignAutomation.sln
 ```
 
 #### Test
 ```
-dotnet test Autodesk.Forge.DesignAutomation.Rsdk.sln
+dotnet test Autodesk.Forge.DesignAutomation.sln
 ```

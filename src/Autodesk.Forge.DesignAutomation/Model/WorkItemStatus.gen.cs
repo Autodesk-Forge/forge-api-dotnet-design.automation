@@ -30,7 +30,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk.Model
+namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
     /// WorkItemStatus

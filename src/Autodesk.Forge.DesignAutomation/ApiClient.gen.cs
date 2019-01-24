@@ -21,10 +21,10 @@
  */
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
-using Autodesk.Forge.DesignAutomation.Rsdk.Http;
-using Autodesk.Forge.DesignAutomation.Rsdk.Model;
+using Autodesk.Forge.DesignAutomation.Http;
+using Autodesk.Forge.DesignAutomation.Model;
 
-namespace Autodesk.Forge.DesignAutomation.Rsdk
+namespace Autodesk.Forge.DesignAutomation
 {
     public partial class DesignAutomationClient
     {
