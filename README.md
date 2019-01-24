@@ -14,17 +14,22 @@ For clients with straightforward needs one high level API client is provided in 
 
 ### Requirements
 
-- .NET Standard 2.0 or later
+- [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions.md) or later
 - A registered app on the [Forge Developer Portal](http://forge.autodesk.com). 
 
 ### Dependencies
 
-- [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) 12.0.1 or later
-- [Autodesk.Forge.Core](https://github.com/autodesk-forge/forge-api-dotnet-shared) assembly which provides services such as: 1. Acquisition of [2 legged oauth token](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) (and refreshing it when it expires) 2. Preconfigurated resiliency patterns (e.g. retry) using [Polly](https://github.com/App-vNext/Polly)
+- [Autodesk.Forge.Core](https://github.com/autodesk-forge/forge-api-dotnet-shared) assembly which provides services such as: 
+    - Acquisition of [2 legged oauth token](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) (and refreshing it when it expires) 
+    - Preconfigurated resiliency patterns (e.g. retry) using [Polly](https://github.com/App-vNext/Polly)
 
 ### Changelog
 
 The change log for the SDK can be found in the [changelog file](/changelog.md).
+
+### Contributions
+
+Contributions are welcome! Please open a Pull Request.
 
 ## Support
 
@@ -145,6 +150,8 @@ Using [Semantic Version](https://semver.org/) scheme following the pattern of `x
 - `z`: PATCH version when you make backwards-compatible bug fixes.
 
 ## Source-code
+
+Generated with [swagger-codegen](https://github.com/swagger-api/swagger-codegen).
 
 #### Build
 ```
