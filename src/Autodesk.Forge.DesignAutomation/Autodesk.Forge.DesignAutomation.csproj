@@ -3,19 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors></Authors>
+    <authors>Autodesk Forge</authors>
+    <owners>Autodesk Forge</owners>
     <Company>Autodesk</Company>
     <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
-    <Version>3.0.0-beta1</Version>
+    <Version>3.0.0-beta2</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
     <PackageId>Autodesk.Forge.DesignAutomation</PackageId>
-    <licenseUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</projectUrl>
-    <iconUrl>http://developer.static.autodesk.com/images/logo_forge-2-line.png</iconUrl>
-    <releaseNotes>For full release notes see https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/CHANGELOG.md</releaseNotes>
+    <PackageLicenseUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</PackageProjectUrl>
+    <PackageIconUrl>http://developer.static.autodesk.com/images/logo_forge-2-line.png</PackageIconUrl>
+    <PackageReleaseNotes>For full release notes see https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/CHANGELOG.md</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
