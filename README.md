@@ -8,8 +8,8 @@
 
 .NET SDK for **Design Automation v3 API**, for more information, please visit  [official documentation](https://forge.autodesk.com/en/docs/design-automation/v3/)
 
-For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/Autodesk.Forge.DesignAutomation/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided: [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/ActivitiesApi.gen.cs), [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/AppBundlesApi.gen.cs), [EnginesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/EnginesApi.gen.cs),
-[ForgeAppsApi](/src/Autodesk.Forge.DesignAutomation/Http/ForgeAppsApi.gen.cs), [HealthApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/HealthApi.gen.cs), [SharesApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/SharesApi.gen.cs), [WorkItemsApi](/src/Autodesk.Forge.DesignAutomation.Rsdk/Http/WorkItemsApi.gen.cs).
+For clients with straightforward needs one high level API client is provided in  [DesignAutomationClient](/src/Autodesk.Forge.DesignAutomation/ApiClient.gen.cs). For clients with more varied needs the following low level API classes are provided: [ActivitiesApi](/src/Autodesk.Forge.DesignAutomation/Http/ActivitiesApi.gen.cs), [AppBundlesApi](/src/Autodesk.Forge.DesignAutomation/Http/AppBundlesApi.gen.cs), [EnginesApi](/src/Autodesk.Forge.DesignAutomation/Http/EnginesApi.gen.cs),
+[ForgeAppsApi](/src/Autodesk.Forge.DesignAutomation/Http/ForgeAppsApi.gen.cs), [HealthApi](/src/Autodesk.Forge.DesignAutomation/Http/HealthApi.gen.cs), [SharesApi](/src/Autodesk.Forge.DesignAutomation/Http/SharesApi.gen.cs), [WorkItemsApi](/src/Autodesk.Forge.DesignAutomation/Http/WorkItemsApi.gen.cs).
 
 
 ### Requirements
