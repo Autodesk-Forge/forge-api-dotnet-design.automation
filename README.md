@@ -19,7 +19,7 @@ For clients with straightforward needs one high level API client is provided in 
 
 ### Dependencies
 
-- [Autodesk.Forge.Core](https://github.com/autodesk-forge/forge-api-dotnet-shared) assembly which provides services such as: 
+- [Autodesk.Forge.Core](https://github.com/autodesk-forge/forge-api-dotnet-core) assembly which provides services such as: 
     - Acquisition of [2 legged oauth token](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/) (and refreshing it when it expires) 
     - Preconfigurated resiliency patterns (e.g. retry) using [Polly](https://github.com/App-vNext/Polly)
 
