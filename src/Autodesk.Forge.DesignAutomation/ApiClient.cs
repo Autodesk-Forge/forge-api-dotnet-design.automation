@@ -18,7 +18,6 @@
  * limitations under the License.
  */
 using Autodesk.Forge.DesignAutomation.Model;
-using Autodesk.Forge.DesignAutomation.Http;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.IO;
@@ -30,7 +29,6 @@ namespace Autodesk.Forge.DesignAutomation
 {
     public partial class DesignAutomationClient
     {
-
         public async Task UploadAppBundleBits(UploadAppBundleParameters uploadParameters, string packagePath)
         {
             using (var formData = new MultipartFormDataContent())
@@ -46,8 +44,15 @@ namespace Autodesk.Forge.DesignAutomation
                 using (var content = new StreamContent(new FileStream(packagePath, FileMode.Open)))
                 {
                     formData.Add(content, "file");
-                    var response = await Service.Client.PostAsync(uploadParameters.EndpointURL, formData);
-                    response.EnsureSuccessStatusCode();
+
+                    using (var request = new HttpRequestMessage(HttpMethod.Post, uploadParameters.EndpointURL) { Content = formData })
+                    {
+                        // increase timeout to 10 minutes
+                        request.Properties.Add(ForgeConfiguration.TimeoutKey, 10 * 60);
+
+                        var response = await Service.Client.SendAsync(request);
+                        response.EnsureSuccessStatusCode();
+                    }
                 }
             }
         }
