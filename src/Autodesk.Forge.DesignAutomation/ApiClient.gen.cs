@@ -42,7 +42,7 @@ namespace Autodesk.Forge.DesignAutomation
             // set BaseAddress from configuration or default
             this.Service.Client.BaseAddress = configuration?.Value.BaseAddress ?? new Configuration().BaseAddress;
 
-            if (this.ActivitiesApi==null)
+            if (activitiesApi==null)
             {
                 this.ActivitiesApi = new ActivitiesApi(service, configuration);
             }
@@ -51,7 +51,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.ActivitiesApi = activitiesApi;
             }
 
-            if (this.AppBundlesApi==null)
+            if (appBundlesApi==null)
             {
                 this.AppBundlesApi = new AppBundlesApi(service, configuration);
             }
@@ -60,7 +60,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.AppBundlesApi = appBundlesApi;
             }
 
-            if (this.EnginesApi==null)
+            if (enginesApi==null)
             {
                 this.EnginesApi = new EnginesApi(service, configuration);
             }
@@ -69,7 +69,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.EnginesApi = enginesApi;
             }
 
-            if (this.ForgeAppsApi==null)
+            if (forgeAppsApi==null)
             {
                 this.ForgeAppsApi = new ForgeAppsApi(service, configuration);
             }
@@ -78,7 +78,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.ForgeAppsApi = forgeAppsApi;
             }
 
-            if (this.HealthApi==null)
+            if (healthApi==null)
             {
                 this.HealthApi = new HealthApi(service, configuration);
             }
@@ -87,7 +87,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.HealthApi = healthApi;
             }
 
-            if (this.SharesApi==null)
+            if (sharesApi==null)
             {
                 this.SharesApi = new SharesApi(service, configuration);
             }
@@ -96,7 +96,7 @@ namespace Autodesk.Forge.DesignAutomation
                 this.SharesApi = sharesApi;
             }
 
-            if (this.WorkItemsApi==null)
+            if (workItemsApi==null)
             {
                 this.WorkItemsApi = new WorkItemsApi(service, configuration);
             }
