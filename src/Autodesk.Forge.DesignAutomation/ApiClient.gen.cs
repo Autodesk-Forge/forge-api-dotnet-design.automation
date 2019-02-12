@@ -28,90 +28,42 @@ namespace Autodesk.Forge.DesignAutomation
 {
     public partial class DesignAutomationClient
     {
-        public IActivitiesApi ActivitiesApi{get;private set;}
-        public IAppBundlesApi AppBundlesApi{get;private set;}
-        public IEnginesApi EnginesApi{get;private set;}
-        public IForgeAppsApi ForgeAppsApi{get;private set;}
-        public IHealthApi HealthApi{get;private set;}
-        public ISharesApi SharesApi{get;private set;}
-        public IWorkItemsApi WorkItemsApi{get;private set;}
-        public DesignAutomationClient(ForgeService service = null, IOptions<Configuration> configuration = null, IActivitiesApi activitiesApi = null, IAppBundlesApi appBundlesApi = null, IEnginesApi enginesApi = null, IForgeAppsApi forgeAppsApi = null, IHealthApi healthApi = null, ISharesApi sharesApi = null, IWorkItemsApi workItemsApi = null)
-        {
-            this.Service = service ?? ForgeService.CreateDefault();
-
-            // set BaseAddress from configuration or default
-            this.Service.Client.BaseAddress = configuration?.Value.BaseAddress ?? new Configuration().BaseAddress;
-
-            if (this.ActivitiesApi==null)
-            {
-                this.ActivitiesApi = new ActivitiesApi(service, configuration);
-            }
-            else
-            {
-                this.ActivitiesApi = activitiesApi;
-            }
-
-            if (this.AppBundlesApi==null)
-            {
-                this.AppBundlesApi = new AppBundlesApi(service, configuration);
-            }
-            else
-            {
-                this.AppBundlesApi = appBundlesApi;
-            }
-
-            if (this.EnginesApi==null)
-            {
-                this.EnginesApi = new EnginesApi(service, configuration);
-            }
-            else
-            {
-                this.EnginesApi = enginesApi;
-            }
-
-            if (this.ForgeAppsApi==null)
-            {
-                this.ForgeAppsApi = new ForgeAppsApi(service, configuration);
-            }
-            else
-            {
-                this.ForgeAppsApi = forgeAppsApi;
-            }
-
-            if (this.HealthApi==null)
-            {
-                this.HealthApi = new HealthApi(service, configuration);
-            }
-            else
-            {
-                this.HealthApi = healthApi;
-            }
-
-            if (this.SharesApi==null)
-            {
-                this.SharesApi = new SharesApi(service, configuration);
-            }
-            else
-            {
-                this.SharesApi = sharesApi;
-            }
-
-            if (this.WorkItemsApi==null)
-            {
-                this.WorkItemsApi = new WorkItemsApi(service, configuration);
-            }
-            else
-            {
-                this.WorkItemsApi = workItemsApi;
-            }
-
-        }
+        public IActivitiesApi ActivitiesApi { get; }
+        public IAppBundlesApi AppBundlesApi { get; }
+        public IEnginesApi EnginesApi { get; }
+        public IForgeAppsApi ForgeAppsApi { get; }
+        public IHealthApi HealthApi { get; }
+        public ISharesApi SharesApi { get; }
+        public IWorkItemsApi WorkItemsApi { get; }
 
         /// <summary>
-        /// Gets or sets the configuration object
+        /// Gets or sets the ForgeService object
         /// </summary>
         /// <value>An instance of the ForgeService</value>
-        public ForgeService Service {get; set;}
+        public ForgeService Service { get; set; }
+
+        /// <summary>
+        /// Gets the configuration object.
+        /// </summary>
+        public Configuration Configuration { get; }
+
+        public DesignAutomationClient(ForgeService service = null, IOptions<Configuration> configuration = null, IActivitiesApi activitiesApi = null, IAppBundlesApi appBundlesApi = null, IEnginesApi enginesApi = null, IForgeAppsApi forgeAppsApi = null, IHealthApi healthApi = null, ISharesApi sharesApi = null, IWorkItemsApi workItemsApi = null)
+        {
+            this.Configuration = configuration?.Value ?? new Configuration();
+
+            this.Service = service ?? ForgeService.CreateDefault();
+
+            // set BaseAddress from configuration
+            this.Service.Client.BaseAddress = Configuration.BaseAddress;
+
+            this.ActivitiesApi = activitiesApi ?? new ActivitiesApi(service, configuration);
+            this.AppBundlesApi = appBundlesApi ?? new AppBundlesApi(service, configuration);
+            this.EnginesApi = enginesApi ?? new EnginesApi(service, configuration);
+            this.ForgeAppsApi = forgeAppsApi ?? new ForgeAppsApi(service, configuration);
+            this.HealthApi = healthApi ?? new HealthApi(service, configuration);
+            this.SharesApi = sharesApi ?? new SharesApi(service, configuration);
+            this.WorkItemsApi = workItemsApi ?? new WorkItemsApi(service, configuration);
+        }
 
         /// <summary>
         /// Creates a new Activity. Creates a new Activity.              Limits (varies by Engine):              1. Number of Activities that can be created.
