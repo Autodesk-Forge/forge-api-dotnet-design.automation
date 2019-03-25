@@ -17,6 +17,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+using Autodesk.Forge.Core;
 using Autodesk.Forge.Core.E2eTestHelpers;
 using Autodesk.Forge.DesignAutomation;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,7 @@ namespace E2eTests
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.user.json", optional: true)
                 .AddEnvironmentVariables()
+                .AddForgeAlternativeEnvironmentVariables()
                 .Build();
 
             DataFolder = Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\data\\");
