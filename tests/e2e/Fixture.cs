@@ -43,8 +43,8 @@ namespace E2eTests
                 .AddForgeAlternativeEnvironmentVariables()
                 .Build();
 
-            DataFolder = Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\data\\");
-            this.testHandler = new TestHandler(Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\recordings\\"));
+            DataFolder = Path.Combine(Environment.CurrentDirectory, "../../../data/");
+            this.testHandler = new TestHandler(Path.Combine(Environment.CurrentDirectory, "../../../recordings/"));
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddDesignAutomation(configuration).ConfigurePrimaryHttpMessageHandler(() =>
             {
