@@ -3,6 +3,7 @@
 [![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/) 
 ![SDK](https://img.shields.io/badge/SDK-3.0.0-lightgree.svg)
 ![.NET](https://img.shields.io/badge/.NET%20Standard-2.0-blue.svg)
+![BUILD](https://codebuild.us-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoid1B4Tzk5R1h1emxsZjBjQm5NODNtYVgvL1drWnk3TVprN0MrK3YvTHBmcEk0UVphdzN3dVlvZktlcFA5S2V4NytvL3dmcXVwQkRnZXQwQkYrdXdWK29vPSIsIml2UGFyYW1ldGVyU3BlYyI6ImwyUXA0ODM0VFBBZnR0N2MiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
 ## Overview
 
