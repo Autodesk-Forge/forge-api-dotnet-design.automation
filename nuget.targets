@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Push the nuget package that this project builds to nuget.org
+  Ignore exit code so failures including the value of NugetApiKey do not get echo-ed.
+  Continue on errors. Publishing can fail if the package version isn't updated and we get conflict.
+  -->
+  <Target Name="Push" DependsOnTargets="Pack">
+    <Exec Command="dotnet nuget push @(NuGetPackOutput->WithMetadataValue('Extension','.nupkg')) -k=$(NugetApiKey) -s nuget.org"  
+          IgnoreExitCode="true"
+          ContinueOnError="true"/>
+  </Target>
+</Project>
