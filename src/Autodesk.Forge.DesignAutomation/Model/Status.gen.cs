@@ -60,34 +60,34 @@ namespace Autodesk.Forge.DesignAutomation.Model
         Cancelled = 3,
         
         /// <summary>
-        /// Enum FailedDownload for value: failedDownload
+        /// Enum FailedLimitDataSize for value: failedLimitDataSize
         /// </summary>
-        [EnumMember(Value = "failedDownload")]
-        FailedDownload = 4,
-        
-        /// <summary>
-        /// Enum FailedInstructions for value: failedInstructions
-        /// </summary>
-        [EnumMember(Value = "failedInstructions")]
-        FailedInstructions = 5,
-        
-        /// <summary>
-        /// Enum FailedUpload for value: failedUpload
-        /// </summary>
-        [EnumMember(Value = "failedUpload")]
-        FailedUpload = 6,
+        [EnumMember(Value = "failedLimitDataSize")]
+        FailedLimitDataSize = 4,
         
         /// <summary>
         /// Enum FailedLimitProcessingTime for value: failedLimitProcessingTime
         /// </summary>
         [EnumMember(Value = "failedLimitProcessingTime")]
-        FailedLimitProcessingTime = 7,
+        FailedLimitProcessingTime = 5,
         
         /// <summary>
-        /// Enum FailedLimitDataSize for value: failedLimitDataSize
+        /// Enum FailedDownload for value: failedDownload
         /// </summary>
-        [EnumMember(Value = "failedLimitDataSize")]
-        FailedLimitDataSize = 8,
+        [EnumMember(Value = "failedDownload")]
+        FailedDownload = 6,
+        
+        /// <summary>
+        /// Enum FailedInstructions for value: failedInstructions
+        /// </summary>
+        [EnumMember(Value = "failedInstructions")]
+        FailedInstructions = 7,
+        
+        /// <summary>
+        /// Enum FailedUpload for value: failedUpload
+        /// </summary>
+        [EnumMember(Value = "failedUpload")]
+        FailedUpload = 8,
         
         /// <summary>
         /// Enum Success for value: success

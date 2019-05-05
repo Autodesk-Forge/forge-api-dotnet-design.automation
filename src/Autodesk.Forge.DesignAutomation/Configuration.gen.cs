@@ -20,13 +20,6 @@
  * limitations under the License.
  */
 using System;
-using System.Reflection;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Net.Http;
 
 namespace Autodesk.Forge.DesignAutomation
 {
@@ -46,6 +39,6 @@ namespace Autodesk.Forge.DesignAutomation
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public Uri BaseAddress { get; set;}
+        public Uri BaseAddress { get; set; }
     }
 }

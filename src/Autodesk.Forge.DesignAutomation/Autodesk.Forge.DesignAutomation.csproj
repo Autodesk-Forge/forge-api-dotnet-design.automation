@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
@@ -9,7 +9,7 @@
     <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
-    <Version>3.0.0-beta3</Version>
+    <Version>3.0.0-beta4</Version>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <FileVersion>3.0.0.0</FileVersion>
     <PackageId>Autodesk.Forge.DesignAutomation</PackageId>

@@ -41,7 +41,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> CreateNicknameAsync (string id, NicknameRecord nicknameRecord, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This action is required prior to using the &#39;PATCH /forgeapps/me&#39; endpoint when changing the nickname for the current Forge app,.
+        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
@@ -143,7 +143,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This action is required prior to using the &#39;PATCH /forgeapps/me&#39; endpoint when changing the nickname for the current Forge app,.
+        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>

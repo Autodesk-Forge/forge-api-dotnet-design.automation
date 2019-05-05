@@ -60,14 +60,23 @@ namespace Autodesk.Forge.DesignAutomation.Model
         public UploadAppBundleParameters UploadParameters { get; set; }
 
         /// <summary>
-        /// Gets or Sets Engine
+        /// Name of AppBundle, see the example section.
         /// </summary>
+        /// <value>Name of AppBundle, see the example section.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// The actual processing engine that runs the WorkItem job and processes the Activity.
+        /// </summary>
+        /// <value>The actual processing engine that runs the WorkItem job and processes the Activity.</value>
         [DataMember(Name="engine", EmitDefaultValue=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// Gets or Sets Appbundles
+        /// A module referenced by an Activity in order to perform specific functions. Typically this is a DLL or some other form of custom code.
         /// </summary>
+        /// <value>A module referenced by an Activity in order to perform specific functions. Typically this is a DLL or some other form of custom code.</value>
         [DataMember(Name="appbundles", EmitDefaultValue=false)]
         public List<string> Appbundles { get; set; }
 
@@ -90,12 +99,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int Version { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

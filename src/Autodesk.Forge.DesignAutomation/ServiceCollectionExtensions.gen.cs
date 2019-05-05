@@ -42,6 +42,7 @@ namespace Autodesk.Forge.DesignAutomation
             services.AddTransient<IEnginesApi,EnginesApi>();
             services.AddTransient<IForgeAppsApi,ForgeAppsApi>();
             services.AddTransient<IHealthApi,HealthApi>();
+            services.AddTransient<IServiceLimitsApi,ServiceLimitsApi>();
             services.AddTransient<ISharesApi,SharesApi>();
             services.AddTransient<IWorkItemsApi,WorkItemsApi>();
             services.AddTransient<DesignAutomationClient>();

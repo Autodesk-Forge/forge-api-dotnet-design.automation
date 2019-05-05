@@ -47,7 +47,7 @@ namespace E2eTests
                     }
                 };
 
-                var resp = await Fixture.DesignAutomationClient.CreateWorkItemsAsync(wi);
+                var resp = await Fixture.DesignAutomationClient.CreateWorkItemAsync(wi);
                 Assert.Equal(Status.Pending, resp.Status);
                 while (!resp.Status.IsDone())
                 {

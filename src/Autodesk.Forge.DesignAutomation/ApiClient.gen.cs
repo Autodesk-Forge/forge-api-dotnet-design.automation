@@ -23,6 +23,7 @@ using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
 using Autodesk.Forge.DesignAutomation.Http;
 using Autodesk.Forge.DesignAutomation.Model;
+using System.Collections.Generic;
 
 namespace Autodesk.Forge.DesignAutomation
 {
@@ -33,6 +34,7 @@ namespace Autodesk.Forge.DesignAutomation
         public IEnginesApi EnginesApi { get; }
         public IForgeAppsApi ForgeAppsApi { get; }
         public IHealthApi HealthApi { get; }
+        public IServiceLimitsApi ServiceLimitsApi { get; }
         public ISharesApi SharesApi { get; }
         public IWorkItemsApi WorkItemsApi { get; }
 
@@ -47,7 +49,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// </summary>
         public Configuration Configuration { get; }
 
-        public DesignAutomationClient(ForgeService service = null, IOptions<Configuration> configuration = null, IActivitiesApi activitiesApi = null, IAppBundlesApi appBundlesApi = null, IEnginesApi enginesApi = null, IForgeAppsApi forgeAppsApi = null, IHealthApi healthApi = null, ISharesApi sharesApi = null, IWorkItemsApi workItemsApi = null)
+        public DesignAutomationClient(ForgeService service = null, IOptions<Configuration> configuration = null, IActivitiesApi activities = null, IAppBundlesApi appBundles = null, IEnginesApi engines = null, IForgeAppsApi forgeApps = null, IHealthApi health = null, IServiceLimitsApi serviceLimits = null, ISharesApi shares = null, IWorkItemsApi workItems = null)
         {
             this.Configuration = configuration?.Value ?? new Configuration();
 
@@ -56,13 +58,14 @@ namespace Autodesk.Forge.DesignAutomation
             // set BaseAddress from configuration
             this.Service.Client.BaseAddress = Configuration.BaseAddress;
 
-            this.ActivitiesApi = activitiesApi ?? new ActivitiesApi(service, configuration);
-            this.AppBundlesApi = appBundlesApi ?? new AppBundlesApi(service, configuration);
-            this.EnginesApi = enginesApi ?? new EnginesApi(service, configuration);
-            this.ForgeAppsApi = forgeAppsApi ?? new ForgeAppsApi(service, configuration);
-            this.HealthApi = healthApi ?? new HealthApi(service, configuration);
-            this.SharesApi = sharesApi ?? new SharesApi(service, configuration);
-            this.WorkItemsApi = workItemsApi ?? new WorkItemsApi(service, configuration);
+            this.ActivitiesApi = activities ?? new ActivitiesApi(service, configuration);
+            this.AppBundlesApi = appBundles ?? new AppBundlesApi(service, configuration);
+            this.EnginesApi = engines ?? new EnginesApi(service, configuration);
+            this.ForgeAppsApi = forgeApps ?? new ForgeAppsApi(service, configuration);
+            this.HealthApi = health ?? new HealthApi(service, configuration);
+            this.ServiceLimitsApi = serviceLimits ?? new ServiceLimitsApi(service, configuration);
+            this.SharesApi = shares ?? new SharesApi(service, configuration);
+            this.WorkItemsApi = workItems ?? new WorkItemsApi(service, configuration);
         }
 
         /// <summary>
@@ -428,7 +431,7 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This action is required prior to using the &#39;PATCH /forgeapps/me&#39; endpoint when changing the nickname for the current Forge app,.
+        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
@@ -463,6 +466,31 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
+        /// Get the service limit configuration. Gets a user&#39;s service limit configuration.
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="owner">The user to fetch the service limit configuration for.</param>
+        /// <returns>Task of ServiceLimit</returns>
+        public async System.Threading.Tasks.Task<ServiceLimit> GeServiceLimitAsync (string owner)
+        {
+             var response = await this.ServiceLimitsApi.GeServiceLimitAsync(owner);
+             return response.Content;
+
+        }
+        /// <summary>
+        /// Creates a new service limits configuration or updates exiting. Creates a new service limits configuration or updates exiting.
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="owner">The user to associate the configuration to.</param>
+        /// <param name="item"></param>
+        /// <returns>Task of ServiceLimit</returns>
+        public async System.Threading.Tasks.Task<ServiceLimit> ModifyServiceLimitAsync (string owner, ServiceLimit item)
+        {
+             var response = await this.ServiceLimitsApi.ModifyServiceLimitAsync(owner, item);
+             return response.Content;
+
+        }
+        /// <summary>
         /// Gets all Shares (AppBundles and Activities) shared by this Forge app. Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
@@ -475,14 +503,26 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the  queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="workitem"></param>
+        /// <param name="workItem"></param>
         /// <returns>Task of WorkItemStatus</returns>
-        public async System.Threading.Tasks.Task<WorkItemStatus> CreateWorkItemsAsync (WorkItem workitem)
+        public async System.Threading.Tasks.Task<WorkItemStatus> CreateWorkItemAsync (WorkItem workItem)
         {
-             var response = await this.WorkItemsApi.CreateWorkItemsAsync(workitem);
+             var response = await this.WorkItemsApi.CreateWorkItemAsync(workItem);
+             return response.Content;
+
+        }
+        /// <summary>
+        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="workItems"></param>
+        /// <returns>Task of List&lt;WorkItemStatus&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WorkItemStatus>> CreateWorkItemsBatchAsync (List<WorkItem> workItems)
+        {
+             var response = await this.WorkItemsApi.CreateWorkItemsBatchAsync(workItems);
              return response.Content;
 
         }

@@ -33,52 +33,53 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// A WorkItem is a specification of the processing job for an Activity, and it is submitted to and executed by an Engine. Note that a WorkItem cannot be modified after it has been created. ( request only ).
+    /// BackendLimits
     /// </summary>
     [DataContract]
-    public partial class WorkItem 
+    public partial class BackendLimits 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItem" /> class.
+        /// Initializes a new instance of the <see cref="BackendLimits" /> class.
         /// </summary>
-        public WorkItem()
+        public BackendLimits()
         {
         }
         
         /// <summary>
-        /// Gets Id.
+        /// Gets or Sets LimitDownloads
         /// </summary>
-        /// <value>Gets Id.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        [DataMember(Name="limitDownloads", EmitDefaultValue=false)]
+        public int LimitDownloads { get; set; }
 
         /// <summary>
-        /// Reference to the Activity that this WorkItem will invoke.  Examples: &#x60;MyPlot+Prod&#x60; (an Activity created by the caller) or  &#x60;Autodesk.PlotToPdf&#x60; (an Activity created by someone else and shared with this caller).
+        /// Gets or Sets LimitUploads
         /// </summary>
-        /// <value>Reference to the Activity that this WorkItem will invoke.  Examples: &#x60;MyPlot+Prod&#x60; (an Activity created by the caller) or  &#x60;Autodesk.PlotToPdf&#x60; (an Activity created by someone else and shared with this caller).</value>
-        [DataMember(Name="activityId", EmitDefaultValue=false)]
-        public string ActivityId { get; set; }
+        [DataMember(Name="limitUploads", EmitDefaultValue=false)]
+        public int LimitUploads { get; set; }
 
         /// <summary>
-        /// Arguments of the WorkItem.
+        /// Gets or Sets LimitDownloadSizeMB
         /// </summary>
-        /// <value>Arguments of the WorkItem.</value>
-        [DataMember(Name="arguments", EmitDefaultValue=false)]
-        public Dictionary<string, IArgument> Arguments { get; set; }
+        [DataMember(Name="limitDownloadSizeMB", EmitDefaultValue=false)]
+        public int LimitDownloadSizeMB { get; set; }
 
         /// <summary>
-        /// Signatures for various WorkItem attributes.
+        /// Gets or Sets LimitUploadSizeMB
         /// </summary>
-        /// <value>Signatures for various WorkItem attributes.</value>
-        [DataMember(Name="signatures", EmitDefaultValue=false)]
-        public WorkItemSignatures Signatures { get; set; }
+        [DataMember(Name="limitUploadSizeMB", EmitDefaultValue=false)]
+        public int LimitUploadSizeMB { get; set; }
 
         /// <summary>
-        /// Max duration of processing in seconds per workitem (includes download and upload time).
+        /// Gets or Sets LimitProcessingTimeSec
         /// </summary>
-        /// <value>Max duration of processing in seconds per workitem (includes download and upload time).</value>
         [DataMember(Name="limitProcessingTimeSec", EmitDefaultValue=false)]
         public int LimitProcessingTimeSec { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LimitTotalUncompressedAppsSizeInMB
+        /// </summary>
+        [DataMember(Name="limitTotalUncompressedAppsSizeInMB", EmitDefaultValue=false)]
+        public int LimitTotalUncompressedAppsSizeInMB { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

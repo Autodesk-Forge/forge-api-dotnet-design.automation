@@ -33,13 +33,21 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IWorkItemsApi
     {
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the  queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="workitem"></param>
+        /// <param name="workItem"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> CreateWorkItemsAsync (WorkItem workitem, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> CreateWorkItemAsync (WorkItem workItem, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        /// <summary>
+        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="workItems"></param>
+        /// <returns>Task of ApiResponse<List&lt;WorkItemStatus&gt;></returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<WorkItemStatus>>> CreateWorkItemsBatchAsync (List<WorkItem> workItems, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
         /// Cancels a specific WorkItem. Cancels a specific WorkItem.  If the WorkItem is on the queue, it is removed from the queue and not processed.  If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.  If the WorkItem has already finished processing, then it has no effect on the processing or results.
         /// </summary>
@@ -84,13 +92,13 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the  queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="workitem"></param>
+        /// <param name="workItem"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> CreateWorkItemsAsync (WorkItem workitem, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> CreateWorkItemAsync (WorkItem workItem, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {
@@ -111,7 +119,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
                     }
                 }
 
-                request.Content = Marshalling.Serialize(workitem); // http body (model) parameter
+                request.Content = Marshalling.Serialize(workItem); // http body (model) parameter
 
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
@@ -138,6 +146,64 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 }
 
                 return new ApiResponse<WorkItemStatus>(response, await Marshalling.DeserializeAsync<WorkItemStatus>(response.Content));
+
+            } // using
+        }
+        /// <summary>
+        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="workItems"></param>
+        /// <returns>Task of ApiResponse<List&lt;WorkItemStatus&gt;></returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<WorkItemStatus>>> CreateWorkItemsBatchAsync (List<WorkItem> workItems, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        {
+            using (var request = new HttpRequestMessage())
+            {
+                request.RequestUri = 
+                    Marshalling.BuildRequestUri("/v3/workitems/batch", 
+                        routeParameters: new Dictionary<string, object> {
+                        },
+                        queryParameters: new Dictionary<string, object> {
+                        }
+                    );
+
+                request.Headers.TryAddWithoutValidation("Accept", "application/json");
+                if (headers!=null)
+                {
+                    foreach (var header in headers)
+                    {
+                        request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                    }
+                }
+
+                request.Content = Marshalling.Serialize(workItems); // http body (model) parameter
+
+                // tell the underlying pipeline what scope we'd like to use
+                if (scopes == null)
+                {
+                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                }
+                else
+                {
+                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                }
+
+                request.Method = new HttpMethod("POST");
+
+                // make the HTTP request
+                var response = await this.Service.Client.SendAsync(request);
+
+                if (throwOnError)
+                {
+                    await response.EnsureSuccessStatusCodeAsync();
+                }
+                else if (!response.IsSuccessStatusCode)
+                {
+                    return new ApiResponse<List<WorkItemStatus>>(response, default(List<WorkItemStatus>));
+                }
+
+                return new ApiResponse<List<WorkItemStatus>>(response, await Marshalling.DeserializeAsync<List<WorkItemStatus>>(response.Content));
 
             } // using
         }
