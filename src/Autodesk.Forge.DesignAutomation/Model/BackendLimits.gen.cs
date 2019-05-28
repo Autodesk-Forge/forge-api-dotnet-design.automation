@@ -49,37 +49,37 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Gets or Sets LimitDownloads
         /// </summary>
         [DataMember(Name="limitDownloads", EmitDefaultValue=false)]
-        public int LimitDownloads { get; set; }
+        public int? LimitDownloads { get; set; }
 
         /// <summary>
         /// Gets or Sets LimitUploads
         /// </summary>
         [DataMember(Name="limitUploads", EmitDefaultValue=false)]
-        public int LimitUploads { get; set; }
+        public int? LimitUploads { get; set; }
 
         /// <summary>
         /// Gets or Sets LimitDownloadSizeMB
         /// </summary>
         [DataMember(Name="limitDownloadSizeMB", EmitDefaultValue=false)]
-        public int LimitDownloadSizeMB { get; set; }
+        public int? LimitDownloadSizeMB { get; set; }
 
         /// <summary>
         /// Gets or Sets LimitUploadSizeMB
         /// </summary>
         [DataMember(Name="limitUploadSizeMB", EmitDefaultValue=false)]
-        public int LimitUploadSizeMB { get; set; }
+        public int? LimitUploadSizeMB { get; set; }
 
         /// <summary>
         /// Gets or Sets LimitProcessingTimeSec
         /// </summary>
         [DataMember(Name="limitProcessingTimeSec", EmitDefaultValue=false)]
-        public int LimitProcessingTimeSec { get; set; }
+        public int? LimitProcessingTimeSec { get; set; }
 
         /// <summary>
         /// Gets or Sets LimitTotalUncompressedAppsSizeInMB
         /// </summary>
         [DataMember(Name="limitTotalUncompressedAppsSizeInMB", EmitDefaultValue=false)]
-        public int LimitTotalUncompressedAppsSizeInMB { get; set; }
+        public int? LimitTotalUncompressedAppsSizeInMB { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

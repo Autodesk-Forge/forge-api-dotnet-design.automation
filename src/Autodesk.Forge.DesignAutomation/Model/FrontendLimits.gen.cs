@@ -50,35 +50,35 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>Max permitted size for App/Activity/Workitem json payload in kilobytes. Default is 16KB.</value>
         [DataMember(Name="limitPayloadSizeInKB", EmitDefaultValue=false)]
-        public int LimitPayloadSizeInKB { get; set; }
+        public int? LimitPayloadSizeInKB { get; set; }
 
         /// <summary>
         /// Max permitted number of App/Activity versions a client can have at any one time. Default is 100.
         /// </summary>
         /// <value>Max permitted number of App/Activity versions a client can have at any one time. Default is 100.</value>
         [DataMember(Name="limitVersions", EmitDefaultValue=false)]
-        public int LimitVersions { get; set; }
+        public int? LimitVersions { get; set; }
 
         /// <summary>
         /// Max permitted number of aliases that a client can have at any one time. Default is 100.
         /// </summary>
         /// <value>Max permitted number of aliases that a client can have at any one time. Default is 100.</value>
         [DataMember(Name="limitAliases", EmitDefaultValue=false)]
-        public int LimitAliases { get; set; }
+        public int? LimitAliases { get; set; }
 
         /// <summary>
         /// Max permitted number of public aliases that a client can have at any one time. Default is 0.
         /// </summary>
         /// <value>Max permitted number of public aliases that a client can have at any one time. Default is 0.</value>
         [DataMember(Name="limitPublicAliases", EmitDefaultValue=false)]
-        public int LimitPublicAliases { get; set; }
+        public int? LimitPublicAliases { get; set; }
 
         /// <summary>
         /// Max permitted size of an App upload in megabytes.
         /// </summary>
         /// <value>Max permitted size of an App upload in megabytes.</value>
         [DataMember(Name="limitAppUploadSizeInMB", EmitDefaultValue=false)]
-        public int LimitAppUploadSizeInMB { get; set; }
+        public int? LimitAppUploadSizeInMB { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
