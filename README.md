@@ -26,7 +26,7 @@ For clients with straightforward needs one high level API client is provided in 
 
 ### Changelog
 
-The change log for the SDK can be found in the [changelog file](/changelog.md).
+The change log for the SDK can be found [here](../../releases).
 
 ### Contributions
 
