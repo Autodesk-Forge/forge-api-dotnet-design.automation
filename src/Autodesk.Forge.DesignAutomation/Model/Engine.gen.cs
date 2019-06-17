@@ -70,7 +70,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int Version { get; set; }
+        public int? Version { get; set; }
 
         /// <summary>
         /// Gets or Sets Id

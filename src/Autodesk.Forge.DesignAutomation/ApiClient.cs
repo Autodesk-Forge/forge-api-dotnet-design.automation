@@ -69,7 +69,7 @@ namespace Autodesk.Forge.DesignAutomation
 
             await UploadAppBundleBits(item.UploadParameters, packagePath);
 
-            await this.CreateAppBundleAliasAsync(app.Id, new Alias() { Id = label, Version = item.Version });
+            await this.CreateAppBundleAliasAsync(app.Id, new Alias() { Id = label, Version = item.Version.Value });
         }
 
         public async Task<int> UpdateAppBundleAsync(AppBundle app, string label, string packagePath)
@@ -82,17 +82,17 @@ namespace Autodesk.Forge.DesignAutomation
 
                 await UploadAppBundleBits(item.UploadParameters, packagePath);
 
-                var resp = await this.AppBundlesApi.ModifyAppBundleAliasAsync(id, label, new AliasPatch() { Version = item.Version }, throwOnError: false);
+                var resp = await this.AppBundlesApi.ModifyAppBundleAliasAsync(id, label, new AliasPatch() { Version = item.Version.Value }, throwOnError: false);
                 if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
-                    await this.AppBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                    await this.AppBundlesApi.CreateAppBundleAliasAsync(id, new Alias() { Id = label, Version = item.Version.Value });
                 }
                 else
                 {
                     await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
                 }
 
-                return item.Version;
+                return item.Version.Value;
             }
             finally
             {
@@ -105,7 +105,7 @@ namespace Autodesk.Forge.DesignAutomation
             // Create the activity
             var response = await this.CreateActivityAsync(activity);
             // and assign an alias
-            await this.CreateActivityAliasAsync(activity.Id, new Alias() { Id = label , Version = response.Version });
+            await this.CreateActivityAliasAsync(activity.Id, new Alias() { Id = label , Version = response.Version.Value });
         }
 
         public async Task<int> UpdateActivityAsync(Activity activity, string label)
@@ -117,17 +117,17 @@ namespace Autodesk.Forge.DesignAutomation
 
                 var item = await this.CreateActivityVersionAsync(id, activity);
 
-                var resp = await this.ActivitiesApi.ModifyActivityAliasAsync(id, label, new AliasPatch() { Version = item.Version }, throwOnError: false);
+                var resp = await this.ActivitiesApi.ModifyActivityAliasAsync(id, label, new AliasPatch() { Version = item.Version.Value }, throwOnError: false);
                 if (resp.HttpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
-                    await this.ActivitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version });
+                    await this.ActivitiesApi.CreateActivityAliasAsync(id, new Alias() { Id = label, Version = item.Version.Value });
                 }
                 else
                 {
                     await resp.HttpResponse.EnsureSuccessStatusCodeAsync();
                 }
 
-                return item.Version;
+                return item.Version.Value;
             }
             finally
             {

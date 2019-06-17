@@ -33,7 +33,7 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// ISetting
+    /// Marker interface for bound argument types, we may add methods here if we find something useful.
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(SettingConverter))]

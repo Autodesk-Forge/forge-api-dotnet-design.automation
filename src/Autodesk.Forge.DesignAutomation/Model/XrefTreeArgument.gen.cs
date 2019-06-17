@@ -46,20 +46,23 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets Optional
+        /// Argument optionality. Failure to download optional input arguments is OK. Failure to find or upload optional output arguments is OK. Defaults to false.
         /// </summary>
+        /// <value>Argument optionality. Failure to download optional input arguments is OK. Failure to find or upload optional output arguments is OK. Defaults to false.</value>
         [DataMember(Name="optional", EmitDefaultValue=false)]
         public bool Optional { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocalName
+        /// The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name. See Activity.instructions for more information.
         /// </summary>
+        /// <value>The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name. See Activity.instructions for more information.</value>
         [DataMember(Name="localName", EmitDefaultValue=false)]
         public string LocalName { get; set; }
 
         /// <summary>
-        /// Gets or Sets PathInZip
+        /// Denotes the &#39;main file&#x60; in a zip. See Activity.instructions for more information. If the url does not point to a zip the this parameter is ignored. The parameter references a zip file. This is how this is interpreted in various scenarios: 1. verb&#x3D;&#x3D;get implies that the byte stream should be unzipped to a folder designated by localName. 2. verb&#x3D;&#x3D;put, patch, post the contents of the file or folder designated by localName will be zipped and sent. 3. Any other verb values result in an error.
         /// </summary>
+        /// <value>Denotes the &#39;main file&#x60; in a zip. See Activity.instructions for more information. If the url does not point to a zip the this parameter is ignored. The parameter references a zip file. This is how this is interpreted in various scenarios: 1. verb&#x3D;&#x3D;get implies that the byte stream should be unzipped to a folder designated by localName. 2. verb&#x3D;&#x3D;put, patch, post the contents of the file or folder designated by localName will be zipped and sent. 3. Any other verb values result in an error.</value>
         [DataMember(Name="pathInZip", EmitDefaultValue=false)]
         public string PathInZip { get; set; }
 
@@ -70,20 +73,23 @@ namespace Autodesk.Forge.DesignAutomation.Model
         public List<XrefTreeArgument> References { get; set; }
 
         /// <summary>
-        /// Gets or Sets Url
+        /// Url.
         /// </summary>
+        /// <value>Url.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or Sets Headers
+        /// Headers.
         /// </summary>
+        /// <value>Headers.</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// Gets or Sets Verb
+        /// The HTTP verb to be used.
         /// </summary>
+        /// <value>The HTTP verb to be used.</value>
         [DataMember(Name="verb", EmitDefaultValue=false)]
         public Verb Verb { get; set; }
 

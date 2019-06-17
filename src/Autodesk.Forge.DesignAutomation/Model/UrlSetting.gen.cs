@@ -46,20 +46,23 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets Url
+        /// Url.
         /// </summary>
+        /// <value>Url.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or Sets Headers
+        /// Headers.
         /// </summary>
+        /// <value>Headers.</value>
         [DataMember(Name="headers", EmitDefaultValue=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// Gets or Sets Verb
+        /// The HTTP verb to be used.
         /// </summary>
+        /// <value>The HTTP verb to be used.</value>
         [DataMember(Name="verb", EmitDefaultValue=false)]
         public Verb Verb { get; set; }
 

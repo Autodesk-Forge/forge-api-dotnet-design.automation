@@ -33,7 +33,7 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// IArgument
+    /// This interface must be implemented by all workitem arguments.
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(ArgumentConverter))]

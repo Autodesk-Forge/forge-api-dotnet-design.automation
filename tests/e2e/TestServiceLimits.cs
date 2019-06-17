@@ -32,7 +32,7 @@ namespace E2eTests
         {
             using (Fixture.StartTestScope())
             {
-                await this.Fixture.DesignAutomationClient.GeServiceLimitAsync("me");
+                await this.Fixture.DesignAutomationClient.GetServiceLimitAsync("me");
             }
         }
 
@@ -42,7 +42,7 @@ namespace E2eTests
         {
             using (Fixture.StartTestScope())
             {
-                await this.Fixture.DesignAutomationClient.ModifyServiceLimitAsync("me", new ServiceLimit() {
+                await this.Fixture.DesignAutomationClient.ModifyServiceLimitsAsync("me", new ServiceLimit() {
                     BackendLimits = new Dictionary<string, BackendLimits>() {
                         { "AutoCAD", new BackendLimits() { LimitProcessingTimeSec = 300 } }
                     }

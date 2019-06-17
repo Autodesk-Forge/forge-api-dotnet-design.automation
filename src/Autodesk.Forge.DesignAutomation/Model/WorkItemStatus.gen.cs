@@ -46,26 +46,30 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets Status
+        /// The current status of the workitem.
         /// </summary>
+        /// <value>The current status of the workitem.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public Status Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Progress
+        /// The current status of the workitem.
         /// </summary>
+        /// <value>The current status of the workitem.</value>
         [DataMember(Name="progress", EmitDefaultValue=false)]
         public string Progress { get; set; }
 
         /// <summary>
-        /// Gets or Sets ReportUrl
+        /// The detailed report about the workitem, report url is valid for 24 hours from first receiving it.
         /// </summary>
+        /// <value>The detailed report about the workitem, report url is valid for 24 hours from first receiving it.</value>
         [DataMember(Name="reportUrl", EmitDefaultValue=false)]
         public string ReportUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets Stats
+        /// Basic statistics about workitem processing.
         /// </summary>
+        /// <value>Basic statistics about workitem processing.</value>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public Statistics Stats { get; set; }
 

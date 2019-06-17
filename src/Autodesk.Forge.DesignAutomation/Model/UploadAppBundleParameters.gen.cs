@@ -46,14 +46,16 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets EndpointURL
+        /// The URL to upload the AppBundle package to.
         /// </summary>
+        /// <value>The URL to upload the AppBundle package to.</value>
         [DataMember(Name="endpointURL", EmitDefaultValue=false)]
         public string EndpointURL { get; set; }
 
         /// <summary>
-        /// Gets or Sets FormData
+        /// FormData parameters to be used in the body of the AppBundle package upload request. Must be followed by a &#39;file&#39; parameter indicating the package file location.
         /// </summary>
+        /// <value>FormData parameters to be used in the body of the AppBundle package upload request. Must be followed by a &#39;file&#39; parameter indicating the package file location.</value>
         [DataMember(Name="formData", EmitDefaultValue=false)]
         public Dictionary<string, string> FormData { get; set; }
 

@@ -33,7 +33,7 @@ using Newtonsoft.Json.Converters;
 namespace Autodesk.Forge.DesignAutomation.Model
 {
     /// <summary>
-    /// BackendLimits
+    /// Helper class used in the following property.
     /// </summary>
     [DataContract]
     public partial class BackendLimits 
@@ -46,40 +46,46 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets LimitDownloads
+        /// Max number of downloads per workitem.
         /// </summary>
+        /// <value>Max number of downloads per workitem.</value>
         [DataMember(Name="limitDownloads", EmitDefaultValue=false)]
-        public int LimitDownloads { get; set; }
+        public int? LimitDownloads { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitUploads
+        /// Max number of uploads per workitem.
         /// </summary>
+        /// <value>Max number of uploads per workitem.</value>
         [DataMember(Name="limitUploads", EmitDefaultValue=false)]
-        public int LimitUploads { get; set; }
+        public int? LimitUploads { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitDownloadSizeMB
+        /// Max total size of all downloads in MB per workitem.
         /// </summary>
+        /// <value>Max total size of all downloads in MB per workitem.</value>
         [DataMember(Name="limitDownloadSizeMB", EmitDefaultValue=false)]
-        public int LimitDownloadSizeMB { get; set; }
+        public int? LimitDownloadSizeMB { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitUploadSizeMB
+        /// Max total size of all uploads in MB per workitem.
         /// </summary>
+        /// <value>Max total size of all uploads in MB per workitem.</value>
         [DataMember(Name="limitUploadSizeMB", EmitDefaultValue=false)]
-        public int LimitUploadSizeMB { get; set; }
+        public int? LimitUploadSizeMB { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitProcessingTimeSec
+        /// Max duration of processing in seconds per workitem (includes download and upload time).
         /// </summary>
+        /// <value>Max duration of processing in seconds per workitem (includes download and upload time).</value>
         [DataMember(Name="limitProcessingTimeSec", EmitDefaultValue=false)]
-        public int LimitProcessingTimeSec { get; set; }
+        public int? LimitProcessingTimeSec { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitTotalUncompressedAppsSizeInMB
+        /// Max permitted size of all Apps referenced by an activity. It is enforced when you post a workitem. Default is 500.
         /// </summary>
+        /// <value>Max permitted size of all Apps referenced by an activity. It is enforced when you post a workitem. Default is 500.</value>
         [DataMember(Name="limitTotalUncompressedAppsSizeInMB", EmitDefaultValue=false)]
-        public int LimitTotalUncompressedAppsSizeInMB { get; set; }
+        public int? LimitTotalUncompressedAppsSizeInMB { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

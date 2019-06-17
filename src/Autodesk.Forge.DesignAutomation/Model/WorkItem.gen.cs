@@ -46,9 +46,9 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets Id.
+        /// Id.
         /// </summary>
-        /// <value>Gets Id.</value>
+        /// <value>Id.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -78,7 +78,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>Max duration of processing in seconds per workitem (includes download and upload time).</value>
         [DataMember(Name="limitProcessingTimeSec", EmitDefaultValue=false)]
-        public int LimitProcessingTimeSec { get; set; }
+        public int? LimitProcessingTimeSec { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

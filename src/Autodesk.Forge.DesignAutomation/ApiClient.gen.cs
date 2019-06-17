@@ -466,14 +466,25 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
+        /// Deletes user service limits. 
+        /// </summary>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="owner"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteServiceLimitsAsync (string owner)
+        {
+             await this.ServiceLimitsApi.DeleteServiceLimitsAsync(owner);
+
+        }
+        /// <summary>
         /// Get the service limit configuration. Gets a user&#39;s service limit configuration.
         /// </summary>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to fetch the service limit configuration for.</param>
         /// <returns>Task of ServiceLimit</returns>
-        public async System.Threading.Tasks.Task<ServiceLimit> GeServiceLimitAsync (string owner)
+        public async System.Threading.Tasks.Task<ServiceLimit> GetServiceLimitAsync (string owner)
         {
-             var response = await this.ServiceLimitsApi.GeServiceLimitAsync(owner);
+             var response = await this.ServiceLimitsApi.GetServiceLimitAsync(owner);
              return response.Content;
 
         }
@@ -484,9 +495,9 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="owner">The user to associate the configuration to.</param>
         /// <param name="item"></param>
         /// <returns>Task of ServiceLimit</returns>
-        public async System.Threading.Tasks.Task<ServiceLimit> ModifyServiceLimitAsync (string owner, ServiceLimit item)
+        public async System.Threading.Tasks.Task<ServiceLimit> ModifyServiceLimitsAsync (string owner, ServiceLimit item)
         {
-             var response = await this.ServiceLimitsApi.ModifyServiceLimitAsync(owner, item);
+             var response = await this.ServiceLimitsApi.ModifyServiceLimitsAsync(owner, item);
              return response.Content;
 
         }

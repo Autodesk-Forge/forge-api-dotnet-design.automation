@@ -46,52 +46,60 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Gets or Sets TimeQueued
+        /// The time in UTC when the workitem was queued.
         /// </summary>
+        /// <value>The time in UTC when the workitem was queued.</value>
         [DataMember(Name="timeQueued", EmitDefaultValue=false)]
-        public DateTime TimeQueued { get; set; }
+        public DateTime? TimeQueued { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeDownloadStarted
+        /// The time in UTC when the system started processing the workitem by transferring input data to the processing node.
         /// </summary>
+        /// <value>The time in UTC when the system started processing the workitem by transferring input data to the processing node.</value>
         [DataMember(Name="timeDownloadStarted", EmitDefaultValue=false)]
-        public DateTime TimeDownloadStarted { get; set; }
+        public DateTime? TimeDownloadStarted { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeInstructionsStarted
+        /// The time in UTC when the system finished downloading input and started processing instructions from the Activity associated with this workitem.
         /// </summary>
+        /// <value>The time in UTC when the system finished downloading input and started processing instructions from the Activity associated with this workitem.</value>
         [DataMember(Name="timeInstructionsStarted", EmitDefaultValue=false)]
-        public DateTime TimeInstructionsStarted { get; set; }
+        public DateTime? TimeInstructionsStarted { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeInstructionsEnded
+        /// The time in UTC when the system finished executing instructions and started uploading outputs.
         /// </summary>
+        /// <value>The time in UTC when the system finished executing instructions and started uploading outputs.</value>
         [DataMember(Name="timeInstructionsEnded", EmitDefaultValue=false)]
-        public DateTime TimeInstructionsEnded { get; set; }
+        public DateTime? TimeInstructionsEnded { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeUploadEnded
+        /// The time in UTC when the system finished uploading outputs.
         /// </summary>
+        /// <value>The time in UTC when the system finished uploading outputs.</value>
         [DataMember(Name="timeUploadEnded", EmitDefaultValue=false)]
-        public DateTime TimeUploadEnded { get; set; }
+        public DateTime? TimeUploadEnded { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeFinished
+        /// The time in UTC when the system finished the workitem and reported the status.
         /// </summary>
+        /// <value>The time in UTC when the system finished the workitem and reported the status.</value>
         [DataMember(Name="timeFinished", EmitDefaultValue=false)]
-        public DateTime TimeFinished { get; set; }
+        public DateTime? TimeFinished { get; set; }
 
         /// <summary>
-        /// Gets or Sets BytesDownloaded
+        /// The file size of bytes the job downloads for input.
         /// </summary>
+        /// <value>The file size of bytes the job downloads for input.</value>
         [DataMember(Name="bytesDownloaded", EmitDefaultValue=false)]
-        public long BytesDownloaded { get; set; }
+        public long? BytesDownloaded { get; set; }
 
         /// <summary>
-        /// Gets or Sets BytesUploaded
+        /// The file size of bytes the job uploads for output.
         /// </summary>
+        /// <value>The file size of bytes the job uploads for output.</value>
         [DataMember(Name="bytesUploaded", EmitDefaultValue=false)]
-        public long BytesUploaded { get; set; }
+        public long? BytesUploaded { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
