@@ -60,9 +60,9 @@ namespace Autodesk.Forge.DesignAutomation.Model
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// Arguments of the WorkItem.
+        /// Arguments of the WorkItem. Named parameters of an Activity have corresponding named arguments of a WorkItem.
         /// </summary>
-        /// <value>Arguments of the WorkItem.</value>
+        /// <value>Arguments of the WorkItem. Named parameters of an Activity have corresponding named arguments of a WorkItem.</value>
         [DataMember(Name="arguments", EmitDefaultValue=false)]
         public Dictionary<string, IArgument> Arguments { get; set; }
 

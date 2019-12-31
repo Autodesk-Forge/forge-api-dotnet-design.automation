@@ -33,16 +33,22 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IEnginesApi
     {
         /// <summary>
-        /// Gets the details of the specified Engine. Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Engine.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Engine (owner.name+label).</param>
         /// <returns>Task of ApiResponse<Engine></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Engine>> GetEngineAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all available Engines. Lists all available Engines.
+        /// Lists all available Engines.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Engines.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>
@@ -76,8 +82,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Gets the details of the specified Engine. Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Engine.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Engine (owner.name+label).</param>
         /// <returns>Task of ApiResponse<Engine></returns>
@@ -134,8 +143,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all available Engines. Lists all available Engines.
+        /// Lists all available Engines.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Engines.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>

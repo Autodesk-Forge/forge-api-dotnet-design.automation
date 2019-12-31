@@ -69,8 +69,11 @@ namespace Autodesk.Forge.DesignAutomation
         }
 
         /// <summary>
-        /// Creates a new Activity. Creates a new Activity.              Limits (varies by Engine):              1. Number of Activities that can be created.
+        /// Creates a new Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new Activity.                             Limits (varies by Engine):                             1. Number of Activities that can be created.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of Activity</returns>
@@ -81,8 +84,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new alias for this Activity. Creates a new alias for this Activity.              Limit:              1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this Activity.                             Limit:                             1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="alias">{ id : {anyname}, version : {version number}, receiver : [{id of other Forge app},...] }.</param>
@@ -94,8 +100,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new version of the Activity. Creates a new version of the Activity.              Limit:              1. Number of versions (LimitVersions).
+        /// Creates a new version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the Activity.                             Limit:                             1. Number of versions (LimitVersions).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="item"></param>
@@ -107,8 +116,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the specified Activity. Deletes the specified Activity, including all versions and aliases.
+        /// Deletes the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified Activity, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <returns>Task of void</returns>
@@ -118,8 +130,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="aliasId">Name of alias to delete.</param>
@@ -130,8 +145,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the specified version of the Activity. Deletes the specified version of the Activity.
+        /// Deletes the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="version">Version to delete (integer).</param>
@@ -142,8 +160,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets the details of the specified version of the Activity. Gets the details of the specified version of the Activity.
+        /// Gets the details of the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="version">Version to retrieve (integer).</param>
@@ -155,8 +176,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all available Activities. Lists all available Activities, including Activities shared with this Forge app.
+        /// Lists all available Activities.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Activities, including Activities shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of Page&lt;string&gt;</returns>
@@ -167,8 +191,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets the details of the specified Activity. Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Activity (owner.name+label).</param>
         /// <returns>Task of Activity</returns>
@@ -179,8 +206,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Gets alias details.
         /// </summary>
+        /// <remarks>
+        /// Gets alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="aliasId">Name of alias.</param>
@@ -192,8 +222,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all aliases for the specified Activity. Lists all aliases for the specified Activity.
+        /// Lists all aliases for the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
@@ -205,8 +238,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all versions of the specified Activity. Lists all versions of the specified Activity.
+        /// Lists all versions of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
@@ -218,8 +254,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modifies alias details.
         /// </summary>
+        /// <remarks>
+        /// Modifies alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="aliasId">Name of alias.</param>
@@ -232,8 +271,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new AppBundle. Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              | The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of AppBundle</returns>
@@ -244,8 +286,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new alias for this AppBundle. Creates a new alias for this AppBundle. Limit: 1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this AppBundle.                Limit:  1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="alias"></param>
@@ -257,10 +302,13 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new version of the AppBundle. Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of app (unqualified).</param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="item"></param>
         /// <returns>Task of AppBundle</returns>
         public async System.Threading.Tasks.Task<AppBundle> CreateAppBundleVersionAsync (string id, AppBundle item)
@@ -270,8 +318,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the specified AppBundle. Deletes the specified AppBundle, including all versions and aliases.
+        /// Deletes the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified AppBundle, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <returns>Task of void</returns>
@@ -281,8 +332,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="aliasId">Name of alias to delete.</param>
@@ -293,8 +347,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes the specified version of the AppBundle. Deletes the specified version of the AppBundle.
+        /// Deletes the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="version">Version to delete (as integer).</param>
@@ -305,8 +362,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets the details of the specified AppBundle. Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the AppBundle (owner.name+label).</param>
         /// <returns>Task of AppBundle</returns>
@@ -317,8 +377,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Get alias details.
         /// </summary>
+        /// <remarks>
+        /// Get alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="aliasId">Name of alias.</param>
@@ -330,10 +393,13 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all aliases for the specified AppBundle. Lists all aliases for the specified AppBundle.
+        /// Lists all aliases for the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of activity (unqualified).</param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of Page&lt;Alias&gt;</returns>
         public async System.Threading.Tasks.Task<Page<Alias>> GetAppBundleAliasesAsync (string id, string page = null)
@@ -343,8 +409,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets the details of the specified version of the AppBundle. Gets the details of the specified version of the AppBundle.
+        /// Gets the details of the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="version">Version to retrieve (as integer).</param>
@@ -356,8 +425,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all versions of the specified AppBundle. Lists all versions of the specified AppBundle.
+        /// Lists all versions of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
@@ -369,8 +441,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all available AppBundles. Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// Lists all available AppBundles.
         /// </summary>
+        /// <remarks>
+        /// Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of Page&lt;string&gt;</returns>
@@ -381,8 +456,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modify alias details.
         /// </summary>
+        /// <remarks>
+        /// Modify alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         /// <param name="aliasId">Name of alias.</param>
@@ -395,8 +473,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets the details of the specified Engine. Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Engine.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Engine. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Engine (owner.name+label).</param>
         /// <returns>Task of Engine</returns>
@@ -407,8 +488,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Lists all available Engines. Lists all available Engines.
+        /// Lists all available Engines.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Engines.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of Page&lt;string&gt;</returns>
@@ -419,8 +503,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates/updates the nickname for the current Forge app. Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// Creates/updates the nickname for the current Forge app.
         /// </summary>
+        /// <remarks>
+        /// Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <param name="nicknameRecord">new nickname (public key is for internal use only).</param>
@@ -431,8 +518,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// Delete all data associated with this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <returns>Task of void</returns>
@@ -442,8 +532,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Returns the user&#39;s (app) nickname. Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// Returns the user&#39;s (app) nickname.
         /// </summary>
+        /// <remarks>
+        /// Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <returns>Task of string</returns>
@@ -454,8 +547,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        ///  Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="engine"></param>
         /// <returns>Task of string</returns>
@@ -466,19 +562,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Deletes user service limits. 
+        /// Get the service limit configuration.
         /// </summary>
-        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="owner"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteServiceLimitsAsync (string owner)
-        {
-             await this.ServiceLimitsApi.DeleteServiceLimitsAsync(owner);
-
-        }
-        /// <summary>
-        /// Get the service limit configuration. Gets a user&#39;s service limit configuration.
-        /// </summary>
+        /// <remarks>
+        /// Gets a user&#39;s service limit configuration.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to fetch the service limit configuration for.</param>
         /// <returns>Task of ServiceLimit</returns>
@@ -489,8 +577,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new service limits configuration or updates exiting. Creates a new service limits configuration or updates exiting.
+        /// Creates a new service limits configuration or updates an exiting one.
         /// </summary>
+        /// <remarks>
+        /// User can only update the following 2 properties:                - frontendLimits.limitMonthlyProcessingTimeInHours  - backendLimits[/engine/].limitProcessingTimeSec                LimitProcessingTimeSec cannot be set greater than the maximum processing time limit specified by the engine.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to associate the configuration to.</param>
         /// <param name="item"></param>
@@ -502,8 +593,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Gets all Shares (AppBundles and Activities) shared by this Forge app. Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Used to get subsequent &#39;pages&#39; of data. (optional)</param>
         /// <returns>Task of Page&lt;Share&gt;</returns>
@@ -514,8 +608,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItem is always placed on a queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItem"></param>
         /// <returns>Task of WorkItemStatus</returns>
@@ -526,8 +623,11 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates new WorkItems and queues them for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItems are always placed on the queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItems"></param>
         /// <returns>Task of List&lt;WorkItemStatus&gt;</returns>
@@ -538,19 +638,25 @@ namespace Autodesk.Forge.DesignAutomation
 
         }
         /// <summary>
-        /// Cancels a specific WorkItem. Cancels a specific WorkItem.  If the WorkItem is on the queue, it is removed from the queue and not processed.  If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.  If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// Cancels a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Cancels a specific WorkItem.                If the WorkItem is on the queue, it is removed from the queue and not processed.                If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.                If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkitemAsync (string id)
+        public async System.Threading.Tasks.Task DeleteWorkItemAsync (string id)
         {
-             await this.WorkItemsApi.DeleteWorkitemAsync(id);
+             await this.WorkItemsApi.DeleteWorkItemAsync(id);
 
         }
         /// <summary>
-        /// Gets the status of a specific WorkItem. Gets the status of a specific WorkItem.  Typically used to &#39;poll&#39; for              the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for              an alternative that does not require &#39;polling&#39;.  WorkItem status is retained              for a limited period of time after the WorkItem completes.              Limits:              1. Retention period (LimitWorkItemRetentionPeriod).
+        /// Gets the status of a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Gets the status of a specific WorkItem.                Typically used to &#39;poll&#39; for the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for  an alternative that does not require &#39;polling&#39;.                WorkItem status is retained for a limited period of time after the WorkItem completes.                Limits:                1. Retention period (LimitWorkItemRetentionPeriod).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of WorkItemStatus</returns>

@@ -33,8 +33,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IHealthApi
     {
         /// <summary>
-        ///  Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="engine"></param>
         /// <returns>Task of ApiResponse<string></returns>
@@ -68,8 +71,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        ///  Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// 
         /// </summary>
+        /// <remarks>
+        /// Gets the health status by Engine or for all Engines (Inventor, AutoCAD ...).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="engine"></param>
         /// <returns>Task of ApiResponse<string></returns>

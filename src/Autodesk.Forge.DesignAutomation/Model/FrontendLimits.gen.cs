@@ -81,6 +81,13 @@ namespace Autodesk.Forge.DesignAutomation.Model
         public int? LimitAppUploadSizeInMB { get; set; }
 
         /// <summary>
+        /// Max commulative engine usage by client in a given calendar month. This limit applies to all engines. For example, if the limit is set to 1 hour then 30 minutes of Revit usage and 30 minutes of Inventor usage will reach limit.
+        /// </summary>
+        /// <value>Max commulative engine usage by client in a given calendar month. This limit applies to all engines. For example, if the limit is set to 1 hour then 30 minutes of Revit usage and 30 minutes of Inventor usage will reach limit.</value>
+        [DataMember(Name="limitMonthlyProcessingTimeInHours", EmitDefaultValue=false)]
+        public int? LimitMonthlyProcessingTimeInHours { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

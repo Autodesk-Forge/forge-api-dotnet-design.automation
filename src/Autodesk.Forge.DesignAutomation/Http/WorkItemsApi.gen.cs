@@ -33,32 +33,44 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IWorkItemsApi
     {
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItem is always placed on a queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItem"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
         
         System.Threading.Tasks.Task<ApiResponse<WorkItemStatus>> CreateWorkItemAsync (WorkItem workItem, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates new WorkItems and queues them for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItems are always placed on the queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItems"></param>
         /// <returns>Task of ApiResponse<List&lt;WorkItemStatus&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<WorkItemStatus>>> CreateWorkItemsBatchAsync (List<WorkItem> workItems, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Cancels a specific WorkItem. Cancels a specific WorkItem.  If the WorkItem is on the queue, it is removed from the queue and not processed.  If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.  If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// Cancels a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Cancels a specific WorkItem.                If the WorkItem is on the queue, it is removed from the queue and not processed.                If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.                If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkItemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Gets the status of a specific WorkItem. Gets the status of a specific WorkItem.  Typically used to &#39;poll&#39; for              the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for              an alternative that does not require &#39;polling&#39;.  WorkItem status is retained              for a limited period of time after the WorkItem completes.              Limits:              1. Retention period (LimitWorkItemRetentionPeriod).
+        /// Gets the status of a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Gets the status of a specific WorkItem.                Typically used to &#39;poll&#39; for the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for  an alternative that does not require &#39;polling&#39;.                WorkItem status is retained for a limited period of time after the WorkItem completes.                Limits:                1. Retention period (LimitWorkItemRetentionPeriod).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
@@ -92,8 +104,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Creates a new WorkItem and queues it for processing. Creates a new WorkItem and queues it for processing.  The new WorkItem is always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates a new WorkItem and queues it for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItem is always placed on a queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItem"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>
@@ -150,8 +165,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates new WorkItems and queues them for processing. Creates one or more  WorkItems and queues them for processing.  The new WorkItems are always placed on the queue; no further action is necessary.                Limits (Engine-specific):                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).
+        /// Creates new WorkItems and queues them for processing.
         /// </summary>
+        /// <remarks>
+        /// The new WorkItems are always placed on the queue and later picked up by an engine.                The following limits apply:                Per-engine. These limits are enforced when the engine processes the workitem.                1. Number of downloads (LimitDownloads)  2. Number of uploads (LimitUploads)  3. Total download size (LimitDownloadSize)  4. Total upload size (LimitUploadSize)  5. Processing time (LimitProcessingTime)  6. Total size of uncompressed bits for all referenced appbundles (LimitTotalUncompressedAppsSizePerActivity).                Service wide. These limits are enforced during workitem submission.                7. Total processing time per month (LimitMonthlyProcessingTimeInHours).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="workItems"></param>
         /// <returns>Task of ApiResponse<List&lt;WorkItemStatus&gt;></returns>
@@ -208,13 +226,16 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Cancels a specific WorkItem. Cancels a specific WorkItem.  If the WorkItem is on the queue, it is removed from the queue and not processed.  If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.  If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// Cancels a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Cancels a specific WorkItem.                If the WorkItem is on the queue, it is removed from the queue and not processed.                If the WorkItem is already being processed, then it may or may not be interrupted and cancelled.                If the WorkItem has already finished processing, then it has no effect on the processing or results.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         
         /// <returns>Task of HttpResponseMessage</returns>
-        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkitemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteWorkItemAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {
@@ -266,8 +287,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Gets the status of a specific WorkItem. Gets the status of a specific WorkItem.  Typically used to &#39;poll&#39; for              the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for              an alternative that does not require &#39;polling&#39;.  WorkItem status is retained              for a limited period of time after the WorkItem completes.              Limits:              1. Retention period (LimitWorkItemRetentionPeriod).
+        /// Gets the status of a specific WorkItem.
         /// </summary>
+        /// <remarks>
+        /// Gets the status of a specific WorkItem.                Typically used to &#39;poll&#39; for the completion of a WorkItem, but see the use of the &#39;onComplete&#39; argument for  an alternative that does not require &#39;polling&#39;.                WorkItem status is retained for a limited period of time after the WorkItem completes.                Limits:                1. Retention period (LimitWorkItemRetentionPeriod).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse<WorkItemStatus></returns>

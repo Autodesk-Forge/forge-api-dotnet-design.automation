@@ -33,24 +33,33 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IForgeAppsApi
     {
         /// <summary>
-        /// Creates/updates the nickname for the current Forge app. Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// Creates/updates the nickname for the current Forge app.
         /// </summary>
+        /// <remarks>
+        /// Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>/// <param name="nicknameRecord">new nickname (public key is for internal use only).</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> CreateNicknameAsync (string id, NicknameRecord nicknameRecord, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// Delete all data associated with this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteForgeAppAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Returns the user&#39;s (app) nickname. Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// Returns the user&#39;s (app) nickname.
         /// </summary>
+        /// <remarks>
+        /// Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <returns>Task of ApiResponse<string></returns>
@@ -84,8 +93,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Creates/updates the nickname for the current Forge app. Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// Creates/updates the nickname for the current Forge app.
         /// </summary>
+        /// <remarks>
+        /// Creates/updates the nickname for the current Forge app.  The nickname is  used as a clearer alternative name when identifying AppBundles and Activities, as  compared to using the Forge app ID.  Once you have defined a nickname,  it MUST be used instead of the Forge app ID.                The new nickname cannot be in use by any other Forge app.                The Forge app cannot have any data when this endpoint is invoked.  Use the &#39;DELETE /forgeapps/me&#39;  endpoint (cautiously!!!) to remove all data from this Forge app.  &#39;DELETE /forgeapps/me&#39; is  also the only way to remove the nickname.                Note the nickname is supplied in the body, not as a query-parameter.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>/// <param name="nicknameRecord">new nickname (public key is for internal use only).</param>
         
@@ -143,8 +155,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Delete all data associated with this Forge app. Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// Delete all data associated with this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Delete all data associated with the given Forge app.                ALL Design Automation appbundles and activities are DELETED.                This may take up to 2 minutes. During this time the app will not be able to make successful requests.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         
@@ -201,8 +216,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Returns the user&#39;s (app) nickname. Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// Returns the user&#39;s (app) nickname.
         /// </summary>
+        /// <remarks>
+        /// Return the given Forge app&#39;s nickname.                If the app has no nickname, this route will return its id.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Must be \&quot;me\&quot; for the call to succeed.</param>
         /// <returns>Task of ApiResponse<string></returns>

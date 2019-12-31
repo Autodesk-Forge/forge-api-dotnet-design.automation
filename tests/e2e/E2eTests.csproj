@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
-    <None Remove="appsettings.user.json" />
   </ItemGroup>
 
   <ItemGroup>

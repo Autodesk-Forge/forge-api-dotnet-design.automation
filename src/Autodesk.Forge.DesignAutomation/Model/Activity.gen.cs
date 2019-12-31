@@ -46,16 +46,16 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// Path to Engine executable with arguments.
+        /// Path to Engine executable with arguments. &#x60;Activity command line &lt;/en/docs/design-automation/v3/developers_guide/field-guide#command-lines&gt;&#x60;_.
         /// </summary>
-        /// <value>Path to Engine executable with arguments.</value>
+        /// <value>Path to Engine executable with arguments. &#x60;Activity command line &lt;/en/docs/design-automation/v3/developers_guide/field-guide#command-lines&gt;&#x60;_.</value>
         [DataMember(Name="commandLine", EmitDefaultValue=false)]
         public List<string> CommandLine { get; set; }
 
         /// <summary>
-        /// Each parameter represents an input or output file.
+        /// Each parameter represents an input or output file. Named parameters of an Activity have corresponding named arguments of a WorkItem.
         /// </summary>
-        /// <value>Each parameter represents an input or output file.</value>
+        /// <value>Each parameter represents an input or output file. Named parameters of an Activity have corresponding named arguments of a WorkItem.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, Parameter> Parameters { get; set; }
 

@@ -33,8 +33,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface ISharesApi
     {
         /// <summary>
-        /// Gets all Shares (AppBundles and Activities) shared by this Forge app. Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Used to get subsequent &#39;pages&#39; of data. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Share&gt;></returns>
@@ -68,8 +71,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Gets all Shares (AppBundles and Activities) shared by this Forge app. Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app.
         /// </summary>
+        /// <remarks>
+        /// Gets all Shares (AppBundles and Activities) shared by this Forge app (shared to other  Forge apps for them to use).                Sharing of AppBundles and Activities is controlled via the use of &#39;aliases&#39;.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Used to get subsequent &#39;pages&#39; of data. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Share&gt;></returns>

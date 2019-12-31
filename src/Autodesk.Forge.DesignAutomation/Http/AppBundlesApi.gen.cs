@@ -33,104 +33,143 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IAppBundlesApi
     {
         /// <summary>
-        /// Creates a new AppBundle. Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              | The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
         
         System.Threading.Tasks.Task<ApiResponse<AppBundle>> CreateAppBundleAsync (AppBundle item, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates a new alias for this AppBundle. Creates a new alias for this AppBundle. Limit: 1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this AppBundle.                Limit:  1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="alias"></param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Alias>> CreateAppBundleAliasAsync (string id, Alias alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates a new version of the AppBundle. Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of app (unqualified).</param>/// <param name="item"></param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
         
         System.Threading.Tasks.Task<ApiResponse<AppBundle>> CreateAppBundleVersionAsync (string id, AppBundle item, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the specified AppBundle. Deletes the specified AppBundle, including all versions and aliases.
+        /// Deletes the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified AppBundle, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteAppBundleAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias to delete.</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteAppBundleAliasAsync (string id, string aliasId, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the specified version of the AppBundle. Deletes the specified version of the AppBundle.
+        /// Deletes the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="version">Version to delete (as integer).</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteAppBundleVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Gets the details of the specified AppBundle. Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the AppBundle (owner.name+label).</param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
         
         System.Threading.Tasks.Task<ApiResponse<AppBundle>> GetAppBundleAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Get alias details.
         /// </summary>
+        /// <remarks>
+        /// Get alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Alias>> GetAppBundleAliasAsync (string id, string aliasId, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all aliases for the specified AppBundle. Lists all aliases for the specified AppBundle.
+        /// Lists all aliases for the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Alias&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<Alias>>> GetAppBundleAliasesAsync (string id, string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Gets the details of the specified version of the AppBundle. Gets the details of the specified version of the AppBundle.
+        /// Gets the details of the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="version">Version to retrieve (as integer).</param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
         
         System.Threading.Tasks.Task<ApiResponse<AppBundle>> GetAppBundleVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all versions of the specified AppBundle. Lists all versions of the specified AppBundle.
+        /// Lists all versions of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;int&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<int>>> GetAppBundleVersionsAsync (string id, string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all available AppBundles. Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// Lists all available AppBundles.
         /// </summary>
+        /// <remarks>
+        /// Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<string>>> GetAppBundlesAsync (string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modify alias details.
         /// </summary>
+        /// <remarks>
+        /// Modify alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -164,8 +203,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Creates a new AppBundle. Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              | The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new AppBundle.              | Limits: (varies by Engine)              | 1. Number of AppBundle that can be created.              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size.              |              | After this request, you need to upload the AppBundle zip.              | To upload the AppBundle package, create a multipart/form-data request using data received in reponse uploadParameters:              | - endpointURL is the URL to make the upload package request against,              | - formData are the parameters that need to be put into the upload package request body.              |   They must be followed by an extra &#39;file&#39; parameter indicating the location of the package file.              | An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
@@ -222,8 +264,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates a new alias for this AppBundle. Creates a new alias for this AppBundle. Limit: 1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this AppBundle.                Limit:  1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="alias"></param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -281,10 +326,13 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates a new version of the AppBundle. Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// Creates a new version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the AppBundle.              | Limit:              | 1. Number of versions (LimitVersions).              | 2. Size of AppBundle.              | This method creates new AppBundle returned in response value.              | POST upload is required to limit upload size. The endpoint url and all form fields are retrieved in AppBundle.UploadParameters.              |              | After this request, you need to upload the AppBundle zip.              | Use data received in the response to create multipart/form-data request. An example:              |              | curl https://bucketname.s3.amazonaws.com/              | -F key &#x3D; apps/myApp/myfile.zip              | -F content-type &#x3D; application/octet-stream              | -F policy &#x3D; eyJleHBpcmF0aW9uIjoiMjAxOC0wNi0yMVQxMzo...(trimmed)              | -F x-amz-signature &#x3D; 800e52d73579387757e1c1cd88762...(trimmed)              | -F x-amz-credential &#x3D; AKIAIOSFODNN7EXAMPLE/20180621/us-west-2/s3/aws4_request/              | -F x-amz-algorithm &#x3D; AWS4-HMAC-SHA256              | -F x-amz-date &#x3D; 20180621T091656Z              | -F file&#x3D;@E:\\myfile.zip              The &#39;file&#39; field must be at the end, all fields after &#39;file&#39; will be ignored.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of app (unqualified).</param>/// <param name="item"></param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<AppBundle>> CreateAppBundleVersionAsync (string id, AppBundle item, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
@@ -340,8 +388,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the specified AppBundle. Deletes the specified AppBundle, including all versions and aliases.
+        /// Deletes the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified AppBundle, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>
         
@@ -398,8 +449,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias to delete.</param>
         
@@ -457,8 +511,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the specified version of the AppBundle. Deletes the specified version of the AppBundle.
+        /// Deletes the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="version">Version to delete (as integer).</param>
         
@@ -516,8 +573,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Gets the details of the specified AppBundle. Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified AppBundle. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the AppBundle (owner.name+label).</param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
@@ -574,8 +634,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Get alias details.
         /// </summary>
+        /// <remarks>
+        /// Get alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -633,10 +696,13 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all aliases for the specified AppBundle. Lists all aliases for the specified AppBundle.
+        /// Lists all aliases for the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="id">Name of activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
+        /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Alias&gt;></returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Page<Alias>>> GetAppBundleAliasesAsync (string id, string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
@@ -692,8 +758,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Gets the details of the specified version of the AppBundle. Gets the details of the specified version of the AppBundle.
+        /// Gets the details of the specified version of the AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="version">Version to retrieve (as integer).</param>
         /// <returns>Task of ApiResponse<AppBundle></returns>
@@ -751,8 +820,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all versions of the specified AppBundle. Lists all versions of the specified AppBundle.
+        /// Lists all versions of the specified AppBundle.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified AppBundle.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;int&gt;></returns>
@@ -810,8 +882,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all available AppBundles. Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// Lists all available AppBundles.
         /// </summary>
+        /// <remarks>
+        /// Lists all available AppBundles, including AppBundles shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>
@@ -868,8 +943,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modify alias details.
         /// </summary>
+        /// <remarks>
+        /// Modify alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of AppBundle (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>

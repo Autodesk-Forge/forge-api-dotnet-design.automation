@@ -33,104 +33,143 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IActivitiesApi
     {
         /// <summary>
-        /// Creates a new Activity. Creates a new Activity.              Limits (varies by Engine):              1. Number of Activities that can be created.
+        /// Creates a new Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new Activity.                             Limits (varies by Engine):                             1. Number of Activities that can be created.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Activity>> CreateActivityAsync (Activity item, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates a new alias for this Activity. Creates a new alias for this Activity.              Limit:              1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this Activity.                             Limit:                             1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="alias">{ id : {anyname}, version : {version number}, receiver : [{id of other Forge app},...] }.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Alias>> CreateActivityAliasAsync (string id, Alias alias, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates a new version of the Activity. Creates a new version of the Activity.              Limit:              1. Number of versions (LimitVersions).
+        /// Creates a new version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the Activity.                             Limit:                             1. Number of versions (LimitVersions).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Activity>> CreateActivityVersionAsync (string id, Activity item, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the specified Activity. Deletes the specified Activity, including all versions and aliases.
+        /// Deletes the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified Activity, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteActivityAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias to delete.</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteActivityAliasAsync (string id, string aliasId, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Deletes the specified version of the Activity. Deletes the specified version of the Activity.
+        /// Deletes the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to delete (integer).</param>
         
         /// <returns>Task of HttpResponseMessage</returns>
         System.Threading.Tasks.Task<HttpResponseMessage> DeleteActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Gets the details of the specified version of the Activity. Gets the details of the specified version of the Activity.
+        /// Gets the details of the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all available Activities. Lists all available Activities, including Activities shared with this Forge app.
+        /// Lists all available Activities.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Activities, including Activities shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<string>>> GetActivitiesAsync (string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Gets the details of the specified Activity. Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Activity (owner.name+label).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Activity>> GetActivityAsync (string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Gets alias details.
         /// </summary>
+        /// <remarks>
+        /// Gets alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Alias>> GetActivityAliasAsync (string id, string aliasId, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all aliases for the specified Activity. Lists all aliases for the specified Activity.
+        /// Lists all aliases for the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Alias&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<Alias>>> GetActivityAliasesAsync (string id, string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Lists all versions of the specified Activity. Lists all versions of the specified Activity.
+        /// Lists all versions of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;int&gt;></returns>
         
         System.Threading.Tasks.Task<ApiResponse<Page<int>>> GetActivityVersionsAsync (string id, string page = null, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modifies alias details.
         /// </summary>
+        /// <remarks>
+        /// Modifies alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -164,8 +203,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Creates a new Activity. Creates a new Activity.              Limits (varies by Engine):              1. Number of Activities that can be created.
+        /// Creates a new Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new Activity.                             Limits (varies by Engine):                             1. Number of Activities that can be created.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="item"></param>
         /// <returns>Task of ApiResponse<Activity></returns>
@@ -222,8 +264,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates a new alias for this Activity. Creates a new alias for this Activity.              Limit:              1. Number of aliases (LimitAliases).
+        /// Creates a new alias for this Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new alias for this Activity.                             Limit:                             1. Number of aliases (LimitAliases).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="alias">{ id : {anyname}, version : {version number}, receiver : [{id of other Forge app},...] }.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -281,8 +326,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates a new version of the Activity. Creates a new version of the Activity.              Limit:              1. Number of versions (LimitVersions).
+        /// Creates a new version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Creates a new version of the Activity.                             Limit:                             1. Number of versions (LimitVersions).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<Activity></returns>
@@ -340,8 +388,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the specified Activity. Deletes the specified Activity, including all versions and aliases.
+        /// Deletes the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified Activity, including all versions and aliases.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>
         
@@ -398,8 +449,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the alias. Deletes the alias.
+        /// Deletes the alias.
         /// </summary>
+        /// <remarks>
+        /// Deletes the alias.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias to delete.</param>
         
@@ -457,8 +511,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Deletes the specified version of the Activity. Deletes the specified version of the Activity.
+        /// Deletes the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Deletes the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to delete (integer).</param>
         
@@ -516,8 +573,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Gets the details of the specified version of the Activity. Gets the details of the specified version of the Activity.
+        /// Gets the details of the specified version of the Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
@@ -575,8 +635,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all available Activities. Lists all available Activities, including Activities shared with this Forge app.
+        /// Lists all available Activities.
         /// </summary>
+        /// <remarks>
+        /// Lists all available Activities, including Activities shared with this Forge app.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;string&gt;></returns>
@@ -633,8 +696,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Gets the details of the specified Activity. Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// Gets the details of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified Activity. Note that the {id} parameter must be a QualifiedId (owner.name+label).
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Full qualified id of the Activity (owner.name+label).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
@@ -691,8 +757,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Get alias details. Get alias details.
+        /// Gets alias details.
         /// </summary>
+        /// <remarks>
+        /// Gets alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias.</param>
         /// <returns>Task of ApiResponse<Alias></returns>
@@ -750,8 +819,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all aliases for the specified Activity. Lists all aliases for the specified Activity.
+        /// Lists all aliases for the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all aliases for the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;Alias&gt;></returns>
@@ -809,8 +881,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Lists all versions of the specified Activity. Lists all versions of the specified Activity.
+        /// Lists all versions of the specified Activity.
         /// </summary>
+        /// <remarks>
+        /// Lists all versions of the specified Activity.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="page">Access an additional &#39;page&#39; of data when necessary, based on the &#39;paginationToken&#39; returned from a previous invocation. (optional)</param>
         /// <returns>Task of ApiResponse<Page&lt;int&gt;></returns>
@@ -868,8 +943,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Modify alias details. Modify alias details.
+        /// Modifies alias details.
         /// </summary>
+        /// <remarks>
+        /// Modifies alias details.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="aliasId">Name of alias.</param>/// <param name="alias">Alias details to be modified.</param>
         /// <returns>Task of ApiResponse<Alias></returns>

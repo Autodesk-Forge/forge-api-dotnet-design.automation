@@ -33,24 +33,22 @@ namespace Autodesk.Forge.DesignAutomation.Http
     public interface IServiceLimitsApi
     {
         /// <summary>
-        /// Deletes user service limits. 
+        /// Get the service limit configuration.
         /// </summary>
-        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="owner"></param>
-        
-        /// <returns>Task of HttpResponseMessage</returns>
-        System.Threading.Tasks.Task<HttpResponseMessage> DeleteServiceLimitsAsync (string owner, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
-        /// <summary>
-        /// Get the service limit configuration. Gets a user&#39;s service limit configuration.
-        /// </summary>
+        /// <remarks>
+        /// Gets a user&#39;s service limit configuration.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to fetch the service limit configuration for.</param>
         /// <returns>Task of ApiResponse<ServiceLimit></returns>
         
         System.Threading.Tasks.Task<ApiResponse<ServiceLimit>> GetServiceLimitAsync (string owner, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
-        /// Creates a new service limits configuration or updates exiting. Creates a new service limits configuration or updates exiting.
+        /// Creates a new service limits configuration or updates an exiting one.
         /// </summary>
+        /// <remarks>
+        /// User can only update the following 2 properties:                - frontendLimits.limitMonthlyProcessingTimeInHours  - backendLimits[/engine/].limitProcessingTimeSec                LimitProcessingTimeSec cannot be set greater than the maximum processing time limit specified by the engine.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to associate the configuration to.</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<ServiceLimit></returns>
@@ -84,66 +82,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
         public ForgeService Service {get; set;}
 
         /// <summary>
-        /// Deletes user service limits. 
+        /// Get the service limit configuration.
         /// </summary>
-        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
-        /// <param name="owner"></param>
-        
-        /// <returns>Task of HttpResponseMessage</returns>
-        public async System.Threading.Tasks.Task<HttpResponseMessage> DeleteServiceLimitsAsync (string owner, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
-        {
-            using (var request = new HttpRequestMessage())
-            {
-                request.RequestUri = 
-                    Marshalling.BuildRequestUri("/v3/servicelimits/{owner}", 
-                        routeParameters: new Dictionary<string, object> {
-                            { "owner", owner},
-                        },
-                        queryParameters: new Dictionary<string, object> {
-                        }
-                    );
-
-                request.Headers.TryAddWithoutValidation("Accept", "application/json");
-                if (headers!=null)
-                {
-                    foreach (var header in headers)
-                    {
-                        request.Headers.TryAddWithoutValidation(header.Key, header.Value);
-                    }
-                }
-
-
-                // tell the underlying pipeline what scope we'd like to use
-                if (scopes == null)
-                {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
-                }
-                else
-                {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
-                }
-
-                request.Method = new HttpMethod("DELETE");
-
-                // make the HTTP request
-                var response = await this.Service.Client.SendAsync(request);
-
-                if (throwOnError)
-                {
-                    await response.EnsureSuccessStatusCodeAsync();
-                }
-                else if (!response.IsSuccessStatusCode)
-                {
-                    return response;
-                }
-
-                return response;
-
-            } // using
-        }
-        /// <summary>
-        /// Get the service limit configuration. Gets a user&#39;s service limit configuration.
-        /// </summary>
+        /// <remarks>
+        /// Gets a user&#39;s service limit configuration.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to fetch the service limit configuration for.</param>
         /// <returns>Task of ApiResponse<ServiceLimit></returns>
@@ -200,8 +143,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
             } // using
         }
         /// <summary>
-        /// Creates a new service limits configuration or updates exiting. Creates a new service limits configuration or updates exiting.
+        /// Creates a new service limits configuration or updates an exiting one.
         /// </summary>
+        /// <remarks>
+        /// User can only update the following 2 properties:                - frontendLimits.limitMonthlyProcessingTimeInHours  - backendLimits[/engine/].limitProcessingTimeSec                LimitProcessingTimeSec cannot be set greater than the maximum processing time limit specified by the engine.
+        /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="owner">The user to associate the configuration to.</param>/// <param name="item"></param>
         /// <returns>Task of ApiResponse<ServiceLimit></returns>

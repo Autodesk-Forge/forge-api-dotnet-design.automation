@@ -50,7 +50,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         /// <value>The time in UTC when the workitem was queued.</value>
         [DataMember(Name="timeQueued", EmitDefaultValue=false)]
-        public DateTime? TimeQueued { get; set; }
+        public DateTime TimeQueued { get; set; }
 
         /// <summary>
         /// The time in UTC when the system started processing the workitem by transferring input data to the processing node.

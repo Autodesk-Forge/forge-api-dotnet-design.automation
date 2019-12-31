@@ -46,16 +46,23 @@ namespace Autodesk.Forge.DesignAutomation.Model
         }
         
         /// <summary>
-        /// The parameter references a zip file. This is how this is interpreted in various scenarios: 1. verb&#x3D;&#x3D;get implies that the byte stream should be unzipped to a folder designated by localName. 2. verb&#x3D;&#x3D;put, patch, post the contents of the file or folder designated by localName will be zipped and sent. 3. Any other verb values result in an error. Default is false.
+        /// This attribute together with the XrefTreeArgumentBase.PathInZip attribute determine how zip files are handled. Default is false. For onDemand&#x3D;&#39;true&#39; the Zip file is just downloaded, not unzipped.
         /// </summary>
-        /// <value>The parameter references a zip file. This is how this is interpreted in various scenarios: 1. verb&#x3D;&#x3D;get implies that the byte stream should be unzipped to a folder designated by localName. 2. verb&#x3D;&#x3D;put, patch, post the contents of the file or folder designated by localName will be zipped and sent. 3. Any other verb values result in an error. Default is false.</value>
+        /// <value>This attribute together with the XrefTreeArgumentBase.PathInZip attribute determine how zip files are handled. Default is false. For onDemand&#x3D;&#39;true&#39; the Zip file is just downloaded, not unzipped.</value>
         [DataMember(Name="zip", EmitDefaultValue=false)]
         public bool Zip { get; set; }
 
         /// <summary>
-        /// The parameter will be accessed by the appbundle on demand and should not be used by the system. Default is false.
+        /// Provides default name of the file or folder on the processing server for this parameter. Note this name may be overriden in various ways.
         /// </summary>
-        /// <value>The parameter will be accessed by the appbundle on demand and should not be used by the system. Default is false.</value>
+        /// <value>Provides default name of the file or folder on the processing server for this parameter. Note this name may be overriden in various ways.</value>
+        [DataMember(Name="localName", EmitDefaultValue=false)]
+        public string LocalName { get; set; }
+
+        /// <summary>
+        /// The parameter will be accessed by the appbundle on demand and should not be used by the system. Default is false. When onDemand&#x3D;&#39;true&#39;, the next parameter&#39;s &#39;verb&#39;s only valid values are &#x60;&#x60;get&#x60;&#x60; or &#x60;&#x60;head&#x60;&#x60;.
+        /// </summary>
+        /// <value>The parameter will be accessed by the appbundle on demand and should not be used by the system. Default is false. When onDemand&#x3D;&#39;true&#39;, the next parameter&#39;s &#39;verb&#39;s only valid values are &#x60;&#x60;get&#x60;&#x60; or &#x60;&#x60;head&#x60;&#x60;.</value>
         [DataMember(Name="ondemand", EmitDefaultValue=false)]
         public bool Ondemand { get; set; }
 
@@ -79,13 +86,6 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <value>Specifies whether the corresponding WorkItem Argument is required. Default is false.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool Required { get; set; }
-
-        /// <summary>
-        /// The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name.
-        /// </summary>
-        /// <value>The file or folder where the contents of an UrlArgument are placed. Note that this may be different than the &#x60;localName&#x60; for input arguments when [Content-Disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) header is specifified by the server. For &#x60;zip&#x60; &#x3D; &#x60;true&#x60; this is a folder name.</value>
-        [DataMember(Name="localName", EmitDefaultValue=false)]
-        public string LocalName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
