@@ -43,6 +43,7 @@ namespace E2eTests
             {
                 { "dwg", new Parameter() { Verb = Verb.Get } },
                 { "params", new Parameter() { Verb = Verb.Read, LocalName = "params.json"} },
+                { "token", new Parameter() { Verb = Verb.Read } },
                 { "results", new Parameter() {Verb = Verb.Post, LocalName = "outputs", Zip = true } }
             },
             Id = "MyAct",

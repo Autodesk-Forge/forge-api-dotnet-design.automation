@@ -41,10 +41,15 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StringArgument" /> class.
         /// </summary>
+        public StringArgument(string v) : base()
+        {
+            this.Value = v;
+        }
+
         public StringArgument() : base()
         {
         }
-        
+
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
