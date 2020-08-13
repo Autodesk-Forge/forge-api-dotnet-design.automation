@@ -103,5 +103,63 @@ namespace E2eTests
                 Assert.Equal(Status.Success, resp.Status);
             }
         }
+
+        [Theory]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : { 'bla' : 'http://example.com/test.dwg'},
+                    }
+                }")]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : {},
+                    }
+                }")]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : { 'requestConent': 'request body', 'verb' : 'get'},
+                    }
+                }")]
+        [Order(Weight = 3.0)]
+        public void DeserializeWorkItem_SerializationException(string json)
+        {
+            var ex = Assert.Throws<JsonSerializationException>(() => JsonConvert.DeserializeObject<WorkItem>(json));
+            Assert.Equal("Expected XrefTreeArgument or StringArgument.", ex.Message);
+        }
+
+        [Theory]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : [ 'bla' ]
+                    }
+                }", "StartArray")]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : 101
+                    }
+                }", "Integer")]
+        [InlineData(@"
+                {
+                    'activityId' : 'SdkTester.MyAct+latest',
+                    'arguments' : {
+                        'bad' : false
+                    }
+                }", "Boolean")]
+        [Order(Weight = 3.0)]
+        public void DeserializeWorkItem_ReaderException(string json, string errorType)
+        {
+            var ex = Assert.Throws<JsonReaderException>(() => JsonConvert.DeserializeObject<WorkItem>(json));
+            Assert.Contains(errorType, ex.Message);
+        }
     }
 }

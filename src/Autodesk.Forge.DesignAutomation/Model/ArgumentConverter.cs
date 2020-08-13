@@ -48,7 +48,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
                 }
                 else
                 {
-                    throw new JsonSerializationException($"Expected XrefTreeArgument or StringArgument.");
+                    throw new JsonSerializationException("Expected XrefTreeArgument or StringArgument.");
                 }
             }
             else if (reader.TokenType == JsonToken.String)
@@ -57,7 +57,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
             }
             else
             {
-                throw new JsonSerializationException($"Expected object or string but got {reader.TokenType}.");
+                throw new JsonReaderException($"Expected object or string but got {reader.TokenType}.");
             }
 
             return target;
