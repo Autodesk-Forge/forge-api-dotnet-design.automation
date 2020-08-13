@@ -14,6 +14,9 @@
             "verb": "read",
             "localName": "params.json"
           },
+          "token": {
+            "verb": "read"
+          },
           "results": {
             "zip": true,
             "verb": "post",
@@ -55,6 +58,9 @@
             "params": {
               "verb": "read",
               "localName": "params.json"
+            },
+            "token": {
+              "verb": "read"
             },
             "results": {
               "zip": true,

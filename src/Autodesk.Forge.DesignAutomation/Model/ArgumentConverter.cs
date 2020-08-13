@@ -33,25 +33,34 @@ namespace Autodesk.Forge.DesignAutomation.Model
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
+            IArgument target;
             if (reader.TokenType == JsonToken.StartObject)
             {
-                IArgument target;
-                var jObject = JObject.Load(reader);
-                if (jObject.Property("url") != null)
+                JObject jObject = JObject.Load(reader);
+                if (jObject["url"] != null)
                 {
                     target = new XrefTreeArgument();
+                    serializer.Populate(jObject.CreateReader(), target);
+                }
+                else if (jObject["value"] != null)
+                {
+                    target = new StringArgument(jObject["value"].Value<string>());
                 }
                 else
                 {
-                    target = new StringArgument();
+                    throw new JsonSerializationException("Expected XrefTreeArgument or StringArgument.");
                 }
-                serializer.Populate(jObject.CreateReader(), target);
-                return target;
+            }
+            else if (reader.TokenType == JsonToken.String)
+            {
+                target = new StringArgument(reader.Value.ToString());
             }
             else
             {
-                throw new JsonReaderException("Expected start of object.");
+                throw new JsonReaderException($"Expected object or string but got {reader.TokenType}.");
             }
+
+            return target;
         }
     }
 }
