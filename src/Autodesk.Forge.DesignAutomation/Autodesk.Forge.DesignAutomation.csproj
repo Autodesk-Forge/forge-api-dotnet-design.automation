@@ -15,7 +15,15 @@
     <PackageProjectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</PackageProjectUrl>
     <PackageIconUrl>http://developer.static.autodesk.com/images/logo_forge-2-line.png</PackageIconUrl>
     <PackageReleaseNotes>For full release notes see https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/CHANGELOG.md</PackageReleaseNotes>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Autodesk.Forge.Core" Version="1.0.1" />
