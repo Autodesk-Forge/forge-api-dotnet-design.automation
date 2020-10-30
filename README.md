@@ -168,3 +168,5 @@ dotnet test Autodesk.Forge.DesignAutomation.sln
 ## License
 
 This sample is licensed under the terms of the **Apache License 2.0**. Please see the [LICENSE](LICENSE) file for full details.
+
+## Debugging
