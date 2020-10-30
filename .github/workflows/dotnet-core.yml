@@ -2,9 +2,9 @@ name: .NET Core
 
 on:
   push:
-    branches: [ master ]
+    branches: [ zhuliice-try-actions ]
   pull_request:
-    branches: [ master ]
+    branches: [ zhuliice-try-actions ]
 
 jobs:
   build:
