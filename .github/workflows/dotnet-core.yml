@@ -22,7 +22,7 @@ jobs:
     - name: Test
       run: dotnet test tests/e2e/E2eTests.csproj
     - name: Publish
-      if: ${{ github.ref != 'refs/heads/master'}}
+      if: ${{ github.ref == 'refs/heads/master'}}
       run: dotnet msbuild src/Autodesk.Forge.DesignAutomation/Autodesk.Forge.DesignAutomation.csproj /t:Push
       env:
         NugetApiKey: ${{ secrets.NUGETAPIKEYBYENGOPS }}
