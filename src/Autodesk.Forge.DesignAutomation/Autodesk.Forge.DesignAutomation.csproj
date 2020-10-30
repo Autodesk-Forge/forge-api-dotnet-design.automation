@@ -9,7 +9,7 @@
     <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
-    <Version>3.0.4</Version>
+    <Version>3.0.5</Version>
     <PackageId>Autodesk.Forge.DesignAutomation</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</PackageProjectUrl>

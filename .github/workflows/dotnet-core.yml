@@ -1,0 +1,28 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+    - name: Build
+      run: dotnet build Autodesk.Forge.DesignAutomation.sln
+    - name: Test
+      run: dotnet test tests/e2e/E2eTests.csproj
+    - name: Publish
+      if: ${{ github.ref == 'refs/heads/master'}}
+      run: dotnet msbuild src/Autodesk.Forge.DesignAutomation/Autodesk.Forge.DesignAutomation.csproj /t:Push
+      env:
+        NugetApiKey: ${{ secrets.NUGETAPIKEYBYENGOPS }}
