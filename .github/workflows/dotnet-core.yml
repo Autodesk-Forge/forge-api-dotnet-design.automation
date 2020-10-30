@@ -21,3 +21,7 @@ jobs:
       run: dotnet build Autodesk.Forge.DesignAutomation.sln
     - name: Test
       run: dotnet test tests/e2e/E2eTests.csproj
+    - name: Publish
+      run: dotnet msbuild src/Autodesk.Forge.DesignAutomation/Autodesk.Forge.DesignAutomation.csproj /t:Push
+      env:
+        NugetApiKey: ${{ secrets.NugetApiKey }}
