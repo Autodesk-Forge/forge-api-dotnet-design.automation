@@ -30,8 +30,8 @@ jobs:
       with:
         languages: ${{ matrix.language }}
    
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
+    - name: Build
+      run: dotnet build Autodesk.Forge.DesignAutomation.sln /p:UseSharedCompilation=false
    
     - name: Perform CodeQL Analysis
       id: CodeQL_analysis
