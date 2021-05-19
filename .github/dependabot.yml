@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  reviewers:
+  - szilvaa
+  - augustogoncalves
+  - zhuliice
+  labels:
+  - dependencies
+  - dependabot
