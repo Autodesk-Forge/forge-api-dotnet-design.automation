@@ -238,11 +238,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("POST");
@@ -300,11 +300,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("POST");
@@ -362,11 +362,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("POST");
@@ -423,11 +423,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("DELETE");
@@ -485,11 +485,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("DELETE");
@@ -547,11 +547,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("DELETE");
@@ -609,11 +609,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -670,11 +670,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -731,11 +731,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -793,11 +793,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -855,11 +855,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -917,11 +917,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("GET");
@@ -980,11 +980,11 @@ namespace Autodesk.Forge.DesignAutomation.Http
                 // tell the underlying pipeline what scope we'd like to use
                 if (scopes == null)
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, "code:all");
+                    request.Options.Set(ForgeConfiguration.ScopeKey, "code:all");
                 }
                 else
                 {
-                    request.Properties.Add(ForgeConfiguration.ScopeKey, scopes);
+                    request.Options.Set(ForgeConfiguration.ScopeKey, scopes);
                 }
 
                 request.Method = new HttpMethod("PATCH");

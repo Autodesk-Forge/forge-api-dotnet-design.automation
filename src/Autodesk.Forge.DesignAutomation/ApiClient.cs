@@ -47,7 +47,7 @@ namespace Autodesk.Forge.DesignAutomation
 
                     using (var request = new HttpRequestMessage(HttpMethod.Post, uploadParameters.EndpointURL) { Content = formData })
                     {
-                        request.Properties.Add(ForgeConfiguration.TimeoutKey, (int)this.Configuration.UploadTimeout.TotalSeconds);
+                        request.Options.Set(ForgeConfiguration.TimeoutKey, (int)this.Configuration.UploadTimeout.TotalSeconds);
 
                         var response = await Service.Client.SendAsync(request);
                         response.EnsureSuccessStatusCode();
