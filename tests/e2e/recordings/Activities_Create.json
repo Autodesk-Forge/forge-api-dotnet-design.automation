@@ -4,7 +4,7 @@
     "Content": {
       "Body": {
         "commandLine": [
-          "$(engine.path)\\accoreconsole.exe /i $(args[dwg].path) /s $(settings[script].path)"
+          "\"$(engine.path)\\accoreconsole.exe\" /i \"$(args[dwg].path)\" /s \"$(settings[script].path)\""
         ],
         "parameters": {
           "dwg": {
@@ -49,7 +49,7 @@
       "Content": {
         "Body": {
           "commandLine": [
-            "$(engine.path)\\accoreconsole.exe /i $(args[dwg].path) /s $(settings[script].path)"
+            "\"$(engine.path)\\accoreconsole.exe\" /i \"$(args[dwg].path)\" /s \"$(settings[script].path)\""
           ],
           "parameters": {
             "dwg": {

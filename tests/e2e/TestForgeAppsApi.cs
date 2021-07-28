@@ -28,6 +28,7 @@ namespace E2eTests
     public partial class Tests
     {
         private readonly string nickname = "SdkTester";
+        private readonly PublicKey publicKey = new PublicKey() { Exponent = new byte[] { 0x1 }, Modulus = new byte[] { 0x2 } };
 
         [Fact]
         [Order(Weight = 0.0)]
@@ -61,6 +62,28 @@ namespace E2eTests
             {
                 var resp = await this.Fixture.DesignAutomationClient.GetNicknameAsync("me");
                 Assert.Equal(this.nickname, resp);
+            }
+        }
+
+        [Fact]
+        [Order(Weight = 0.3)]
+        public async void ForgeApps_CreateNicknameRecord()
+        {
+            using (Fixture.StartTestScope())
+            {
+                await this.Fixture.DesignAutomationClient.CreateNicknameAsync("me", new NicknameRecord { Nickname = this.nickname, PublicKey = this.publicKey });
+            }
+        }
+
+        [Fact]
+        [Order(Weight = 0.4)]
+        public async void ForgeApps_GetNicknameRecord()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var resp = await this.Fixture.DesignAutomationClient.ForgeAppsApi.GetNicknameRecordAsync("me");
+                Assert.Equal(this.nickname, resp.Content.Nickname);
+                Assert.Equal(this.publicKey, resp.Content.PublicKey);
             }
         }
     }
