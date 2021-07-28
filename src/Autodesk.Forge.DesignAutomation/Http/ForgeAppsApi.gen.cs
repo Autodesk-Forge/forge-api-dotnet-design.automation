@@ -30,7 +30,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IForgeAppsApi
+    public partial interface IForgeAppsApi
     {
         /// <summary>
         /// Creates/updates the nickname for the current Forge app.

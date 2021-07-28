@@ -6,6 +6,10 @@ using System.Net.Http;
 
 namespace Autodesk.Forge.DesignAutomation.Http
 {
+    public partial interface IForgeAppsApi
+    {
+        public System.Threading.Tasks.Task<ApiResponse<NicknameRecord>> GetNicknameRecordAsync(string id, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+    }
     public partial class ForgeAppsApi
     {
         /// <summary>

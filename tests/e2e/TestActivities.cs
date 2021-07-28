@@ -30,7 +30,7 @@ namespace E2eTests
     {
         private readonly Activity act = new Activity()
         {
-            CommandLine = new List<string> { "$(engine.path)\\accoreconsole.exe /i $(args[dwg].path) /s $(settings[script].path)" },
+            CommandLine = new List<string> { "\"$(engine.path)\\accoreconsole.exe\" /i \"$(args[dwg].path)\" /s \"$(settings[script].path)\"" },
             Settings = new Dictionary<string, ISetting>()
             {
                 { "script", new StringSetting() { Value = "_test params.json outputs\n" } }
