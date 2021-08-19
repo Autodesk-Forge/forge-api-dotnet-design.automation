@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Autodesk.Forge.DesignAutomation.Model
 {
@@ -10,6 +11,11 @@ namespace Autodesk.Forge.DesignAutomation.Model
             if (other == null)
                 return false;
             return this.Exponent.SequenceEqual(other.Exponent) && this.Modulus.SequenceEqual(other.Modulus);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Exponent, Modulus);
         }
     }
 }
