@@ -63,6 +63,7 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Enum FailedLimitDataSize for value: failedLimitDataSize
         /// </summary>
         [EnumMember(Value = "failedLimitDataSize")]
+        [Obsolete]
         FailedLimitDataSize = 4,
         
         /// <summary>
@@ -88,7 +89,13 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// </summary>
         [EnumMember(Value = "failedUpload")]
         FailedUpload = 8,
-        
+
+        /// <summary>
+        /// Some optional outputs failed to upload. See report for details.
+        /// </summary>
+        [EnumMember(Value = "failedUploadOptional")]
+        FailedUploadOptional = 10,
+
         /// <summary>
         /// Enum Success for value: success
         /// </summary>
