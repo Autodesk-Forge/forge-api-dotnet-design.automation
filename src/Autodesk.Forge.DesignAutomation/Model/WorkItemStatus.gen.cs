@@ -60,11 +60,18 @@ namespace Autodesk.Forge.DesignAutomation.Model
         public string Progress { get; set; }
 
         /// <summary>
-        /// The detailed report about the workitem, report url is valid for 24 hours from first receiving it.
+        /// The detailed report about the workitem, report url is valid for 1 hours from first receiving it.
         /// </summary>
-        /// <value>The detailed report about the workitem, report url is valid for 24 hours from first receiving it.</value>
+        /// <value>The detailed report about the workitem, report url is valid for 1 hours from first receiving it.</value>
         [DataMember(Name="reportUrl", EmitDefaultValue=false)]
         public string ReportUrl { get; set; }
+
+        /// <summary>
+        /// The debug information for the workitem, the url is valid for 1 hours from first receiving it.
+        /// </summary>
+        /// <value>The debug information for the workitem, the url is valid for 1 hours from first receiving it.</value>
+        [DataMember(Name = "debugInfoUrl", EmitDefaultValue = false)]
+        public Uri DebugInfoUrl { get; private set; }
 
         /// <summary>
         /// Basic statistics about workitem processing.

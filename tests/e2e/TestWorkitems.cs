@@ -76,6 +76,9 @@ namespace E2eTests
                         'dwg' : {{ 'url' : 'http://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_imperial.dwg' }},
                         'params' : {{ 'value' : '{{ \'ExtractBlockNames\': true, \'ExtractLayerNames\' : true }}' }},
                         'token' : 'IamToken!',
+                        'adskDebug': {{
+                            'uploadJobFolder': true
+                        }},
                         'results' : 
                         {{ 
                             'url' : 'https://dasdev-testing.s3.us-west-2.amazonaws.com/sdktest?X-Amz-Expires=89925&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIZLLKUTZMHO46VTQ/20190103/us-west-2/s3/aws4_request&X-Amz-Date=20190103T025815Z&X-Amz-SignedHeaders=content-type;host&X-Amz-Signature=4bfe24c8855360be63c9c5915deba8750cf7724a532ebfb4fe996872f57d3541',
@@ -101,6 +104,7 @@ namespace E2eTests
                     resp = await Fixture.DesignAutomationClient.GetWorkitemStatusAsync(resp.Id);
                 }
                 Assert.Equal(Status.Success, resp.Status);
+                Assert.NotNull(resp.DebugInfoUrl);
             }
         }
 
