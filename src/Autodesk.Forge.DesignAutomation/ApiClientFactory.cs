@@ -34,11 +34,11 @@ namespace Autodesk.Forge.DesignAutomation
         {
             this.services = services;
         }
-        public DesignAutomationClient CreateClient(string user = null)
+        public DesignAutomationClient CreateClient(string agent = null)
         {
             var httpClientFactory = services.GetRequiredService<IHttpClientFactory>();
             var typedClientFactory = services.GetRequiredService<ITypedHttpClientFactory<ForgeService>>();
-            var forgeService = typedClientFactory.CreateClient(httpClientFactory.CreateClient(user));
+            var forgeService = typedClientFactory.CreateClient(httpClientFactory.CreateClient(agent));
             var client = ActivatorUtilities.CreateInstance<DesignAutomationClient>(
                 services, 
                 forgeService,
@@ -50,7 +50,7 @@ namespace Autodesk.Forge.DesignAutomation
                 ActivatorUtilities.CreateInstance<ServiceLimitsApi>(services, forgeService),
                 ActivatorUtilities.CreateInstance<SharesApi>(services, forgeService),
                 ActivatorUtilities.CreateInstance<WorkItemsApi>(services, forgeService)); 
-            client.User = user;
+            client.Agent = agent;
             return client;
         }
     }

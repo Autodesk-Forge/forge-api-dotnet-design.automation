@@ -37,9 +37,9 @@ namespace Autodesk.Forge.DesignAutomation
         public static void AddDesignAutomationFactory(this IServiceCollection services, IConfiguration configuration, Action<IHttpClientBuilder> configureBuilder = null)
         {
             IHttpClientBuilder builder;
-            foreach (var user in configuration.GetSection("Forge:Agents").GetChildren())
+            foreach (var agent in configuration.GetSection("Forge:Agents").GetChildren())
             {
-                builder = services.AddForgeService(user.Key, configuration);
+                builder = services.AddForgeService(agent.Key, configuration);
                 configureBuilder?.Invoke(builder);
             }
 
