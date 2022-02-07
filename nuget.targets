@@ -4,8 +4,8 @@
   Continue on errors. Publishing can fail if the package version isn't updated and we get conflict.
   -->
   <Target Name="Push" DependsOnTargets="Pack">
-    <Exec Command="dotnet nuget push @(NuGetPackOutput->WithMetadataValue('Extension','.nupkg')) -k=$(NugetApiKey) -s nuget.org"  
-          IgnoreExitCode="true"
-          ContinueOnError="true"/>
+    <Exec Command="dotnet nuget push @(NuGetPackOutput->WithMetadataValue('Extension','.nupkg')) -k=$(NugetApiKey) -s nuget.org --skip-duplicate"
+          IgnoreExitCode="false"
+          ContinueOnError="false"/>
   </Target>
 </Project>

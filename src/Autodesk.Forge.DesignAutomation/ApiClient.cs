@@ -151,5 +151,6 @@ namespace Autodesk.Forge.DesignAutomation
             while (paginationToken != null);
             return ret;
         }
+        public string Agent { get; internal set; }
     }
 }

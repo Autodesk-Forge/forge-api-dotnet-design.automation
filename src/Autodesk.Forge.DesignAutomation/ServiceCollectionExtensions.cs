@@ -22,7 +22,7 @@
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Autodesk.Forge.DesignAutomation.Http;
+using System;
 
 namespace Autodesk.Forge.DesignAutomation
 {
@@ -34,19 +34,19 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="services"></param>
         /// <param name="configuration"></param>
         /// <returns></returns>
-        public static IHttpClientBuilder AddDesignAutomation(this IServiceCollection services, IConfiguration configuration)
+        public static void AddDesignAutomationFactory(this IServiceCollection services, IConfiguration configuration, Action<IHttpClientBuilder> configureBuilder = null)
         {
-            services.Configure<Configuration>(configuration.GetSection("Forge").GetSection("DesignAutomation"));
-            services.AddTransient<IActivitiesApi,ActivitiesApi>();
-            services.AddTransient<IAppBundlesApi,AppBundlesApi>();
-            services.AddTransient<IEnginesApi,EnginesApi>();
-            services.AddTransient<IForgeAppsApi,ForgeAppsApi>();
-            services.AddTransient<IHealthApi,HealthApi>();
-            services.AddTransient<IServiceLimitsApi,ServiceLimitsApi>();
-            services.AddTransient<ISharesApi,SharesApi>();
-            services.AddTransient<IWorkItemsApi,WorkItemsApi>();
-            services.AddTransient<DesignAutomationClient>();
-            return services.AddForgeService(configuration);
+            IHttpClientBuilder builder;
+            foreach (var agent in configuration.GetSection("Forge:Agents").GetChildren())
+            {
+                builder = services.AddForgeService(agent.Key, configuration);
+                configureBuilder?.Invoke(builder);
+            }
+
+            services.AddSingleton<DesignAutomationClientFactory>();
+            builder = services.AddDesignAutomation(configuration);
+            configureBuilder?.Invoke(builder);
+
         }
     }
 }

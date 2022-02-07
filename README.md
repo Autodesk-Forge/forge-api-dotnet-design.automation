@@ -77,6 +77,28 @@ FORGE_CLIENT_ID=<your client id>
 FORGE_CLIENT_SECRET=<your client secret>
 ```
  
+ Starting with version 4.3 you can also configure multiple ClientId/ClientSecret pairs as follows:
+
+ ```
+ {
+  "Forge": {
+    "ClientId": "<default clientId>"
+    "ClientSecret" : "<default clientSecret>"
+    "Agents": {
+      "agent1": {
+        "ClientId": "<clientId of agent1>"
+        "ClientSecret" : "<clientSecret of agent1>"
+      },
+       "agent2": {
+        "ClientId": "<clientId of agent2>"
+        "ClientSecret" : "<clientSecret of agent2>"
+      }
+    },
+    ...
+}
+ ```
+
+ These credentials are used when you create a named `DesignAutomationClient` via [DesignAutomationFactory.CreateClient(string name)](src/Autodesk.Forge.DesignAutomation/ApiClientFactory.cs#L37) where `name` should match the name of the agent in configuration.
 ### Examples
 
 #### Tutorials
