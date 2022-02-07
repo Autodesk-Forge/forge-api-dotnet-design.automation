@@ -82,14 +82,16 @@ FORGE_CLIENT_SECRET=<your client secret>
  ```
  {
   "Forge": {
+    "ClientId": "<default clientId>"
+    "ClientSecret" : "<default clientSecret>"
     "Agents": {
-      "<agent1>": {
-        "ClientId": "<Some clientId>"
-        "ClientSecret" : "<Some clientSecret>"
+      "agent1": {
+        "ClientId": "<clientId of agent1>"
+        "ClientSecret" : "<clientSecret of agent1>"
       },
-       "<agent2>": {
-        "ClientId": "<Some clientId>"
-        "ClientSecret" : "<Some clientSecret>"
+       "agent2": {
+        "ClientId": "<clientId of agent2>"
+        "ClientSecret" : "<clientSecret of agent2>"
       }
     },
     ...
