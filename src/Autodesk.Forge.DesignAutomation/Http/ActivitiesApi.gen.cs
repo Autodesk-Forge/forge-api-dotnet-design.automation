@@ -108,7 +108,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<ApiResponse<Activity>> GetActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
         /// Lists all available Activities.
         /// </summary>
@@ -582,7 +582,7 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        public async System.Threading.Tasks.Task<ApiResponse<Activity>> GetActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {

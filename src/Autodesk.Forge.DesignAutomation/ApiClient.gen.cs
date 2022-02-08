@@ -169,9 +169,9 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of Activity</returns>
-        public async System.Threading.Tasks.Task<Activity> GeActivityVersionAsync (string id, int version)
+        public async System.Threading.Tasks.Task<Activity> GetActivityVersionAsync (string id, int version)
         {
-             var response = await this.ActivitiesApi.GeActivityVersionAsync(id, version);
+             var response = await this.ActivitiesApi.GetActivityVersionAsync(id, version);
              return response.Content;
 
         }
