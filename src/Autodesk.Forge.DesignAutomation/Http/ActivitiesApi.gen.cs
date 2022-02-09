@@ -21,6 +21,7 @@
  */
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using Autodesk.Forge.DesignAutomation.Model;
@@ -105,10 +106,21 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// Gets the details of the specified version of the Activity.
         /// </remarks>
         /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>     
+        /// <returns>Task of ApiResponse<Activity></returns>
+        [Obsolete("This method is obsolete. Call GetActivityVersionAsync instead.", false)]
+        System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync(string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        /// <summary>
+        /// Gets the details of the specified version of the Activity.
+        /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
+        System.Threading.Tasks.Task<ApiResponse<Activity>> GetActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true);
         /// <summary>
         /// Lists all available Activities.
         /// </summary>
@@ -582,7 +594,22 @@ namespace Autodesk.Forge.DesignAutomation.Http
         /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of ApiResponse<Activity></returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        [Obsolete("This method is obsolete. Call GetActivityVersionAsync instead.", false)]
+        public async System.Threading.Tasks.Task<ApiResponse<Activity>> GeActivityVersionAsync(string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
+        {
+            return await this.GetActivityVersionAsync(id, version, scopes, headers, throwOnError);
+        }
+        /// <summary>
+        /// Gets the details of the specified version of the Activity.
+        /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="id">Name of Activity (unqualified).</param>/// <param name="version">Version to retrieve (integer).</param>
+        /// <returns>Task of ApiResponse<Activity></returns>
+
+        public async System.Threading.Tasks.Task<ApiResponse<Activity>> GetActivityVersionAsync (string id, int version, string scopes = null, IDictionary<string, string> headers = null, bool throwOnError = true)
         {
             using (var request = new HttpRequestMessage())
             {

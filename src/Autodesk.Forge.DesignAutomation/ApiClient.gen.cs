@@ -23,6 +23,7 @@ using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
 using Autodesk.Forge.DesignAutomation.Http;
 using Autodesk.Forge.DesignAutomation.Model;
+using System;
 using System.Collections.Generic;
 
 namespace Autodesk.Forge.DesignAutomation
@@ -169,11 +170,25 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="id">Name of Activity (unqualified).</param>
         /// <param name="version">Version to retrieve (integer).</param>
         /// <returns>Task of Activity</returns>
+        [Obsolete("This method is obsolete. Call GetActivityVersionAsync instead.", false)]
         public async System.Threading.Tasks.Task<Activity> GeActivityVersionAsync (string id, int version)
         {
-             var response = await this.ActivitiesApi.GeActivityVersionAsync(id, version);
-             return response.Content;
-
+             return await this.GetActivityVersionAsync(id, version);
+        }
+        /// <summary>
+        /// Gets the details of the specified version of the Activity.
+        /// </summary>
+        /// <remarks>
+        /// Gets the details of the specified version of the Activity.
+        /// </remarks>
+        /// <exception cref="HttpRequestException">Thrown when fails to make API call</exception>
+        /// <param name="id">Name of Activity (unqualified).</param>
+        /// <param name="version">Version to retrieve (integer).</param>
+        /// <returns>Task of Activity</returns>
+        public async System.Threading.Tasks.Task<Activity> GetActivityVersionAsync(string id, int version)
+        {
+            var response = await this.ActivitiesApi.GetActivityVersionAsync(id, version);
+            return response.Content;
         }
         /// <summary>
         /// Lists all available Activities.
