@@ -35,8 +35,9 @@ namespace Autodesk.Forge.DesignAutomation
         {
             var httpClientFactory = services.GetRequiredService<IHttpClientFactory>();
             var typedClientFactory = services.GetRequiredService<ITypedHttpClientFactory<ForgeService>>();
-            var forgeService = typedClientFactory.CreateClient(httpClientFactory.CreateClient(agent));
-            var client = ActivatorUtilities.CreateInstance<DesignAutomationClient>(
+            var client = httpClientFactory.CreateClient(agent?? ForgeAgentHandler.defaultAgentName);
+            var forgeService = typedClientFactory.CreateClient(client);
+            var designAutomationlient = ActivatorUtilities.CreateInstance<DesignAutomationClient>(
                 services, 
                 forgeService,
                 ActivatorUtilities.CreateInstance<ActivitiesApi>(services, forgeService),
@@ -46,9 +47,9 @@ namespace Autodesk.Forge.DesignAutomation
                 ActivatorUtilities.CreateInstance<HealthApi>(services, forgeService),
                 ActivatorUtilities.CreateInstance<ServiceLimitsApi>(services, forgeService),
                 ActivatorUtilities.CreateInstance<SharesApi>(services, forgeService),
-                ActivatorUtilities.CreateInstance<WorkItemsApi>(services, forgeService)); 
-            client.Agent = agent;
-            return client;
+                ActivatorUtilities.CreateInstance<WorkItemsApi>(services, forgeService));
+            designAutomationlient.Agent = agent;
+            return designAutomationlient;
         }
     }
 }
