@@ -20,11 +20,8 @@
  * limitations under the License.
  */
 using Autodesk.Forge.Core;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using Autodesk.Forge.DesignAutomation.Model;
+using Microsoft.Extensions.Options;
 
 namespace Autodesk.Forge.DesignAutomation.Http
 {

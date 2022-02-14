@@ -1,8 +1,8 @@
 # Autodesk.Forge.DesignAutomation
 
 [![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/) 
-![SDK](https://img.shields.io/badge/SDK-4.0.0-lightgree.svg)
-![.NET](https://img.shields.io/badge/.NET%20-5-blue.svg)
+![SDK](https://img.shields.io/badge/SDK-5.0.0-lightgree.svg)
+![.NET](https://img.shields.io/badge/.NET%20-6-blue.svg)
 ![BUILD](https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/workflows/.NET%20Core/badge.svg?branch=main)
 
 ## Overview
@@ -15,7 +15,7 @@ For clients with straightforward needs one high level API client is provided in 
 
 ### Requirements
 
-- [.NET 5](https://docs.microsoft.com/en-us/dotnet/core/dotnet-five) or later
+- [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later
 - A registered app on the [Forge Developer Portal](http://forge.autodesk.com). 
 
 ### Dependencies

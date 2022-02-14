@@ -23,8 +23,6 @@ using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
 using Autodesk.Forge.DesignAutomation.Http;
 using Autodesk.Forge.DesignAutomation.Model;
-using System;
-using System.Collections.Generic;
 
 namespace Autodesk.Forge.DesignAutomation
 {

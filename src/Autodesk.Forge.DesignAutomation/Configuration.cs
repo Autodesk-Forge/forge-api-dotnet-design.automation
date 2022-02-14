@@ -18,8 +18,6 @@
  * limitations under the License.
  */
 
-using System;
-
 namespace Autodesk.Forge.DesignAutomation
 {
     public partial class Configuration
