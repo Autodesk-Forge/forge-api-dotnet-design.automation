@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <TargetFrameworks>net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <authors>Autodesk Forge</authors>
     <owners>Autodesk Forge</owners>
@@ -9,7 +8,7 @@
     <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
     <Copyright>Autodesk Inc.</Copyright>
-    <Version>4.3.1</Version>
+    <Version>5.0.0</Version>
     <PackageId>Autodesk.Forge.DesignAutomation</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</PackageProjectUrl>
@@ -25,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autodesk.Forge.Core" Version="2.1.0" />
+    <PackageReference Include="Autodesk.Forge.Core" Version="3.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>

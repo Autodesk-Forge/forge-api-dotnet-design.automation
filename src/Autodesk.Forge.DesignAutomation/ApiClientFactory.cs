@@ -21,9 +21,6 @@ using Autodesk.Forge.Core;
 using Autodesk.Forge.DesignAutomation.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Http;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 
 namespace Autodesk.Forge.DesignAutomation
 {

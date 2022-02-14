@@ -22,8 +22,6 @@ using Autodesk.Forge.Core.E2eTestHelpers;
 using Autodesk.Forge.DesignAutomation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.IO;
 using System.Runtime.CompilerServices;
 using Xunit;
 

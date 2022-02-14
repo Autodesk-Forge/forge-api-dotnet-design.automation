@@ -21,9 +21,6 @@
  */
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
-using System.Net.Http;
-using Autodesk.Forge.DesignAutomation.Model;
 
 namespace Autodesk.Forge.DesignAutomation.Http
 {

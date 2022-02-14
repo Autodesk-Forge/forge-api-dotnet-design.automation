@@ -22,7 +22,6 @@
 using Autodesk.Forge.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Autodesk.Forge.DesignAutomation
 {
