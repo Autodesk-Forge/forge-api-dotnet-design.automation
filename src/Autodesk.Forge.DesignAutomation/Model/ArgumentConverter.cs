@@ -46,7 +46,14 @@ namespace Autodesk.Forge.DesignAutomation.Model
                 }
                 else
                 {
-                    throw new JsonSerializationException("Expected XrefTreeArgument or StringArgument.");
+                    if (jObject["uploadJobFolder"] != null)
+                    {
+                        target = new StringArgument(jObject.ToString(Formatting.None));
+                    }
+                    else
+                    {
+                        throw new JsonSerializationException($"Expected XrefTreeArgument or StringArgument.");
+                    }
                 }
             }
             else if (reader.TokenType == JsonToken.String)

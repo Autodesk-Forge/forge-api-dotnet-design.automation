@@ -33,6 +33,9 @@
             "token": {
               "value": "IamToken!"
             },
+            "adskDebug": {
+              "value": "{\"uploadJobFolder\":true}"
+            },
             "results": {
               "url": "https://dasdev-testing.s3.us-west-2.amazonaws.com/sdktest?X-Amz-Expires=89925&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIZLLKUTZMHO46VTQ/20190103/us-west-2/s3/aws4_request&X-Amz-Date=20190103T025815Z&X-Amz-SignedHeaders=content-type;host&X-Amz-Signature=4bfe24c8855360be63c9c5915deba8750cf7724a532ebfb4fe996872f57d3541",
               "headers": {
@@ -54,6 +57,7 @@
       "Body": {
         "status": "success",
         "reportUrl": "https://dasprod-store.s3.amazonaws.com/workItem/SdkTester/8970a8ec12345298a3747d18ba9bf95d/report.txt?AWSAccessKeyId=ASIATGVJZKM3HBAEFTHT&Expires=1546498966&x-amz-security-token=FQoGZXIvYXdzEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDEmIckCvKn8%2F87Z0SCL9AYafE8PsudHLPcBjJ48uhdWudR%2BMrM8DH9FO1saphGUvXzrPsiWNaYs5AYCfzMEW7QGjmdqOQmcRAlipNyh0zoiNUFeBkc3LmntyJkIwo7dbyh8aUe2mhLb0b%2FLHe2jfuGtUE%2FGge%2FacqFXzZ57sn4ee9FbypIly2J63gNfKsloFqHSjwufi2pvnB8wUS4lX%2BYdWfJEImJLv3qY%2BCCXzJT9WR8%2B8605h3MQPXG72CIcWAv2A7RCDc8CFt2v5pg%2Bq1UpKdUzOcOrEmGYE6Eoo0RuAmNf%2FV8tKAWX%2BhLCXQ2mR66FULC73LInGIE8dPGmFyayDtFMUanv3gNxPVmEogZu24QU%3D&Signature=gRbfaWvC%2FTSxrOyn%2FGvj5YjBFAw%3D",
+        "debugInfoUrl": "https://dasprod-store.s3.amazonaws.com/workItem/SdkTester/8970a8ec12345298a3747d18ba9bf95d/debugInfo.zip?X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDsaCXVzLXdlc3QtMiJHMEUCIQDQ1rteW2taV28yOZJWi%2B38CD7ZUtxGY7vU%2B7trOaN14AIgGO9a13x7q7ezBiiVlew9nswMPvtdd7rKAZ9FcUG4hmsqmgIINBACGgwwNTczMjY2MDU5NzMiDC1ESrsquh3zv6skQCr3AS2Zq%2FeSLu6GlezUHiQ9AcpntKGAiw8NcK%2B%2F%2B1Pa8heBEBhP%2BdFH%2F97wS0mR8%2B6YQLKu2RiY9D2CduSwyBrGEWsC2AnTkNCs4hLW%2BqRKNt9oA2yp5%2BfwbpUfOd5WZmEKQTTrbdE5iwkJu%2Fb0a1LE4ETD%2BrwT8RjZKfZj5KJBvYMkgB6Sg%2BcOVHQx%2Fq3WSbRryM7oB2yGmSfYZGhpoBLK7TG4tQ%2Fvyro4BcROg8A5D73mtdyLMC3BEtxXRGUm2TWMXiJAkXIwvFlQngZODrjPekf%2FEsncFbMOQ49V5Sk5vTCmOdWY1sgYQzjfTY6Up9gX2nyN%2FqnUi24w9eCNjgY6mgFRYG77Ud8cvim%2BkCZPGLkQJXuxCRXX%2F9GE3LqZ%2FNgm1fZBNnycxKNLIzWR%2BCG%2FmFzSEbupB3ADJUK%2FcXiOCp%2Fyuc4rb9S1UWoBY4gEW8lk2S%2B0DppRjqmtFcbWcELGh6FzTTf3P%2BSIzodsodm0g3%2BQorZZbtITe6VvqmiyQM%2FsvWTKL5jqPqxRUyKdUPb5686OyDSUH59nVtBg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAQ2WHOS2K5NWO3U7P/20211222/us-west-2/s3/aws4_request&X-Amz-Date=20211222T204429Z&X-Amz-SignedHeaders=host&X-Amz-Signature=571672f1308a2887d4323139f04a035d7a59e88e5a7341c341cd4f38d3034ccc",
         "stats": {
           "timeQueued": "2019-08-13T06:02:40.9081695Z",
           "timeDownloadStarted": "2019-08-13T06:02:41.1777074Z",
