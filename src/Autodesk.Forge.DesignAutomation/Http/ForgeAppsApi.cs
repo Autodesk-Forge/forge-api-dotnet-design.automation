@@ -1,8 +1,6 @@
 ﻿using Autodesk.Forge.Core;
 using Autodesk.Forge.DesignAutomation.Model;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Net.Http;
 
 namespace Autodesk.Forge.DesignAutomation.Http
 {

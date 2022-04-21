@@ -18,11 +18,6 @@
  * limitations under the License.
  */
 using Autodesk.Forge.DesignAutomation.Model;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.IO;
-using System.Collections.Generic;
-using System;
 using Autodesk.Forge.Core;
 
 namespace Autodesk.Forge.DesignAutomation
@@ -151,5 +146,6 @@ namespace Autodesk.Forge.DesignAutomation
             while (paginationToken != null);
             return ret;
         }
+        public string Agent { get; internal set; }
     }
 }

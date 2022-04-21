@@ -18,10 +18,7 @@
  * limitations under the License.
  */
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Autodesk.Forge.DesignAutomation.Model
 {

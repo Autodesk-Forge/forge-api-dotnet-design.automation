@@ -19,7 +19,6 @@
  */
 using Autodesk.Forge.Core.E2eTestHelpers;
 using Autodesk.Forge.DesignAutomation.Model;
-using System.Collections.Generic;
 using Xunit;
 
 namespace E2eTests
