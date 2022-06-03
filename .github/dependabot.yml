@@ -14,11 +14,11 @@ updates:
       - dependabot
 
   - package-ecosystem: "github-actions"
-      directory: "/"
-      schedule:
-        interval: "monthly"
-      reviewers:
-        - zhuliice
-      labels:
-        - dependencies
-        - dependabot
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - zhuliice
+    labels:
+      - dependencies
+      - dependabot
