@@ -66,6 +66,7 @@ namespace E2eTests
                 var list = await Fixture.DesignAutomationClient.GetAllItems(Fixture.DesignAutomationClient.GetActivitiesAsync);
                 Assert.Contains($"{this.nickname}.{this.act.Id}+latest", list);
                 Assert.Contains($"{this.nickname}.{this.act.Id}+$LATEST", list);
+                Assert.Distinct(list);
             }
         }
 

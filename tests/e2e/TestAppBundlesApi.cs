@@ -67,6 +67,7 @@ namespace E2eTests
                 Assert.Contains($"{this.nickname}.{this.app.Id}+rc", list);
                 Assert.Contains($"{this.nickname}.{this.app.Id}+beta", list);
                 Assert.Contains($"{this.nickname}.{this.app.Id}+$LATEST", list);
+                Assert.Distinct(list);
             }
         }
 
