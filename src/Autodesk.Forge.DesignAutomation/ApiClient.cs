@@ -138,10 +138,7 @@ namespace Autodesk.Forge.DesignAutomation
             {
                 var resp = await pageGetter(paginationToken);
                 paginationToken = resp.PaginationToken;
-                foreach (var d in resp.Data)
-                {
-                    ret.AddRange(resp.Data);
-                }
+                ret.AddRange(resp.Data);
             }
             while (paginationToken != null);
             return ret;
