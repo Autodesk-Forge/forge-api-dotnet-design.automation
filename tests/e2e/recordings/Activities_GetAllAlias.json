@@ -1,0 +1,36 @@
+[
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "IAD55-P5",
+      "x-amzn-Remapped-Content-Length": "90"
+    },
+    "Content": {
+      "Body": {
+        "paginationToken": null,
+        "data": [
+          {
+            "version": 1,
+            "id": "$LATEST"
+          },
+          {
+            "version": 1,
+            "id": "latest"
+          }
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities/MyAct/aliases",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]

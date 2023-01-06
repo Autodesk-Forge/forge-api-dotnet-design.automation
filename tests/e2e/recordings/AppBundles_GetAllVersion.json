@@ -1,0 +1,41 @@
+[
+  {
+    "StatusCode": 401,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    },
+    "Content": {
+      "Body": {
+        "developerMessage": "Access token provided is invalid or expired.",
+        "moreInfo": "https://forge.autodesk.com/en/docs/oauth/v2/developers_guide/error_handling/",
+        "errorCode": "AUTH-006"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/versions",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 404,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "IAD55-P5"
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/versions",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  }
+]
