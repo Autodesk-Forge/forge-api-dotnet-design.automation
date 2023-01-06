@@ -136,7 +136,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <typeparam name="T">The type of the items to retrieve.</typeparam>
         /// <param name="pageGetter">A function that retrieves a page of items of type <typeparamref name="T"/> given a pagination token.</param>
         /// <returns>A task that represents the asynchronous operation. The task result contains a list of all items of type <typeparamref name="T"/>.</returns>
-        public static async Task<List<T>> GetAllItems<T>(Func<string, Task<Page<T>>> pageGetter)
+        public async Task<List<T>> GetAllItems<T>(Func<string, Task<Page<T>>> pageGetter)
         {
             var ret = new List<T>();
             string paginationToken = null;
@@ -158,7 +158,7 @@ namespace Autodesk.Forge.DesignAutomation
         /// <param name="pageGetter">A function that retrieves a page of items of type <typeparamref name="T"/> given a parameter of type <typeparamref name="P"/> and a pagination token.</param>
         /// <param name="parameter">The parameter to pass to the page getter function.</param>
         /// <returns>A task that represents the asynchronous operation. The task result contains a list of all items of type <typeparamref name="T"/>.</returns>
-        public static async Task<List<T>> GetAllItems<T, P>(Func<P, string, Task<Page<T>>> pageGetter, P parameter)
+        public async Task<List<T>> GetAllItems<T, P>(Func<P, string, Task<Page<T>>> pageGetter, P parameter)
         {
             var ret = new List<T>();
             string paginationToken = null;
