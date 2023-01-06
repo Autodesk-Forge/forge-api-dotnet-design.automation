@@ -70,5 +70,18 @@ namespace E2eTests
             }
         }
 
+        [Fact]
+        [Order(Weight = 2.2)]
+        public async void Activities_GetAllAlias()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var list = await Fixture.DesignAutomationClient.GetAllItems(Fixture.DesignAutomationClient.GetActivityAliasesAsync, this.act.Id);
+                Assert.Contains(list, e => e.Id == "latest");
+                Assert.Contains(list, e => e.Id == "$LATEST");
+                Assert.Distinct(list);
+            }
+        }
+
     }
 }
