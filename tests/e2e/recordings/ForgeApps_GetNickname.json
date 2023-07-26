@@ -1,6 +1,11 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "11"
+    },
     "Content": {
       "Body": "\"SdkTester\"",
       "Headers": {

@@ -40,7 +40,7 @@ namespace E2eTests
                         { "dwg",  new XrefTreeArgument() { Url = "http://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_imperial.dwg" } },
                         { "params", new StringArgument() { Value = "{ 'ExtractBlockNames': true, 'ExtractLayerNames' : true }" }},
                         { "token", new StringArgument("IamToken!")},
-                        { "results", new XrefTreeArgument { Verb=Verb.Put, Headers = new Dictionary<string, string>() { { "Content-Type", "binary/octet-stream" } }, Url = "https://dasdev-testing.s3.us-west-2.amazonaws.com/sdktest?X-Amz-Expires=89925&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIZLLKUTZMHO46VTQ/20190103/us-west-2/s3/aws4_request&X-Amz-Date=20190103T025815Z&X-Amz-SignedHeaders=content-type;host&X-Amz-Signature=4bfe24c8855360be63c9c5915deba8750cf7724a532ebfb4fe996872f57d3541" } }
+                        { "results", new XrefTreeArgument { Verb=Verb.Put, Headers = new Dictionary<string, string>() { { "Content-Type", "binary/octet-stream" } }, Url = "https://httpbin.org/put" } }
                     }
                 };
 
@@ -77,7 +77,7 @@ namespace E2eTests
                         }},
                         'results' : 
                         {{ 
-                            'url' : 'https://dasdev-testing.s3.us-west-2.amazonaws.com/sdktest?X-Amz-Expires=89925&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIZLLKUTZMHO46VTQ/20190103/us-west-2/s3/aws4_request&X-Amz-Date=20190103T025815Z&X-Amz-SignedHeaders=content-type;host&X-Amz-Signature=4bfe24c8855360be63c9c5915deba8750cf7724a532ebfb4fe996872f57d3541',
+                            'url' : 'https://httpbin.org/put',
                             'verb': 'put',
                             'headers': 
                             {{

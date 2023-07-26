@@ -1,13 +1,18 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "114"
+    },
     "Content": {
       "Body": {
         "status": "pending",
         "stats": {
-          "timeQueued": "2019-01-03T06:02:40.9081695Z"
+          "timeQueued": "2023-07-26T02:46:00.8341083Z"
         },
-        "id": "1737a8ec8c634298a3747d18ba9bf95d"
+        "id": "f62103c311a54a6ba571a0950ce6eca3"
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -34,7 +39,7 @@
               "value": "IamToken!"
             },
             "results": {
-              "url": "https://dasdev-testing.s3.us-west-2.amazonaws.com/sdktest?X-Amz-Expires=89925&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIZLLKUTZMHO46VTQ/20190103/us-west-2/s3/aws4_request&X-Amz-Date=20190103T025815Z&X-Amz-SignedHeaders=content-type;host&X-Amz-Signature=4bfe24c8855360be63c9c5915deba8750cf7724a532ebfb4fe996872f57d3541",
+              "url": "https://httpbin.org/put",
               "headers": {
                 "Content-Type": "binary/octet-stream"
               },
@@ -50,19 +55,19 @@
   },
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "170"
+    },
     "Content": {
       "Body": {
-        "status": "success",
-        "reportUrl": "https://dasprod-store.s3.amazonaws.com/workItem/SdkTester/1737a8ec8c634298a3747d18ba9bf95d/report.txt?AWSAccessKeyId=ASIATGVJZKM3HBAEFTHT&Expires=1546498966&x-amz-security-token=FQoGZXIvYXdzEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDEmIckCvKn8%2F87Z0SCL9AYafE8PsudHLPcBjJ48uhdWudR%2BMrM8DH9FO1saphGUvXzrPsiWNaYs5AYCfzMEW7QGjmdqOQmcRAlipNyh0zoiNUFeBkc3LmntyJkIwo7dbyh8aUe2mhLb0b%2FLHe2jfuGtUE%2FGge%2FacqFXzZ57sn4ee9FbypIly2J63gNfKsloFqHSjwufi2pvnB8wUS4lX%2BYdWfJEImJLv3qY%2BCCXzJT9WR8%2B8605h3MQPXG72CIcWAv2A7RCDc8CFt2v5pg%2Bq1UpKdUzOcOrEmGYE6Eoo0RuAmNf%2FV8tKAWX%2BhLCXQ2mR66FULC73LInGIE8dPGmFyayDtFMUanv3gNxPVmEogZu24QU%3D&Signature=gRbfaWvC%2FTSxrOyn%2FGvj5YjBFAw%3D",
+        "status": "inprogress",
         "stats": {
-          "timeQueued": "2019-01-03T06:02:40.9081695Z",
-          "timeDownloadStarted": "2019-01-03T06:02:41.1777074Z",
-          "timeInstructionsStarted": "2019-01-03T06:02:41.349623Z",
-          "timeInstructionsEnded": "2019-01-03T06:02:42.3496219Z",
-          "timeUploadEnded": "2019-01-03T06:02:42.7089659Z",
-          "timeFinished": "2019-01-03T06:02:42.824428Z"
+          "timeQueued": "2023-07-26T02:46:00.8341083Z",
+          "timeDownloadStarted": "2023-07-26T02:46:00.9500329Z"
         },
-        "id": "1737a8ec8c634298a3747d18ba9bf95d"
+        "id": "f62103c311a54a6ba571a0950ce6eca3"
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -70,7 +75,72 @@
     },
     "Request": {
       "Method": "GET",
-      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/workitems/1737a8ec8c634298a3747d18ba9bf95d",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/workitems/f62103c311a54a6ba571a0950ce6eca3",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "170"
+    },
+    "Content": {
+      "Body": {
+        "status": "inprogress",
+        "stats": {
+          "timeQueued": "2023-07-26T02:46:00.8341083Z",
+          "timeDownloadStarted": "2023-07-26T02:46:00.9500329Z"
+        },
+        "id": "f62103c311a54a6ba571a0950ce6eca3"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/workitems/f62103c311a54a6ba571a0950ce6eca3",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "1777"
+    },
+    "Content": {
+      "Body": {
+        "status": "success",
+        "reportUrl": "https://dasprod-store.s3.amazonaws.com/workItem/SdkTester/f62103c311a54a6ba571a0950ce6eca3/report.txt?X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIHDnu96zKeZ95hxDFGbfEX8ZtQ07yimNL3RLa7jaHcThAiBzdmz%2BzYZz%2BabWFZs4QYcRa5rY7WHPom3zdAOznlHS4SqAAwg8EAMaDDIyMDQ3MzE1MjMxMCIMNW968qbshSN0mh0SKt0CugyXrlu6uQCh2fE6x4tyW73lS2oXzLfkPbFnJ%2FKfrtFECqiUV3hGHU2l9OgqiiTm8yjZqtrEJAUi78x4GaCur5lKQZkoeTXa%2Fc%2FPF6y19eJPZrmzuZZCUSrK9mSzJegxRmxb%2FOBsX08KppQD2pyQt1VhcuJJ7Dgo2zR9mhWACaIXCQbJaGhXKJw%2BlTZTKrun7UDu5BECUP%2B0%2FkEjSPQXy%2FCZNJ5y%2B4gewegMZHe2yjPugx3n2E2lTAb1Di5QTE3yhX8mkT5QN%2Fi%2BrxTcQpIFslWq%2BSKzCckBoMy21ebeVxMBc%2BsKEuCslfUPmr5or5Q%2FxchkHMUD82BtLLeg4DEeS%2FoxeFyDDqiMtMred4QVW3X3oicQ0s7Hoax7HWnfPcTMh%2FaWKmBWQqxILF3oj2F7s%2B7zlSOQ2tCGwM%2FNBS%2BOq56bLb8%2FE7ktlRbsuMsvwk4FkRyHYrujkD5FpGSPDDDFjYKmBjqfAeGAcX8polQA5n63QagoH8KPLarTI9pho309BorienXe02ZlLL8zM5%2FZyrPfyE2asCzpaIj%2BKw2lHP68x3wRVn64xruyMmjmR4%2B78f4JrTUU%2BhcKFh9v3BYgV3hoKG7ivSqNGYiPS%2BKiqvt1hDtBiLfkAVToJVbdJiSpcmLfApB0vubTcX2TeaZDxorV7qt6a7PpI6FFnGjpeFRlMjcPTA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATGVJZKM3PFZM4J7G/20230726/us-east-1/s3/aws4_request&X-Amz-Date=20230726T024616Z&X-Amz-SignedHeaders=host&X-Amz-Signature=44e641c0422e18a83ea6173603453038354af2ecfbe4eac364f77fd484cd15fe",
+        "stats": {
+          "timeQueued": "2023-07-26T02:46:00.8341083Z",
+          "timeDownloadStarted": "2023-07-26T02:46:00.9500329Z",
+          "timeInstructionsStarted": "2023-07-26T02:46:01.3748103Z",
+          "timeInstructionsEnded": "2023-07-26T02:46:04.6337709Z",
+          "timeUploadEnded": "2023-07-26T02:46:11.3012457Z",
+          "timeFinished": "2023-07-26T02:46:11.8273259Z",
+          "bytesDownloaded": 227008,
+          "bytesUploaded": 22
+        },
+        "id": "f62103c311a54a6ba571a0950ce6eca3"
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/workitems/f62103c311a54a6ba571a0950ce6eca3",
       "Headers": {
         "Accept": "application/json",
         "Authorization": "***"

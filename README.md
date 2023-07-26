@@ -47,7 +47,7 @@ To use the API you must instantiate one of the API classes and configure it with
 
 There are 2 classes that you can use to configure the API:
 
-1. [Autodesk.Forge.Core.ForgeConfiguration](https://github.com/autodesk-forge/forge-api-dotnet-shared/blob/master/src/ForgeConfiguration.cs) - Allows the configuration of Forge client credentials and alternative authentication service endpoint (default is https://developer.api.autodesk.com/authentication/v1/authenticate)
+1. [Autodesk.Forge.Core.ForgeConfiguration](https://github.com/autodesk-forge/forge-api-dotnet-shared/blob/master/src/ForgeConfiguration.cs) - Allows the configuration of Forge client credentials and alternative authentication service endpoint (default is https://developer.api.autodesk.com/authentication/v2/token)
 
 2. [Autodesk.Forge.DesignAutomation.Configuration](src/Autodesk.Forge.DesignAutomation/Configuration.gen.cs)- Allows the configuration of non-default API endpoint (default is https://developer.api.autodesk.com/da/us-east/). 
 

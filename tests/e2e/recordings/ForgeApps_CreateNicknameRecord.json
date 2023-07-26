@@ -1,6 +1,10 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1"
+    },
     "Request": {
       "Method": "PATCH",
       "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/forgeapps/me",

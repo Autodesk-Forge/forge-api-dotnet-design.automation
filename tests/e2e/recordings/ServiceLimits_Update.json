@@ -1,9 +1,13 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "60"
+    },
     "Content": {
       "Body": {
-        "frontendLimits": {},
         "backendLimits": {
           "AutoCAD": {
             "limitProcessingTimeSec": 300

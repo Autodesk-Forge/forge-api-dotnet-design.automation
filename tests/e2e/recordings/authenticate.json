@@ -1,8 +1,12 @@
 {
   "StatusCode": 200,
+  "Headers": {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Request-ID": "d65f678c-b95d-44d4-8b81-8c54f05112d7"
+  },
   "Content": {
     "Body": {
-      "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJjbGllbnRfaWQiOiJGWXkxRGhYNlo2bVFMaU1nU05ZOFNBQUVBZ283YTIyOCIsImV4cCI6MTU0NjQ5ODk1Mywic2NvcGUiOlsiY29kZTphbGwiXSwiYXVkIjoiaHR0cHM6Ly9hdXRvZGVzay5jb20vYXVkL2p3dGV4cDYwIiwianRpIjoiYmRoMmxVcTk1dHg5VTE2c3BzdzB6RHZObWYyOGJxZU5IQzNXVFFPNTFTMjJWMmJaaFRHeTNWZnhOR056VnNaSyJ9.wDYzCdy9wLKirrppIxaj6iOZ60RcwOn9YHJ7AnNvH_E",
+      "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY0RE9XMnJoOE9tbjNpdk1NU0xlNGQ2VHEwUSIsInBpLmF0bSI6ImFzc2MifQ.eyJzY29wZSI6WyJjb2RlOmFsbCJdLCJjbGllbnRfaWQiOiJDb2tiT3FSdnA0MURWdW5EN2xCTzJjaWl3SnBsdFRBZiIsImlzcyI6Imh0dHBzOi8vZGV2ZWxvcGVyLmFwaS5hdXRvZGVzay5jb20iLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbSIsImp0aSI6ImlxWHhXYndzRTNYRVZVZmtkMlZiUlBQVlFUQ2xmSDU5YzVGS01CVTRBbkVHNk1SenBLS055S0lyWFdqTnFiblAiLCJleHAiOjE2OTAzNDMwOTN9.ojFboz0JVeoOF-ceItHSvdBxBXLXy4z6FCIzKVHlekmKGz5vtsEYBGwWNNrjzrQ6sDcTBnBLLe5h6ASsitQwIGA0EcKWCffG0PKlVmSU2tCY_Ra8WuTy4r5wS3dpQe6VpurQQ6Ba8_iD4btzvCW1gSnx_Zf_7L4DUlvYnOg6hMPzRlFnphSu8oM06mQ02XPqqOLeahoYBfO2io9MiHtxMZJ6mbihHTYbwoycMnjx-1sUOyEEr7sbf-IE11rAGLg5dLlY-FTOaOPBbIku9eL1qXjTouYzG9fi4AECVJdxmrLN7yLTaoHcLHICANuOQ5iskBl8jUBJBQZt5O0MX01q3g",
       "token_type": "Bearer",
       "expires_in": 3599
     },
@@ -12,9 +16,12 @@
   },
   "Request": {
     "Method": "POST",
-    "RequestUri": "https://developer.api.autodesk.com/authentication/v1/authenticate",
+    "RequestUri": "https://developer.api.autodesk.com/authentication/v2/token",
+    "Headers": {
+      "Authorization": "***"
+    },
     "Content": {
-      "Body": "client_id=FYy1DhX6Z6mQLiMgSNY8SAAEAgo7a228&client_secret=tukaej1bYR8GWVHn&grant_type=client_credentials&scope=code%3Aall",
+      "Body": "grant_type=client_credentials&scope=code%3Aall",
       "Headers": {
         "Content-Type": "application/x-www-form-urlencoded"
       }

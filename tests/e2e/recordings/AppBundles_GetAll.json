@@ -1,25 +1,35 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "855"
+    },
     "Content": {
       "Body": {
-        "paginationToken": null,
+        "paginationToken": "3eyJOYW1lX2xhYmVsIjp7IlMiOiJDbGFyaXR5VGFza1Byb2Nlc3NvcjIwMjNSMjAucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IkNsYXJpdHkifX0%3D",
         "data": [
           "SdkTester.MyApp+$LATEST",
           "SdkTester.MyApp+beta",
           "SdkTester.MyApp+latest",
           "SdkTester.MyApp+rc",
-          "Inventor.Configuration+prod",
+          "Inventor.Configuration2019+prod",
+          "Clarity.ClarityTaskProcessor2023R23+prod",
+          "Clarity.ClarityTaskProcessor2023R21+prod",
+          "Clarity.ClarityTaskProcessor2022R19+prod",
+          "Clarity.ClarityTaskProcessor2022R22+prod",
+          "Inventor.ChangeParams2019+prod",
+          "Clarity.ClarityTaskProcessor2022R20+prod",
+          "Inventor.Configuration2020+prod",
           "AutoCAD.Publish2View22+prod",
+          "Autodesk.TestsApp+Latest",
+          "Inventor.iLogicSampleAppPackage2020+prod",
           "3dsMax.UVUnwrap+latest",
-          "Revit.RVTIOSandboxTestPackage2018+prod",
+          "Clarity.ClarityTaskProcessor2022R21+prod",
           "Inventor.ChPa+prod",
-          "Inventor.iLogicSampleAppPackage+prod",
-          "Revit.RVTIOSketchItPackage+prod",
-          "AutoCAD.Publish2View23+prod",
-          "Inventor.ChangeParams+prod",
-          "3dsMax.bakeToTexture+prod",
-          "Revit.RVTIOSketchItPackage2018+prod"
+          "Inventor.Configuration2021+prod",
+          "Clarity.ClarityTaskProcessor2023R20+prod"
         ]
       },
       "Headers": {
@@ -29,6 +39,40 @@
     "Request": {
       "Method": "GET",
       "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "342"
+    },
+    "Content": {
+      "Body": {
+        "paginationToken": null,
+        "data": [
+          "Inventor.iLogicSampleAppPackage2021+prod",
+          "Clarity.ClarityTaskProcessor2023R22+prod",
+          "Clarity.ClarityTaskProcessor2022R18+prod",
+          "Clarity.ClarityTaskProcessor2023R19+prod",
+          "AutoCAD.Publish2View23+prod",
+          "Inventor.Configuration2018+prod",
+          "Autodesk.VarArgTestsApp+Latest",
+          "Clarity.ClarityTaskProcessor2020+prod"
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles?page=3eyJOYW1lX2xhYmVsIjp7IlMiOiJDbGFyaXR5VGFza1Byb2Nlc3NvcjIwMjNSMjAucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IkNsYXJpdHkifX0%253D&",
       "Headers": {
         "Accept": "application/json",
         "Authorization": "***"
