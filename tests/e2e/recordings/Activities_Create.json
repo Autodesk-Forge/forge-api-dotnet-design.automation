@@ -1,6 +1,11 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "452"
+    },
     "Content": {
       "Body": {
         "commandLine": [
@@ -23,7 +28,8 @@
             "localName": "outputs"
           }
         },
-        "engine": "Autodesk.AutoCAD+23",
+        "id": "SdkTester.MyAct",
+        "engine": "Autodesk.AutoCAD+24",
         "appbundles": [
           "SdkTester.MyApp+latest"
         ],
@@ -32,8 +38,7 @@
             "value": "_test params.json outputs\n"
           }
         },
-        "version": 1,
-        "id": "SdkTester.MyAct"
+        "version": 1
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -56,19 +61,20 @@
               "verb": "get"
             },
             "params": {
-              "verb": "read",
-              "localName": "params.json"
+              "localName": "params.json",
+              "verb": "read"
             },
             "token": {
               "verb": "read"
             },
             "results": {
               "zip": true,
-              "verb": "post",
-              "localName": "outputs"
+              "localName": "outputs",
+              "verb": "post"
             }
           },
-          "engine": "Autodesk.AutoCAD+23",
+          "id": "MyAct",
+          "engine": "Autodesk.AutoCAD+24",
           "appbundles": [
             "SdkTester.MyApp+latest"
           ],
@@ -76,8 +82,7 @@
             "script": {
               "value": "_test params.json outputs\n"
             }
-          },
-          "id": "MyAct"
+          }
         },
         "Headers": {
           "Content-Type": "application/json"
@@ -87,6 +92,11 @@
   },
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "27"
+    },
     "Content": {
       "Body": {
         "version": 1,

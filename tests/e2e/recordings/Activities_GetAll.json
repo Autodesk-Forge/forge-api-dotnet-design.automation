@@ -1,30 +1,35 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "829"
+    },
     "Content": {
       "Body": {
-        "paginationToken": "3eyJOYW1lX2xhYmVsIjp7IlMiOiJSdnRJT1NhbmRib3hUZXN0QWN0aXZpdHkucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IlJldml0In19",
+        "paginationToken": "3eyJOYW1lX2xhYmVsIjp7IlMiOiJDb25maWd1cmF0aW9uMjAyMC5wcm9kIn0sIlJlY2VpdmVyIjp7IlMiOiJldmVyeW9uZSJ9LCJPd25lciI6eyJTIjoiSW52ZW50b3IifX0%3D",
         "data": [
           "SdkTester.MyAct+$LATEST",
           "SdkTester.MyAct+latest",
-          "Revit.RVTIOSimpleActivity+prod",
+          "Inventor.Configuration2019+prod",
+          "Clarity.ClarityTaskProcessor2023R23+prod",
+          "AutoCAD.PlotSheetsetToPDF+prod",
+          "Autodesk.VarArgInputsOnly+Latest",
           "Autodesk.Nop+Latest",
-          "vOnjyCxTqZ34qAszA0k7NJUVDADAgh4c.inviowebsample_Choke_Trigger_ipt+inviowebsample_Choke_Trigger_ipt_nick",
+          "Autodesk.VarArgOutputsOnly+Latest",
+          "Inventor.iLogic_Volume2021+prod",
+          "Autodesk.VarArg+Latest",
+          "3dsMax.OpenNetworkTests+Latest",
+          "Clarity.ClarityTaskProcessor2023R21+prod",
           "AutoCAD.AcSvfPublish+prod",
-          "Revit.RvtIOSandboxTestActivity2018+prod",
-          "Revit.RvtIOSketchItActivity+prod",
-          "3dsMax.HelloWorld+Latest",
+          "Clarity.ClarityTaskProcessor2022R19+prod",
+          "Clarity.ClarityTaskProcessor2022R22+prod",
+          "Autodesk.Long+Latest",
+          "Inventor.ChangeParams2019+prod",
           "3dsMax.UVUnwrapMesh+prod",
-          "Revit.RvtIOSketchItActivity2018+prod",
-          "Inventor.Configuration+prod",
-          "Revit.RvtIOFillCDriveTestActivity+prod",
-          "3dsMax.UVUnwrapMesh+latest",
-          "revitiosample.FileUpgraderActivity+test",
-          "3dsMax.bakeToTexture+Latest",
-          "Inventor.iLogic_Volume+prod",
-          "AutoCAD.AcF2dPublish+prod",
-          "Inventor.ChPa+prod",
-          "Revit.RvtIOSandboxTestActivity+prod"
+          "Clarity.ClarityTaskProcessor2022R20+prod",
+          "Inventor.Configuration2020+prod"
         ]
       },
       "Headers": {
@@ -42,17 +47,35 @@
   },
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "829"
+    },
     "Content": {
       "Body": {
-        "paginationToken": null,
+        "paginationToken": "3eyJOYW1lX2xhYmVsIjp7IlMiOiJPcGVuTmV0d29ya1Rlc3RzLkxhdGVzdCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IkF1dG9DQUQifX0%3D",
         "data": [
-          "fileupgradersample.FileUpgraderActivity+test",
+          "3dsMax.UVUnwrapMesh+latest",
+          "Inventor.ChangeParameters+prod",
+          "Clarity.ClarityTaskProcessor2022R21+prod",
+          "AutoCAD.AcF2dPublish+prod",
+          "Inventor.ChPa+prod",
+          "Inventor.Configuration2021+prod",
+          "Clarity.ClarityTaskProcessor2023R20+prod",
           "AutoCAD.AcLMVPublish+prod",
+          "Inventor.iLogic_Volume2020+prod",
           "AutoCAD.PlotToPDF+prod",
-          "Inventor.ChangeParams+prod",
+          "Clarity.ClarityTaskProcessor2023R22+prod",
+          "Clarity.ClarityTaskProcessor2022R18+prod",
+          "Clarity.ClarityTaskProcessor2023R19+prod",
+          "Autodesk.Nop_Multiple+Latest",
           "3dsMax.bakeToTexture+prod",
-          "3hdryVDAjSv0FwHkVAaFz237BSWJquoB.inviowebsample_Stapler_zip+inviowebsample_Stapler_zip_nick",
-          "psawQK8sGnSYlX6wbRBEvR7KI5KAWwch.InventorSmokeActivity+InventorSmokeActivityNickname"
+          "Revit.OpenNetworkTests+Latest",
+          "3dsMax.HelloWorld+sample",
+          "Inventor.Configuration2018+prod",
+          "Autodesk.Nop_DataUri+Latest",
+          "AutoCAD.OpenNetworkTests+Latest"
         ]
       },
       "Headers": {
@@ -61,7 +84,35 @@
     },
     "Request": {
       "Method": "GET",
-      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities?page=3eyJOYW1lX2xhYmVsIjp7IlMiOiJSdnRJT1NhbmRib3hUZXN0QWN0aXZpdHkucHJvZCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IlJldml0In19&",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities?page=3eyJOYW1lX2xhYmVsIjp7IlMiOiJDb25maWd1cmF0aW9uMjAyMC5wcm9kIn0sIlJlY2VpdmVyIjp7IlMiOiJldmVyeW9uZSJ9LCJPd25lciI6eyJTIjoiSW52ZW50b3IifX0%253D&",
+      "Headers": {
+        "Accept": "application/json",
+        "Authorization": "***"
+      }
+    }
+  },
+  {
+    "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "97"
+    },
+    "Content": {
+      "Body": {
+        "paginationToken": null,
+        "data": [
+          "Inventor.OpenNetworkTests+Latest",
+          "AutoCAD.VarArgTests+Latest"
+        ]
+      },
+      "Headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/activities?page=3eyJOYW1lX2xhYmVsIjp7IlMiOiJPcGVuTmV0d29ya1Rlc3RzLkxhdGVzdCJ9LCJSZWNlaXZlciI6eyJTIjoiZXZlcnlvbmUifSwiT3duZXIiOnsiUyI6IkF1dG9DQUQifX0%253D&",
       "Headers": {
         "Accept": "application/json",
         "Authorization": "***"

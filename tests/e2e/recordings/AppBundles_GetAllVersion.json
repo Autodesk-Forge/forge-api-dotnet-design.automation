@@ -4,15 +4,15 @@
     "Headers": {
       "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
       "X-Amz-Cf-Pop": "HIO52-P1",
-      "x-amzn-Remapped-Content-Length": "73"
+      "x-amzn-Remapped-Content-Length": "37"
     },
     "Content": {
       "Body": {
-        "nickname": "SdkTester",
-        "publicKey": {
-          "Exponent": "AQ==",
-          "Modulus": "Ag=="
-        }
+        "paginationToken": null,
+        "data": [
+          1,
+          2
+        ]
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -20,7 +20,7 @@
     },
     "Request": {
       "Method": "GET",
-      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/forgeapps/me",
+      "RequestUri": "https://developer.api.autodesk.com/da/us-east/v3/appbundles/MyApp/versions",
       "Headers": {
         "Accept": "application/json",
         "Authorization": "***"

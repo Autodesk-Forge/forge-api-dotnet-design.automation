@@ -44,7 +44,7 @@ namespace E2eTests
                 { "results", new Parameter() {Verb = Verb.Post, LocalName = "outputs", Zip = true } }
             },
             Id = "MyAct",
-            Engine = "Autodesk.AutoCAD+23"
+            Engine = "Autodesk.AutoCAD+24"
         };
 
         [Fact]

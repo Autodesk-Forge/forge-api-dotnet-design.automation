@@ -1,6 +1,11 @@
 [
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "3358"
+    },
     "Content": {
       "Body": {
         "uploadParameters": {
@@ -8,20 +13,20 @@
           "formData": {
             "key": "apps/SdkTester/MyApp/1",
             "content-type": "application/octet-stream",
-            "policy": "eyJleHBpcmF0aW9uIjoiMjAxOS0wMS0wM1QwNzowMjozNS42OTI1ODU3WiIsImNvbmRpdGlvbnMiOlt7ImtleSI6ImFwcHMvU2RrVGVzdGVyL015QXBwLzEifSx7ImJ1Y2tldCI6ImRhc3Byb2Qtc3RvcmUifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMCJ9LFsic3RhcnRzLXdpdGgiLCIkc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiLCIiXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtVHlwZSIsImFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbSJdLHsieC1hbXotc2VydmVyLXNpZGUtZW5jcnlwdGlvbiI6IkFFUzI1NiJ9LFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCIwIiwiMTA0ODU3NjAwIl0seyJ4LWFtei1jcmVkZW50aWFsIjoiQVNJQVRHVkpaS00zSEJBRUZUSFQvMjAxOTAxMDMvdXMtZWFzdC0xL3MzL2F3czRfcmVxdWVzdC8ifSx7IngtYW16LWFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IngtYW16LWRhdGUiOiIyMDE5MDEwM1QwNjAyMzVaIn0seyJ4LWFtei1zZWN1cml0eS10b2tlbiI6IkZRb0daWEl2WVhkekVKNy8vLy8vLy8vLy93RWFERW1JY2tDdktuOC84N1owU0NMOUFZYWZFOFBzdWRITFBjQmpKNDh1aGRXdWRSK01yTThESDlGTzFzYXBoR1V2WHpyUHNpV05hWXM1QVlDZnpNRVc3UUdqbWRxT1FtY1JBbGlwTnloMHpvaU5VRmVCa2MzTG1udHlKa0l3bzdkYnloOGFVZTJtaExiMGIvTEhlMmpmdUd0VUUvR2dlL2FjcUZYelo1N3NuNGVlOUZieXBJbHkySjYzZ05mS3Nsb0ZxSFNqd3VmaTJwdm5COHdVUzRsWCtZZFdmSkVJbUpMdjNxWStDQ1h6SlQ5V1I4Kzg2MDVoM01RUFhHNzJDSWNXQXYyQTdSQ0RjOENGdDJ2NXBnK3ExVXBLZFV6T2NPckVtR1lFNkVvbzBSdUFtTmYvVjh0S0FXWCtoTENYUTJtUjY2RlVMQzczTEluR0lFOGRQR21GeWF5RHRGTVVhbnYzZ054UFZtRW9nWnUyNFFVPSJ9XX0=",
+            "policy": "eyJleHBpcmF0aW9uIjoiMjAyMy0wNy0yNlQwMzo0NTo1NS4xOTQwNTc3WiIsImNvbmRpdGlvbnMiOlt7ImtleSI6ImFwcHMvU2RrVGVzdGVyL015QXBwLzEifSx7ImJ1Y2tldCI6ImRhc3Byb2Qtc3RvcmUifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMCJ9LFsic3RhcnRzLXdpdGgiLCIkc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiLCIiXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtVHlwZSIsImFwcGxpY2F0aW9uL29jdGV0LXN0cmVhbSJdLHsieC1hbXotc2VydmVyLXNpZGUtZW5jcnlwdGlvbiI6IkFFUzI1NiJ9LFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCIwIiwiMTA0ODU3NjAwIl0seyJ4LWFtei1jcmVkZW50aWFsIjoiQVNJQVRHVkpaS00zRENES0w0WEcvMjAyMzA3MjYvdXMtZWFzdC0xL3MzL2F3czRfcmVxdWVzdC8ifSx7IngtYW16LWFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IngtYW16LWRhdGUiOiIyMDIzMDcyNlQwMjQ1NTVaIn0seyJ4LWFtei1zZWN1cml0eS10b2tlbiI6IklRb0piM0pwWjJsdVgyVmpFS1AvLy8vLy8vLy8vd0VhQ1hWekxXVmhjM1F0TVNKR01FUUNJSDBJa3dzWlRGdG9oUWhIdVBpUnk1NzVtUFd5SEhLck9Kdm1qY2pQL0VVOUFpQTJnc0IvTVgzZkU2YzJlU0JrcC9yMU1mS3crd1Q1akxBMityWXZuazFoMmlxQUF3ZzdFQU1hRERJeU1EUTNNekUxTWpNeE1DSU1YVFN5YzRXcFF4RG52QlBsS3QwQzFLS3kvWGN1NnNobXFWblpTdmRKVk9teFgvaVlHeG1meEkraWNjRyt6bk50aEw0WTRKSDUzazQyZVU4MDEweHZ5Y2xUdUhRWGJHTlBKSjB5bkdHTnBLdm92a1BxSlo2blI5UVloK3VvRkZLM21LcjlLS3NFM2xhM214enA2OHJFc3dGTzJnY0ZkeTVYTkQraGVDWlFham1QV0JNUmtwYlhhenBOeGJEN3UzN1dmanVIRFRuYVFZemM3RVVzQWkvc1Q0RG1uMktaZk9tMTRlT3NWWXhud2o5bHd6RDEzN05PMnp4LzdvZDF2UVZ0b2JLOXd2Sk9FTGxDNC9OakdleEIzK0RldmNySDFHYW5VV3RJckpGNkZlREErdTFwSHRUSGs4c0JDWjNFVUx6UTJzblExUlJENXZSSzJVWnNkUHhzcDd1RklTR2RXOWxNa0NlYVpiWE5FUStPQks3Rm1wdnJFUWhhOS9uSlpEdjNCaWk1SHNZdmJLaGtSWWtZRG1Ta0Z0RUQrZWlQZnlPN0MyK0F1ZTZTZEo2NWdRdmVKRDFPYjJtMFdJNEdwdmlwRTVPWWdvNWx4WHlQOTIwZnVaU282ZG9QRnMzd0doYmVIUnFlbWpDWGdZS21CanFmQVQ5UHBFR2VOOW9oMzBOa2NkQ1lhL05rd29NdDdPUFpUTnVMdG8wYzFnc1Q0RTZBTGlDNnVLK0cxbWVaUVZtbGlybkZhQVYwWmM0RUtoelE5WEVhY0dsVG51OU85UTREeHUzZzFhM09LTnNSeldudEdrZENPZURJMlBPQWFrSGdvRTBwUk0wTWRNSnExempHcS84bkhtaURpaGZ3UjI5YVFoL3FrcEI5ek91SC9pcGxNYW5Sam1IcURvK2dybUh1YWY5c2JJeVFTRThwOFUwbytnNDdDZz09In1dfQ==",
             "success_action_status": "200",
             "success_action_redirect": "",
-            "x-amz-signature": "80c60d8d09cd98329278090c108f98e44ffe336ab4b589886da0e3e584176783",
-            "x-amz-credential": "ASIATGVJZKM3HBAEFTHT/20190103/us-east-1/s3/aws4_request/",
+            "x-amz-signature": "1462c7bb3d541ce147cd062b1a7c056c2100b079a8df53a1f28c8766f2ade998",
+            "x-amz-credential": "ASIATGVJZKM3DCDKL4XG/20230726/us-east-1/s3/aws4_request/",
             "x-amz-algorithm": "AWS4-HMAC-SHA256",
-            "x-amz-date": "20190103T060235Z",
+            "x-amz-date": "20230726T024555Z",
             "x-amz-server-side-encryption": "AES256",
-            "x-amz-security-token": "FQoGZXIvYXdzEJ7//////////wEaDEmIckCvKn8/87Z0SCL9AYafE8PsudHLPcBjJ48uhdWudR+MrM8DH9FO1saphGUvXzrPsiWNaYs5AYCfzMEW7QGjmdqOQmcRAlipNyh0zoiNUFeBkc3LmntyJkIwo7dbyh8aUe2mhLb0b/LHe2jfuGtUE/Gge/acqFXzZ57sn4ee9FbypIly2J63gNfKsloFqHSjwufi2pvnB8wUS4lX+YdWfJEImJLv3qY+CCXzJT9WR8+8605h3MQPXG72CIcWAv2A7RCDc8CFt2v5pg+q1UpKdUzOcOrEmGYE6Eoo0RuAmNf/V8tKAWX+hLCXQ2mR66FULC73LInGIE8dPGmFyayDtFMUanv3gNxPVmEogZu24QU="
+            "x-amz-security-token": "IQoJb3JpZ2luX2VjEKP//////////wEaCXVzLWVhc3QtMSJGMEQCIH0IkwsZTFtohQhHuPiRy575mPWyHHKrOJvmjcjP/EU9AiA2gsB/MX3fE6c2eSBkp/r1MfKw+wT5jLA2+rYvnk1h2iqAAwg7EAMaDDIyMDQ3MzE1MjMxMCIMXTSyc4WpQxDnvBPlKt0C1KKy/Xcu6shmqVnZSvdJVOmxX/iYGxmfxI+iccG+znNthL4Y4JH53k42eU8010xvyclTuHQXbGNPJJ0ynGGNpKvovkPqJZ6nR9QYh+uoFFK3mKr9KKsE3la3mxzp68rEswFO2gcFdy5XND+heCZQajmPWBMRkpbXazpNxbD7u37WfjuHDTnaQYzc7EUsAi/sT4Dmn2KZfOm14eOsVYxnwj9lwzD137NO2zx/7od1vQVtobK9wvJOELlC4/NjGexB3+DevcrH1GanUWtIrJF6FeDA+u1pHtTHk8sBCZ3EULzQ2snQ1RRD5vRK2UZsdPxsp7uFISGdW9lMkCeaZbXNEQ+OBK7FmpvrEQha9/nJZDv3Bii5HsYvbKhkRYkYDmSkFtED+eiPfyO7C2+Aue6SdJ65gQveJD1Ob2m0WI4GpvipE5OYgo5lxXyP920fuZSo6doPFs3wGhbeHRqemjCXgYKmBjqfAT9PpEGeN9oh30NkcdCYa/NkwoMt7OPZTNuLto0c1gsT4E6ALiC6uK+G1meZQVmlirnFaAV0Zc4EKhzQ9XEacGlTnu9O9Q4Dxu3g1a3OKNsRzWntGkdCOeDI2POAakHgoE0pRM0MdMJq1zjGq/8nHmiDihfwR29aQh/qkpB9zOuH/iplManRjmHqDo+grmHuaf9sbIyQSE8p8U0o+g47Cg=="
           }
         },
-        "engine": "Autodesk.AutoCAD+23",
-        "version": 1,
-        "id": "SdkTester.MyApp"
+        "id": "SdkTester.MyApp",
+        "engine": "Autodesk.AutoCAD+24",
+        "version": 1
       },
       "Headers": {
         "Content-Type": "application/json"
@@ -36,8 +41,8 @@
       },
       "Content": {
         "Body": {
-          "engine": "Autodesk.AutoCAD+23",
-          "id": "MyApp"
+          "id": "MyApp",
+          "engine": "Autodesk.AutoCAD+24"
         },
         "Headers": {
           "Content-Type": "application/json"
@@ -65,6 +70,11 @@
   },
   {
     "StatusCode": 200,
+    "Headers": {
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Amz-Cf-Pop": "HIO52-P1",
+      "x-amzn-Remapped-Content-Length": "25"
+    },
     "Content": {
       "Body": {
         "version": 1,

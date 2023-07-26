@@ -28,7 +28,7 @@ namespace E2eTests
         private readonly AppBundle app = new AppBundle()
         {
             Id = "MyApp",
-            Engine = "Autodesk.AutoCAD+23",
+            Engine = "Autodesk.AutoCAD+24",
         };
 
         [Fact]
@@ -71,5 +71,30 @@ namespace E2eTests
             }
         }
 
+        [Fact]
+        [Order(Weight = 1.3)]
+        public async void AppBundles_GetAllAlias()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var list = await Fixture.DesignAutomationClient.GetAllItems(async page => await Fixture.DesignAutomationClient.GetAppBundleAliasesAsync(this.app.Id, page));
+                Assert.Contains(list, e => e.Id == "latest");
+                Assert.Contains(list, e => e.Id == "$LATEST");
+                Assert.Distinct(list);
+            }
+        }
+
+        [Fact]
+        [Order(Weight = 1.4)]
+        public async void AppBundles_GetAllVersion()
+        {
+            using (Fixture.StartTestScope())
+            {
+                var list = await Fixture.DesignAutomationClient.GetAllItems(async page => await Fixture.DesignAutomationClient.GetAppBundleVersionsAsync(this.app.Id, page));
+                Assert.Contains(1, list);
+                Assert.Contains(2, list);
+                Assert.Distinct(list);
+            }
+        }
     }
 }
