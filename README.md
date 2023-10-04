@@ -4,6 +4,7 @@
 ![SDK](https://img.shields.io/badge/SDK-5.0.0-lightgree.svg)
 ![.NET](https://img.shields.io/badge/.NET%20-6-blue.svg)
 ![BUILD](https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/workflows/.NET%20Core/badge.svg?branch=main)
+[![nuget](https://img.shields.io/nuget/v/Autodesk.Forge.DesignAutomation?logo=nuget&color=blue)](https://www.nuget.org/packages/Autodesk.Forge.DesignAutomation)
 
 ## Overview
 
