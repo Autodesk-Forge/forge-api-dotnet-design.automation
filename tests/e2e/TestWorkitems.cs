@@ -28,7 +28,7 @@ namespace E2eTests
     {
         [Fact]
         [Order(Weight = 3.0)]
-        public async void WorkItems_Create()
+        public async Task WorkItems_Create()
         {
             using (var testScope = Fixture.StartTestScope())
             {
@@ -60,7 +60,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 3.0)]
-        public async void WorkItems_CreateWithStringPayload()
+        public async Task WorkItems_CreateWithStringPayload()
         {
             using (var testScope = Fixture.StartTestScope())
             {

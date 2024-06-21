@@ -49,7 +49,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 2.0)]
-        public async void Activities_Create()
+        public async Task Activities_Create()
         {
             using (Fixture.StartTestScope())
             {
@@ -59,7 +59,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 2.1)]
-        public async void Activities_GetAll()
+        public async Task Activities_GetAll()
         {
             using (Fixture.StartTestScope())
             {

@@ -16,7 +16,7 @@ For clients with straightforward needs one high level API client is provided in 
 
 ### Requirements
 
-- [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later
+- [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A registered app on the [Forge Developer Portal](http://forge.autodesk.com). 
 
 ### Dependencies

@@ -27,7 +27,7 @@ namespace E2eTests
     {
         [Fact]
         [Order(Weight = 3.0)]
-        public async void ServiceLimits_Get()
+        public async Task ServiceLimits_Get()
         {
             using (Fixture.StartTestScope())
             {
@@ -37,7 +37,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 3.1)]
-        public async void ServiceLimits_Update()
+        public async Task ServiceLimits_Update()
         {
             using (Fixture.StartTestScope())
             {
