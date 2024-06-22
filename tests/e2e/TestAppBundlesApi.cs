@@ -33,7 +33,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 1.0)]
-        public async void AppBundles_Create()
+        public async Task AppBundles_Create()
         {
             using (Fixture.StartTestScope())
             {
@@ -44,7 +44,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 1.1)]
-        public async void AppBundles_Update()
+        public async Task AppBundles_Update()
         {
             using (Fixture.StartTestScope())
             {
@@ -58,7 +58,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 1.2)]
-        public async void AppBundles_GetAll()
+        public async Task AppBundles_GetAll()
         {
             using (Fixture.StartTestScope())
             {
@@ -73,7 +73,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 1.3)]
-        public async void AppBundles_GetAllAlias()
+        public async Task AppBundles_GetAllAlias()
         {
             using (Fixture.StartTestScope())
             {
@@ -86,7 +86,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 1.4)]
-        public async void AppBundles_GetAllVersion()
+        public async Task AppBundles_GetAllVersion()
         {
             using (Fixture.StartTestScope())
             {

@@ -30,7 +30,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 0.0)]
-        public async void ForgeApps_Delete()
+        public async Task ForgeApps_Delete()
         {
             using (var scope = Fixture.StartTestScope())
             {
@@ -44,7 +44,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 0.1)]
-        public async void ForgeApps_CreateNickname()
+        public async Task ForgeApps_CreateNickname()
         {
             using (Fixture.StartTestScope())
             {
@@ -54,7 +54,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 0.2)]
-        public async void ForgeApps_GetNickname()
+        public async Task ForgeApps_GetNickname()
         {
             using (Fixture.StartTestScope())
             {
@@ -65,7 +65,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 0.3)]
-        public async void ForgeApps_CreateNicknameRecord()
+        public async Task ForgeApps_CreateNicknameRecord()
         {
             using (Fixture.StartTestScope())
             {
@@ -75,7 +75,7 @@ namespace E2eTests
 
         [Fact]
         [Order(Weight = 0.4)]
-        public async void ForgeApps_GetNicknameRecord()
+        public async Task ForgeApps_GetNicknameRecord()
         {
             using (Fixture.StartTestScope())
             {

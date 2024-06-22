@@ -1,34 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <authors>Autodesk Forge</authors>
-    <owners>Autodesk Forge</owners>
-    <Company>Autodesk</Company>
-    <Product>Autodesk Forge</Product>
     <Description>Client sdk for Forge DesignAutomation API</Description>
-    <Copyright>Autodesk Inc.</Copyright>
-    <Version>5.1.2</Version>
-    <PackageId>Autodesk.Forge.DesignAutomation</PackageId>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation</PackageProjectUrl>
-    <PackageIcon>logo_forge-2-line.png</PackageIcon>
-    <PackageReleaseNotes>For full release notes see https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/blob/master/CHANGELOG.md</PackageReleaseNotes>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageVersion>6.0.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\images\logo_forge-2-line.png" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Autodesk.Forge.Core" Version="3.0.2" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Autodesk.Forge.Core" Version="4.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
    
-  <Import Project="..\..\nuget.targets" />
 </Project>
 
