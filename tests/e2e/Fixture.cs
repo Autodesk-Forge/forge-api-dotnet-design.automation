@@ -38,7 +38,7 @@ namespace E2eTests
                 .AddJsonFile("appsettings.json")
                 .AddJsonFile($"appsettings.user.json", optional: true)
                 .AddEnvironmentVariables()
-                .AddForgeAlternativeEnvironmentVariables()
+                .AddAPSAlternativeEnvironmentVariables()
                 .Build();
 
             DataFolder = Path.Combine(Environment.CurrentDirectory, "../../../data/");
