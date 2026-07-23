@@ -104,6 +104,19 @@ namespace E2eTests
             }
         }
 
+        [Fact]
+        [Order(Weight = 3.0)]
+        public void XrefTreeArgument_RefGetVerb_SerializesAndDeserializes()
+        {
+            var arg = new XrefTreeArgument() { Verb = Verb.RefGet, Url = "https://example.com/file.dwg" };
+
+            var json = JsonConvert.SerializeObject(arg);
+            Assert.Contains("\"verb\":\"refget\"", json);
+
+            var roundTripped = JsonConvert.DeserializeObject<XrefTreeArgument>(json);
+            Assert.Equal(Verb.RefGet, roundTripped.Verb);
+        }
+
         [Theory]
         [InlineData(@"
                 {
