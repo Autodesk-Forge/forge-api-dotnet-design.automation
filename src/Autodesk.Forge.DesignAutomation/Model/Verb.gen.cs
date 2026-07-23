@@ -74,6 +74,10 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// <summary>
         /// Enum RefGet for value: refget
         /// </summary>
+        /// <remarks>
+        /// Currently supported on the AutoCAD engine, for DWG/DXF/DST files.
+        /// ref: see https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/reference-downloading/
+        /// </remarks>
         [EnumMember(Value = "refget")]
         RefGet = 7
     }
