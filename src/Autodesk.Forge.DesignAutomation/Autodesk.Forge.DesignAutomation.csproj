@@ -2,11 +2,11 @@
   
   <PropertyGroup>
     <Description>Client sdk for Forge DesignAutomation API</Description>
-    <Version>6.0.1</Version>
+    <Version>6.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autodesk.Forge.Core" Version="4.0.1" />
+    <PackageReference Include="Autodesk.Forge.Core" Version="4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
    
