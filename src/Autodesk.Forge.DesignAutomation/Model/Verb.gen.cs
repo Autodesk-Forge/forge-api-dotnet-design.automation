@@ -22,6 +22,7 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 
 namespace Autodesk.Forge.DesignAutomation.Model
 {
@@ -68,7 +69,17 @@ namespace Autodesk.Forge.DesignAutomation.Model
         /// Enum Read for value: read
         /// </summary>
         [EnumMember(Value = "read")]
-        Read = 6
+        Read = 6,
+
+        /// <summary>
+        /// Enum RefGet for value: refget
+        /// </summary>
+        /// <remarks>
+        /// Currently supported on the AutoCAD engine, for DWG/DXF/DST files.
+        /// ref: see https://aps.autodesk.com/en/docs/design-automation/v3/developers_guide/reference-downloading/
+        /// </remarks>
+        [EnumMember(Value = "refget")]
+        RefGet = 7
     }
 
 }
