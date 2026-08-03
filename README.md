@@ -1,10 +1,9 @@
 # Autodesk.Forge.DesignAutomation
 
 [![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/) 
-![SDK](https://img.shields.io/badge/SDK-5.0.0-lightgree.svg)
-![.NET](https://img.shields.io/badge/.NET%20-6-blue.svg)
-![BUILD](https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/workflows/.NET%20Core/badge.svg?branch=main)
-[![nuget](https://img.shields.io/nuget/v/Autodesk.Forge.DesignAutomation?logo=nuget&color=blue)](https://www.nuget.org/packages/Autodesk.Forge.DesignAutomation)
+[![Latest Version](https://img.shields.io/nuget/v/Autodesk.Forge.DesignAutomation.svg?label=SDK&color=normalgreen)](https://www.nuget.org/packages/Autodesk.Forge.DesignAutomation#readme-body-tab)
+[![Supported Frameworks](https://img.shields.io/badge/8.0-blue.svg?label=.NET)](https://www.nuget.org/packages/Autodesk.Forge.DesignAutomation#supportedframeworks-body-tab)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Autodesk-Forge/forge-api-dotnet-design.automation/dotnet-core.yml?branch=main&label=BUILD)](https://github.com/Autodesk-Forge/forge-api-dotnet-design.automation/actions/workflows/dotnet-core.yml)
 
 ## Overview
 
